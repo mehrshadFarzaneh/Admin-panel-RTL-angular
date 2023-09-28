@@ -20,7 +20,7 @@ export class UserInnerComponent implements OnInit, OnDestroy {
   constructor(
     private auth: AuthService,
     private translationService: TranslationService
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this.user$ = this.auth.currentUserSubject.asObservable();
@@ -91,5 +91,10 @@ const languages = [
     lang: 'fr',
     name: 'French',
     flag: './assets/media/flags/france.svg',
+  },
+  {
+    lang: 'fa',
+    name: 'Persian',
+    flag: './assets/media/flags/iran.svg',
   },
 ];

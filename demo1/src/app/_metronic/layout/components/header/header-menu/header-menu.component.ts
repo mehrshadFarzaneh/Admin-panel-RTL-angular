@@ -1,3 +1,4 @@
+import { AppFacade } from 'src/app/core/store/app.facade';
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { LayoutType } from '../../../core/configs/config';
@@ -10,9 +11,14 @@ import { LayoutService } from '../../../core/layout.service';
   styleUrls: ['./header-menu.component.scss'],
 })
 export class HeaderMenuComponent implements OnInit {
-  constructor(private router: Router, private layout: LayoutService, private layoutInit: LayoutInitService) {}
+  constructor(private router: Router, private layout: LayoutService, private layoutInit: LayoutInitService,
+    public appFacade: AppFacade) {
+  }
 
-  ngOnInit(): void {}
+  // placementDirectionBottomStart = this.appFacade.isLayoutDirectionRtl$ ? ''
+
+
+  ngOnInit(): void { }
 
   calculateMenuItemCssClass(url: string): string {
     return checkIsActive(this.router.url, url) ? 'active' : '';
@@ -23,7 +29,7 @@ export class HeaderMenuComponent implements OnInit {
   }
 
   setToolbar(toolbarLayout: 'classic' | 'accounting' | 'extended' | 'reports' | 'saas') {
-    const currentConfig = {...this.layout.layoutConfigSubject.value};
+    const currentConfig = { ...this.layout.layoutConfigSubject.value };
     if (currentConfig && currentConfig.app && currentConfig.app.toolbar) {
       currentConfig.app.toolbar.layout = toolbarLayout;
       this.layout.saveBaseConfig(currentConfig)

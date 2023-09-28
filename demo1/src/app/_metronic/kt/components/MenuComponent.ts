@@ -1,4 +1,4 @@
-import {createPopper, VirtualElement} from '@popperjs/core'
+import { createPopper, VirtualElement } from '@popperjs/core'
 import {
   getElementChild,
   getElementParents,
@@ -605,7 +605,7 @@ class MenuComponent {
   }
 
   // TODO: not done
-  private _destroy = () => {}
+  private _destroy = () => { }
 
   // Update all item state classes if item sub type changed
   private _update = () => {
@@ -1087,4 +1087,4 @@ class MenuComponent {
   }
 }
 
-export {MenuComponent, defaultMenuOptions}
+export { MenuComponent, defaultMenuOptions }

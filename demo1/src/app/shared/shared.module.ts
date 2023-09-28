@@ -1,15 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ReplaceKtMenuPlacementDirectiveDirective } from './directives/replace-kt-menu-placement-directive.directive';
+import { MenuPlacementDirective } from './directives/menu-placement.directive';
 
 
 
 @NgModule({
   declarations: [
-    ReplaceKtMenuPlacementDirectiveDirective
+    MenuPlacementDirective
   ],
   imports: [
     CommonModule
+  ],
+  exports: [
+    MenuPlacementDirective
   ]
 })
 export class SharedModule { }

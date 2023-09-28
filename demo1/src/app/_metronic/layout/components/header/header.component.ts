@@ -4,6 +4,7 @@ import { Subscription } from 'rxjs';
 import { LayoutService } from '../../core/layout.service';
 import { MenuComponent } from '../../../kt/components';
 import { ILayout, LayoutType } from '../../core/configs/config';
+import { AppFacade } from 'src/app/core/store/app.facade';
 
 @Component({
   selector: 'app-header',
@@ -31,10 +32,11 @@ export class HeaderComponent implements OnInit, OnDestroy {
   appHeaderDefaultContent: string = '';
   appHeaderDefaulMenuDisplay: boolean;
   appPageTitleDisplay: boolean;
-
-  constructor(private layout: LayoutService, private router: Router) {
-    this.routingChanges();
+  data$;
+  constructor(private layout: LayoutService, private router: Router, private appStore: AppFacade) {
+    this.data$ = appStore.isLayoutDirectionRtl$;
   }
+
 
   updateProps(config: ILayout) {
     this.appHeaderDisplay = this.layout.getProp(

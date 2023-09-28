@@ -1,4 +1,4 @@
-import { NgModule, APP_INITIALIZER } from '@angular/core';
+import { NgModule, APP_INITIALIZER, isDevMode } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
@@ -13,6 +13,11 @@ import { AuthService } from './modules/auth/services/auth.service';
 import { environment } from 'src/environments/environment';
 // #fake-start#
 import { FakeAPIService } from './_fake/fake-api.service';
+import { StoreModule, provideState } from '@ngrx/store';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { CoreModule } from './core/core.module';
+import { MenuPlacementDirective } from './shared/directives/menu-placement.directive';
+import { SharedModule } from './shared/shared.module';
 // #fake-end#
 
 function appInitializer(authService: AuthService) {
@@ -35,14 +40,18 @@ function appInitializer(authService: AuthService) {
     // #fake-start#
     environment.isMockEnabled
       ? HttpClientInMemoryWebApiModule.forRoot(FakeAPIService, {
-          passThruUnknownUrl: true,
-          dataEncapsulation: false,
-        })
+        passThruUnknownUrl: true,
+        dataEncapsulation: false,
+      })
       : [],
     // #fake-end#
     AppRoutingModule,
     InlineSVGModule.forRoot(),
     NgbModule,
+    StoreModule.forRoot({}, {}),
+    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() }),
+    CoreModule,
+    SharedModule
   ],
   providers: [
     {
@@ -54,4 +63,4 @@ function appInitializer(authService: AuthService) {
   ],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }

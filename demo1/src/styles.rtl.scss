@@ -1,0 +1,55 @@
+/* You can add global styles to this file, and also import other style files */
+// @import "./assets/sass/style.scss"; comment
+// Replace above style with this css file to enable RTL styles
+// @import "./assets/css/style.rtl";
+// @import "./assets/sass/plugins.scss"; //comment
+@import "./assets/css/style.rtl.css";
+@import "./assets/sass/style.angular.scss";
+
+// Keenicons - High quality and pixel perfect font icons available in 3 styles, duotone, outline and solid for Metronic elements
+@import "./assets/plugins/keenicons/duotone/style.css";
+@import "./assets/plugins/keenicons/outline/style.css";
+@import "./assets/plugins/keenicons/solid/style.css";
+
+// rtl fixture
+.navbar-item__app-user--rtl-fixture {
+  // reset unwanted styles
+  transform: initial !important;
+
+  //main style
+  position: absolute !important;
+  margin-right: calc(100% - 302px) !important;
+  margin-top: 60px !important;
+}
+.navbar-item__them-picker--rtl-fixture {
+  // reset unwanted styles
+  transform: initial !important;
+
+  position: absolute !important;
+  margin-right: calc(100% - 250px) !important;
+  margin-top: 60px !important;
+}
+.navbar-item__quick-link--rtl-fixture {
+  // reset unwanted styles
+  transform: initial !important;
+
+  position: absolute !important;
+  margin-right: calc(100% - 451.5px) !important;
+  margin-top: 60px !important;
+}
+.navbar-item-notification-inner--rtl-fixtur {
+  // reset unwanted styles
+  transform: initial !important;
+
+  position: absolute !important;
+  margin-right: calc(100% - 604px) !important;
+  margin-top: 60px !important;
+}
+.navbar-item-search-result-inner--rtl-fixture {
+  // reset unwanted styles
+  transform: initial !important;
+
+  position: absolute !important;
+  margin-right: calc(100% - 695.5px) !important;
+  margin-top: 60px !important;
+}

@@ -1,8 +1,10 @@
+import { LangUtil } from './../../core/utils/lang.util';
 // Localization is based on '@ngx-translate/core';
 // Please be familiar with official documentations first => https://github.com/ngx-translate/core
 
 import { Injectable } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
+import { AppFacade } from 'src/app/core/store/app.facade';
 
 export interface Locale {
   lang: string;
@@ -18,7 +20,7 @@ export class TranslationService {
   // Private properties
   private langIds: any = [];
 
-  constructor(private translate: TranslateService) {
+  constructor(private translate: TranslateService, private appFacade: AppFacade) {
     // add new langIds to the list
     this.translate.addLangs(['en']);
 
@@ -42,17 +44,24 @@ export class TranslationService {
   }
 
   setLanguage(lang: string) {
-    if (lang) {
-      this.translate.use(this.translate.getDefaultLang());
-      this.translate.use(lang);
-      localStorage.setItem(LOCALIZATION_LOCAL_STORAGE_KEY, lang);
-    }
+    // if (lang) {
+    this.translate.use(this.translate.getDefaultLang());
+    this.translate.use(lang);
+    const needToChangeLayout = LangUtil.isRtlLang(this.getSelectedLanguage()) != LangUtil.isRtlLang(lang);
+    localStorage.setItem(LOCALIZATION_LOCAL_STORAGE_KEY, lang);
+    // make layout rtl or ltr
+    debugger;
+    this.appFacade.setLayoutDirection(LangUtil.isRtlLang(lang));
+    console.log("what")
+    // }
   }
 
   /**
    * Returns selected language
+   *
+   * @return string as **lang**
    */
-  getSelectedLanguage(): any {
+  getSelectedLanguage(): string {
     return (
       localStorage.getItem(LOCALIZATION_LOCAL_STORAGE_KEY) ||
       this.translate.getDefaultLang()
