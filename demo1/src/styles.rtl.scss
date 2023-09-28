@@ -11,6 +11,23 @@
 @import "./assets/plugins/keenicons/outline/style.css";
 @import "./assets/plugins/keenicons/solid/style.css";
 
+//#region font installation
+@import "./assets/fonts/iranYekan/installer.scss";
+@import "./assets/fonts/iranSansNumric/installer.scss";
+:root {
+  --default-font-family: var(--IRANSans);
+}
+%text {
+  font-family: var(--default-font-family);
+  direction: rtl;
+  transition: 0.214s ease-in-out all;
+}
+htm,
+body {
+  @extend %text;
+}
+//#endregion
+
 // rtl fixture
 .navbar-item__app-user--rtl-fixture {
   // reset unwanted styles
