@@ -8,6 +8,8 @@ import {
 } from '@angular/core';
 import * as ApexCharts from 'apexcharts';
 import { getCSSVariableValue } from '../../../../../../kt/_utils';
+import { TranslationService } from 'src/app/modules/i18n';
+import { AppFacade } from 'src/app/core/store/app.facade';
 
 @Component({
   selector: 'app-new-charts-widget8',
@@ -26,25 +28,28 @@ export class NewChartsWidget8Component implements OnInit {
   chart2Options: any = {};
   hadDelay: boolean = false;
 
-  constructor(private cdr: ChangeDetectorRef) {}
+  constructor(private cdr: ChangeDetectorRef, private translationService: TranslationService,private appFacade: AppFacade) {}
 
   ngOnInit(): void {
-    this.setupCharts();
+    this.appFacade.isLayoutDirectionRtl$.subscribe(()=>{
+      this.setupCharts();
+    })
+
   }
 
   init() {
-    this.chart1Options = getChart1Options(this.chartHeightNumber);
-    this.chart2Options = getChart2Options(this.chartHeightNumber);
+    this.chart1Options = this.getChart1Options(this.chartHeightNumber);
+    this.chart2Options = this.getChart2Options(this.chartHeightNumber);
   }
 
   setTab(_tab: 'Week' | 'Month') {
     this.tab = _tab;
     if (_tab === 'Week') {
-      this.chart2Options = getChart2Options(this.chartHeightNumber);
+      this.chart2Options = this.getChart2Options(this.chartHeightNumber);
     }
 
     if (_tab === 'Month') {
-      this.chart1Options = getChart1Options(this.chartHeightNumber);
+      this.chart1Options = this.getChart1Options(this.chartHeightNumber);
     }
 
     this.setupCharts();
@@ -57,302 +62,458 @@ export class NewChartsWidget8Component implements OnInit {
       this.cdr.detectChanges();
     }, 100);
   }
-}
 
-function getChart1Options(chartHeightNumber: number) {
-  const data = [
-    [[100, 250, 30]],
-    [[225, 300, 35]],
-    [[300, 350, 25]],
-    [[350, 350, 20]],
-    [[450, 400, 25]],
-    [[550, 350, 35]],
-  ];
-  const height = chartHeightNumber;
-  const borderColor = getCSSVariableValue('--bs-border-dashed-color');
+  getChart1Options(chartHeightNumber: number) {
+    const data = [
+      [[100, 250, 30]],
+      [[225, 300, 35]],
+      [[300, 350, 25]],
+      [[350, 350, 20]],
+      [[450, 400, 25]],
+      [[550, 350, 35]],
+    ];
+    const height = chartHeightNumber;
+    const borderColor = getCSSVariableValue('--bs-border-dashed-color');
 
-  const options = {
-    series: [
-      {
-        name: 'Social Campaigns',
-        data: data[0], // array value is of the format [x, y, z] where x (timestamp) and y are the two axes coordinates,
-      },
-      {
-        name: 'Email Newsletter',
-        data: data[1],
-      },
-      {
-        name: 'TV Campaign',
-        data: data[2],
-      },
-      {
-        name: 'Google Ads',
-        data: data[3],
-      },
-      {
-        name: 'Courses',
-        data: data[4],
-      },
-      {
-        name: 'Radio',
-        data: data[5],
-      },
-    ],
-    chart: {
-      fontFamily: 'inherit',
-      type: 'bubble',
-      height: height,
-      toolbar: {
-        show: false,
-      },
-    },
-    plotOptions: {
-      bubble: {},
-    },
-    stroke: {
-      show: false,
-      width: 0,
-    },
-    legend: {
-      show: false,
-    },
-    dataLabels: {
-      enabled: false,
-    },
-    xaxis: {
-      type: 'numeric',
-      tickAmount: 7,
-      min: 0,
-      max: 700,
-      axisBorder: {
-        show: false,
-      },
-      axisTicks: {
-        show: true,
-        height: 0,
-      },
-      labels: {
-        show: true,
-        trim: true,
-        style: {
-          colors: getCSSVariableValue('--bs-gray-500'),
-          fontSize: '13px',
+    const options = {
+      series: [
+        {
+          name: 'Social Campaigns',
+          data: data[0], // array value is of the format [x, y, z] where x (timestamp) and y are the two axes coordinates,
+        },
+        {
+          name: 'Email Newsletter',
+          data: data[1],
+        },
+        {
+          name: 'TV Campaign',
+          data: data[2],
+        },
+        {
+          name: 'Google Ads',
+          data: data[3],
+        },
+        {
+          name: 'Courses',
+          data: data[4],
+        },
+        {
+          name: 'Radio',
+          data: data[5],
+        },
+      ],
+      chart: {
+        fontFamily: 'inherit',
+        type: 'bubble',
+        height: height,
+        toolbar: {
+          show: false,
         },
       },
-    },
-    yaxis: {
-      tickAmount: 7,
-      min: 0,
-      max: 700,
-      labels: {
-        style: {
-          colors: getCSSVariableValue('--bs-gray-500'),
-          fontSize: '13px',
-        },
+      plotOptions: {
+        bubble: {},
       },
-    },
-    tooltip: {
-      style: {
-        fontSize: '12px',
-      },
-      x: {
-        formatter: function (val: string) {
-          return 'Clicks: ' + val;
-        },
-      },
-      y: {
-        formatter: function (val: string) {
-          return '$' + val + 'K';
-        },
-      },
-      z: {
-        title: 'Impression: ',
-      },
-    },
-    crosshairs: {
-      show: true,
-      position: 'front',
       stroke: {
-        color: getCSSVariableValue('--bs-border-dashed-color'),
-        width: 1,
-        dashArray: 0,
+        show: false,
+        width: 0,
       },
-    },
-    colors: [
-      getCSSVariableValue('--bs-primary'),
-      getCSSVariableValue('--bs-success'),
-      getCSSVariableValue('--bs-warning'),
-      getCSSVariableValue('--bs-danger'),
-      getCSSVariableValue('--bs-info'),
-      '#43CED7',
-    ],
-    fill: {
-      opacity: 1,
-    },
-    markers: {
-      strokeWidth: 0,
-    },
-    grid: {
-      borderColor: borderColor,
-      strokeDashArray: 4,
-      padding: {
-        right: 20,
+      legend: {
+        show: false,
+      },
+      dataLabels: {
+        enabled: false,
+      },
+      xaxis: {
+        type: 'numeric',
+        tickAmount: 7,
+        min: 0,
+        max: 700,
+        axisBorder: {
+          show: false,
+        },
+        axisTicks: {
+          show: true,
+          height: 0,
+        },
+        labels: {
+          show: true,
+          trim: true,
+          style: {
+            colors: getCSSVariableValue('--bs-gray-500'),
+            fontSize: '13px',
+          },
+        },
       },
       yaxis: {
-        lines: {
-          show: true,
+        tickAmount: 7,
+        min: 0,
+        max: 700,
+        labels: {
+          style: {
+            colors: getCSSVariableValue('--bs-gray-500'),
+            fontSize: '13px',
+          },
         },
       },
-    },
-  };
-  return options;
-}
-
-function getChart2Options(chartHeightNumber: number) {
-  const data = [
-    [[125, 300, 40]],
-    [[250, 350, 35]],
-    [[350, 450, 30]],
-    [[450, 250, 25]],
-    [[500, 500, 30]],
-    [[600, 250, 28]],
-  ];
-  const height = chartHeightNumber;
-  const borderColor = getCSSVariableValue('--bs-border-dashed-color');
-
-  const options = {
-    series: [
+      tooltip:this.translationService.isCurrentLanguageRtl()?
       {
-        name: 'Social Campaigns',
-        data: data[0], // array value is of the format [x, y, z] where x (timestamp) and y are the two axes coordinates,
-      },
+        "style": {
+          "fontSize": "12px"
+        },
+        "x": {
+          "formatter": function (val: string) {
+            return 'کلیک‌ها: ' + val;
+          }
+        },
+        "y": {
+          "formatter": function (val: string) {
+            return '$' + val + 'K';
+          }
+        },
+        "z": {
+          "title": "تاثیر: "
+        }
+      }:
       {
-        name: 'Email Newsletter',
-        data: data[1],
-      },
-      {
-        name: 'TV Campaign',
-        data: data[2],
-      },
-      {
-        name: 'Google Ads',
-        data: data[3],
-      },
-      {
-        name: 'Courses',
-        data: data[4],
-      },
-      {
-        name: 'Radio',
-        data: data[5],
-      },
-    ],
-    chart: {
-      fontFamily: 'inherit',
-      type: 'bubble',
-      height: height,
-      toolbar: {
-        show: false,
-      },
-    },
-    plotOptions: {
-      bubble: {},
-    },
-    stroke: {
-      show: false,
-      width: 0,
-    },
-    legend: {
-      show: false,
-    },
-    dataLabels: {
-      enabled: false,
-    },
-    xaxis: {
-      type: 'numeric',
-      tickAmount: 7,
-      min: 0,
-      max: 700,
-      axisBorder: {
-        show: false,
-      },
-      axisTicks: {
-        show: true,
-        height: 0,
-      },
-      labels: {
-        show: true,
-        trim: true,
         style: {
-          colors: getCSSVariableValue('--bs-gray-500'),
-          fontSize: '13px',
+          fontSize: '12px',
+        },
+        x: {
+          formatter: function (val: string) {
+            return 'Clicks: ' + val;
+          },
+        },
+        y: {
+          formatter: function (val: string) {
+            return '$' + val + 'K';
+          },
+        },
+        z: {
+          title: 'Impression: ',
         },
       },
-    },
-    yaxis: {
-      tickAmount: 7,
-      min: 0,
-      max: 700,
-      labels: {
-        style: {
-          colors: getCSSVariableValue('--bs-gray-500'),
-          fontSize: '13px',
+      crosshairs: {
+        show: true,
+        position: 'front',
+        stroke: {
+          color: getCSSVariableValue('--bs-border-dashed-color'),
+          width: 1,
+          dashArray: 0,
         },
       },
-    },
-    tooltip: {
-      style: {
-        fontSize: '12px',
+      colors: [
+        getCSSVariableValue('--bs-primary'),
+        getCSSVariableValue('--bs-success'),
+        getCSSVariableValue('--bs-warning'),
+        getCSSVariableValue('--bs-danger'),
+        getCSSVariableValue('--bs-info'),
+        '#43CED7',
+      ],
+      fill: {
+        opacity: 1,
       },
-      x: {
-        formatter: function (val: string) {
-          return 'Clicks: ' + val;
+      markers: {
+        strokeWidth: 0,
+      },
+      grid: {
+        borderColor: borderColor,
+        strokeDashArray: 4,
+        padding: {
+          right: 20,
+        },
+        yaxis: {
+          lines: {
+            show: true,
+          },
         },
       },
-      y: {
-        formatter: function (val: string) {
-          return '$' + val + 'K';
+    };
+    return options;
+  }
+   getChart2Options(chartHeightNumber: number) {
+    const data = [
+      [[125, 300, 40]],
+      [[250, 350, 35]],
+      [[350, 450, 30]],
+      [[450, 250, 25]],
+      [[500, 500, 30]],
+      [[600, 250, 28]],
+    ];
+    const height = chartHeightNumber;
+    const borderColor = getCSSVariableValue('--bs-border-dashed-color');
+
+    const options =
+    this.translationService.isCurrentLanguageRtl() ?
+    {
+      series: [
+        {
+          name: 'کمپین‌های اجتماعی',
+          data: data[0],
+        },
+        {
+          name: 'نامه‌نامه ایمیل',
+          data: data[1],
+        },
+        {
+          name: 'کمپین تلویزیونی',
+          data: data[2],
+        },
+        {
+          name: 'تبلیغات گوگل',
+          data: data[3],
+        },
+        {
+          name: 'دوره‌ها',
+          data: data[4],
+        },
+        {
+          name: 'رادیو',
+          data: data[5],
+        },
+      ],
+      chart: {
+        fontFamily: 'inherit',
+        type: 'bubble',
+        height: height,
+        toolbar: {
+          show: false,
         },
       },
-      z: {
-        title: 'Impression: ',
+      plotOptions: {
+        bubble: {},
       },
-    },
-    crosshairs: {
-      show: true,
-      position: 'front',
       stroke: {
-        color: getCSSVariableValue('--bs-border-dashed-color'),
-        width: 1,
-        dashArray: 0,
+        show: false,
+        width: 0,
       },
-    },
-    colors: [
-      getCSSVariableValue('--bs-primary'),
-      getCSSVariableValue('--bs-success'),
-      getCSSVariableValue('--bs-warning'),
-      getCSSVariableValue('--bs-danger'),
-      getCSSVariableValue('--bs-info'),
-      '#43CED7',
-    ],
-    fill: {
-      opacity: 1,
-    },
-    markers: {
-      strokeWidth: 0,
-    },
-    grid: {
-      borderColor: borderColor,
-      strokeDashArray: 4,
-      padding: {
-        right: 20,
+      legend: {
+        show: false,
+      },
+      dataLabels: {
+        enabled: false,
+      },
+      xaxis: {
+        type: 'numeric',
+        tickAmount: 7,
+        min: 0,
+        max: 700,
+        axisBorder: {
+          show: false,
+        },
+        axisTicks: {
+          show: true,
+          height: 0,
+        },
+        labels: {
+          show: true,
+          trim: true,
+          style: {
+            colors: getCSSVariableValue('--bs-gray-500'),
+            fontSize: '13px',
+          },
+        },
       },
       yaxis: {
-        lines: {
-          show: true,
+        tickAmount: 7,
+        min: 0,
+        max: 700,
+        labels: {
+          style: {
+            colors: getCSSVariableValue('--bs-gray-500'),
+            fontSize: '13px',
+          },
         },
       },
-    },
-  };
-  return options;
+      tooltip: {
+        style: {
+          fontSize: '12px',
+        },
+        x: {
+          formatter: function (val: string) {
+            return 'کلیک‌ها: ' + val;
+          },
+        },
+        y: {
+          formatter: function (val: string) {
+            return '$' + val + 'K';
+          },
+        },
+        z: {
+          title: 'تعداد نمایش: ',
+        },
+      },
+      crosshairs: {
+        show: true,
+        position: 'front',
+        stroke: {
+          color: getCSSVariableValue('--bs-border-dashed-color'),
+          width: 1,
+          dashArray: 0,
+        },
+      },
+      colors: [
+        getCSSVariableValue('--bs-primary'),
+        getCSSVariableValue('--bs-success'),
+        getCSSVariableValue('--bs-warning'),
+        getCSSVariableValue('--bs-danger'),
+        getCSSVariableValue('--bs-info'),
+        '#43CED7',
+      ],
+      fill: {
+        opacity: 1,
+      },
+      markers: {
+        strokeWidth: 0,
+      },
+      grid: {
+        borderColor: borderColor,
+        strokeDashArray: 4,
+        padding: {
+          right: 20,
+        },
+        yaxis: {
+          lines: {
+            show: true,
+          },
+        },
+      },
+    }
+    :
+     {
+      series: [
+        {
+          name: 'Social Campaigns',
+          data: data[0], // array value is of the format [x, y, z] where x (timestamp) and y are the two axes coordinates,
+        },
+        {
+          name: 'Email Newsletter',
+          data: data[1],
+        },
+        {
+          name: 'TV Campaign',
+          data: data[2],
+        },
+        {
+          name: 'Google Ads',
+          data: data[3],
+        },
+        {
+          name: 'Courses',
+          data: data[4],
+        },
+        {
+          name: 'Radio',
+          data: data[5],
+        },
+      ],
+      chart: {
+        fontFamily: 'inherit',
+        type: 'bubble',
+        height: height,
+        toolbar: {
+          show: false,
+        },
+      },
+      plotOptions: {
+        bubble: {},
+      },
+      stroke: {
+        show: false,
+        width: 0,
+      },
+      legend: {
+        show: false,
+      },
+      dataLabels: {
+        enabled: false,
+      },
+      xaxis: {
+        type: 'numeric',
+        tickAmount: 7,
+        min: 0,
+        max: 700,
+        axisBorder: {
+          show: false,
+        },
+        axisTicks: {
+          show: true,
+          height: 0,
+        },
+        labels: {
+          show: true,
+          trim: true,
+          style: {
+            colors: getCSSVariableValue('--bs-gray-500'),
+            fontSize: '13px',
+          },
+        },
+      },
+      yaxis: {
+        tickAmount: 7,
+        min: 0,
+        max: 700,
+        labels: {
+          style: {
+            colors: getCSSVariableValue('--bs-gray-500'),
+            fontSize: '13px',
+          },
+        },
+      },
+      tooltip: {
+        style: {
+          fontSize: '12px',
+        },
+        x: {
+          formatter: function (val: string) {
+            return 'Clicks: ' + val;
+          },
+        },
+        y: {
+          formatter: function (val: string) {
+            return '$' + val + 'K';
+          },
+        },
+        z: {
+          title: 'Impression: ',
+        },
+      },
+      crosshairs: {
+        show: true,
+        position: 'front',
+        stroke: {
+          color: getCSSVariableValue('--bs-border-dashed-color'),
+          width: 1,
+          dashArray: 0,
+        },
+      },
+      colors: [
+        getCSSVariableValue('--bs-primary'),
+        getCSSVariableValue('--bs-success'),
+        getCSSVariableValue('--bs-warning'),
+        getCSSVariableValue('--bs-danger'),
+        getCSSVariableValue('--bs-info'),
+        '#43CED7',
+      ],
+      fill: {
+        opacity: 1,
+      },
+      markers: {
+        strokeWidth: 0,
+      },
+      grid: {
+        borderColor: borderColor,
+        strokeDashArray: 4,
+        padding: {
+          right: 20,
+        },
+        yaxis: {
+          lines: {
+            show: true,
+          },
+        },
+      },
+    };
+    return options;
+  }
 }
+

@@ -2,7 +2,9 @@
   <!--begin::Header-->
   <div class="card-header pt-5">
     <!--begin::Title-->
-    <h3 class="card-title text-gray-800 fw-bold">External Links</h3>
+    <h3 class="card-title text-gray-800 fw-bold">
+      {{ 'external links' | translate }}
+    </h3>
     <!--end::Title-->
 
     <!--begin::Toolbar-->
@@ -25,18 +27,22 @@
       <!--begin::Item-->
       <div class="d-flex flex-stack">
         <!--begin::Section-->
-        <a href="#" class="text-primary fw-semibold fs-6 me-2">{{row.description}}</a>
+        <a href="#" class="text-primary fw-semibold fs-6 me-2">
+          {{ row.description }}
+        </a>
         <!--end::Section-->
         <!--begin::Action-->
-        <button type="button"
-                class="btn btn-icon btn-sm h-auto btn-color-gray-400 btn-active-color-primary justify-content-end">
+        <button
+          type="button"
+          class="btn btn-icon btn-sm h-auto btn-color-gray-400 btn-active-color-primary justify-content-end"
+        >
           <app-keenicon name="arr095.svg" class="fs-2"></app-keenicon>
         </button>
         <!--end::Action-->
       </div>
       <!--end::Item-->
 
-      <ng-container *ngIf="i < (rows.length - 1)">
+      <ng-container *ngIf="i < rows.length - 1">
         <!--begin::Separator-->
         <div class="separator separator-dashed my-3"></div>
         <!--end::Separator-->

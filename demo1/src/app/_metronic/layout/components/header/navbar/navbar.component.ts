@@ -7,7 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
   @Input() appHeaderDefaulMenuDisplay: boolean;
-  @Input() isRtl: boolean;
+  @Input() isRtl: boolean =  false;
 
   itemClass: string = 'ms-1 ms-lg-3';
   btnClass: string = 'btn btn-icon btn-custom btn-icon-muted btn-active-light btn-active-color-primary w-35px h-35px w-md-40px h-md-40px';

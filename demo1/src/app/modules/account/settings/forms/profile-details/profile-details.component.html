@@ -8,14 +8,16 @@
     aria-controls="kt_account_profile_details"
   >
     <div class="card-title m-0">
-      <h3 class="fw-bolder m-0">Profile Details</h3>
+      <h3 class="fw-bolder m-0">{{ 'profile details' | translate }}</h3>
     </div>
   </div>
   <div id="kt_account_profile_details" class="collapse show">
     <form novalidate="" class="form">
       <div class="card-body border-top p-9">
         <div class="row mb-6">
-          <label class="col-lg-4 col-form-label fw-bold fs-6">Avatar</label>
+          <label class="col-lg-4 col-form-label fw-bold fs-6">
+            {{ 'avatar' | translate }}
+          </label>
           <div class="col-lg-8">
             <div
               class="image-input image-input-outline"
@@ -32,18 +34,15 @@
           </div>
         </div>
         <div class="row mb-6">
-          <label class="col-lg-4 col-form-label required fw-bold fs-6"
-            >Full Name</label
-          >
+          <label class="col-lg-4 col-form-label required fw-bold fs-6">
+            {{ 'full name' | translate }}
+          </label>
           <div class="col-lg-8">
             <div class="row">
               <div class="col-lg-6 fv-row">
                 <input
                   type="text"
-                  class="
-                    form-control form-control-lg form-control-solid
-                    mb-3 mb-lg-0
-                  "
+                  class="form-control form-control-lg form-control-solid mb-3 mb-lg-0"
                   placeholder="First name"
                   name="fName"
                   value="Max"
@@ -62,9 +61,9 @@
           </div>
         </div>
         <div class="row mb-6">
-          <label class="col-lg-4 col-form-label required fw-bold fs-6"
-            >Company</label
-          >
+          <label class="col-lg-4 col-form-label required fw-bold fs-6">
+            {{ 'company' | translate }}
+          </label>
           <div class="col-lg-8 fv-row">
             <input
               type="text"
@@ -76,9 +75,9 @@
           </div>
         </div>
         <div class="row mb-6">
-          <label class="col-lg-4 col-form-label fw-bold fs-6"
-            ><span class="required">Contact Phone</span></label
-          >
+          <label class="col-lg-4 col-form-label fw-bold fs-6">
+            <span class="required">{{ 'contact phone' | translate }}</span>
+          </label>
           <div class="col-lg-8 fv-row">
             <input
               type="tel"
@@ -90,9 +89,9 @@
           </div>
         </div>
         <div class="row mb-6">
-          <label class="col-lg-4 col-form-label fw-bold fs-6"
-            ><span class="required">Company Site</span></label
-          >
+          <label class="col-lg-4 col-form-label fw-bold fs-6">
+            <span class="required">{{ 'company site' | translate }}</span>
+          </label>
           <div class="col-lg-8 fv-row">
             <input
               type="text"
@@ -104,268 +103,324 @@
           </div>
         </div>
         <div class="row mb-6">
-          <label class="col-lg-4 col-form-label fw-bold fs-6"
-            ><span class="required">Country</span></label
-          >
+          <label class="col-lg-4 col-form-label fw-bold fs-6">
+            <span class="required">{{ 'country' | translate }}</span>
+          </label>
           <div class="col-lg-8 fv-row">
             <select
               class="form-select form-select-solid form-select-lg fw-bold"
               name="country"
             >
-              <option value="">Select a Country...</option>
-              <option value="AF">Afghanistan</option>
-              <option value="AX">Aland Islands</option>
-              <option value="AL">Albania</option>
-              <option value="DZ">Algeria</option>
-              <option value="AS">American Samoa</option>
-              <option value="AD">Andorra</option>
-              <option value="AO">Angola</option>
-              <option value="AI">Anguilla</option>
-              <option value="AQ">Antarctica</option>
-              <option value="AG">Antigua and Barbuda</option>
-              <option value="AR">Argentina</option>
-              <option value="AM">Armenia</option>
-              <option value="AW">Aruba</option>
-              <option value="AU">Australia</option>
-              <option value="AT">Austria</option>
-              <option value="AZ">Azerbaijan</option>
-              <option value="BS">Bahamas</option>
-              <option value="BH">Bahrain</option>
-              <option value="BD">Bangladesh</option>
-              <option value="BB">Barbados</option>
-              <option value="BY">Belarus</option>
-              <option value="BE">Belgium</option>
-              <option value="BZ">Belize</option>
-              <option value="BJ">Benin</option>
-              <option value="BM">Bermuda</option>
-              <option value="BT">Bhutan</option>
-              <option value="BO">Bolivia, Plurinational State of</option>
-              <option value="BQ">Bonaire, Sint Eustatius and Saba</option>
-              <option value="BA">Bosnia and Herzegovina</option>
-              <option value="BW">Botswana</option>
-              <option value="BV">Bouvet Island</option>
-              <option value="BR">Brazil</option>
-              <option value="IO">British Indian Ocean Territory</option>
-              <option value="BN">Brunei Darussalam</option>
-              <option value="BG">Bulgaria</option>
-              <option value="BF">Burkina Faso</option>
-              <option value="BI">Burundi</option>
-              <option value="KH">Cambodia</option>
-              <option value="CM">Cameroon</option>
-              <option value="CA">Canada</option>
-              <option value="CV">Cape Verde</option>
-              <option value="KY">Cayman Islands</option>
-              <option value="CF">Central African Republic</option>
-              <option value="TD">Chad</option>
-              <option value="CL">Chile</option>
-              <option value="CN">China</option>
-              <option value="CX">Christmas Island</option>
+              <option value="">{{ 'Select a Country...' | translate }}</option>
+              <option value="AF">{{ 'afghanistan' | translate }}</option>
+              <option value="AX">{{ 'aland islands' | translate }}</option>
+              <option value="AL">{{ 'albania' | translate }}</option>
+              <option value="DZ">{{ 'algeria' | translate }}</option>
+              <option value="AS">{{ 'american samoa' | translate }}</option>
+              <option value="AD">{{ 'andorra' | translate }}</option>
+              <option value="AO">{{ 'angola' | translate }}</option>
+              <option value="AI">{{ 'anguilla' | translate }}</option>
+              <option value="AQ">{{ 'antarctica' | translate }}</option>
+              <option value="AG">
+                {{ 'antigua and barbuda' | translate }}
+              </option>
+              <option value="AR">{{ 'argentina' | translate }}</option>
+              <option value="AM">{{ 'armenia' | translate }}</option>
+              <option value="AW">{{ 'aruba' | translate }}</option>
+              <option value="AU">{{ 'australia' | translate }}</option>
+              <option value="AT">{{ 'austria' | translate }}</option>
+              <option value="AZ">{{ 'azerbaijan' | translate }}</option>
+              <option value="BS">{{ 'bahamas' | translate }}</option>
+              <option value="BH">{{ 'bahrain' | translate }}</option>
+              <option value="BD">{{ 'bangladesh' | translate }}</option>
+              <option value="BB">{{ 'barbados' | translate }}</option>
+              <option value="BY">{{ 'belarus' | translate }}</option>
+              <option value="BE">{{ 'belgium' | translate }}</option>
+              <option value="BZ">{{ 'belize' | translate }}</option>
+              <option value="BJ">{{ 'benin' | translate }}</option>
+              <option value="BM">{{ 'bermuda' | translate }}</option>
+              <option value="BT">{{ 'bhutan' | translate }}</option>
+              <option value="BO">
+                {{ 'Bolivia, Plurinational State of' | translate }}
+              </option>
+              <option value="BQ">
+                {{ 'Bonaire, Sint Eustatius and Saba' | translate }}
+              </option>
+              <option value="BA">
+                {{ 'bosnia and herzegovina' | translate }}
+              </option>
+              <option value="BW">{{ 'botswana' | translate }}</option>
+              <option value="BV">{{ 'bouvet island' | translate }}</option>
+              <option value="BR">{{ 'brazil' | translate }}</option>
+              <option value="IO">
+                {{ 'british indian ocean territory' | translate }}
+              </option>
+              <option value="BN">{{ 'brunei darussalam' | translate }}</option>
+              <option value="BG">{{ 'bulgaria' | translate }}</option>
+              <option value="BF">{{ 'burkina faso' | translate }}</option>
+              <option value="BI">{{ 'burundi' | translate }}</option>
+              <option value="KH">{{ 'cambodia' | translate }}</option>
+              <option value="CM">{{ 'cameroon' | translate }}</option>
+              <option value="CA">{{ 'canada' | translate }}</option>
+              <option value="CV">{{ 'cape verde' | translate }}</option>
+              <option value="KY">{{ 'cayman islands' | translate }}</option>
+              <option value="CF">
+                {{ 'central african republic' | translate }}
+              </option>
+              <option value="TD">{{ 'chad' | translate }}</option>
+              <option value="CL">{{ 'chile' | translate }}</option>
+              <option value="CN">{{ 'china' | translate }}</option>
+              <option value="CX">{{ 'christmas island' | translate }}</option>
               <option value="CC">Cocos (Keeling) Islands</option>
-              <option value="CO">Colombia</option>
-              <option value="KM">Comoros</option>
-              <option value="CG">Congo</option>
-              <option value="CD">Congo, the Democratic Republic of the</option>
-              <option value="CK">Cook Islands</option>
-              <option value="CR">Costa Rica</option>
-              <option value="CI">Côte d'Ivoire</option>
-              <option value="HR">Croatia</option>
-              <option value="CU">Cuba</option>
-              <option value="CW">Curaçao</option>
-              <option value="CY">Cyprus</option>
-              <option value="CZ">Czech Republic</option>
-              <option value="DK">Denmark</option>
-              <option value="DJ">Djibouti</option>
-              <option value="DM">Dominica</option>
-              <option value="DO">Dominican Republic</option>
-              <option value="EC">Ecuador</option>
-              <option value="EG">Egypt</option>
-              <option value="SV">El Salvador</option>
-              <option value="GQ">Equatorial Guinea</option>
-              <option value="ER">Eritrea</option>
-              <option value="EE">Estonia</option>
-              <option value="ET">Ethiopia</option>
+              <option value="CO">{{ 'colombia' | translate }}</option>
+              <option value="KM">{{ 'comoros' | translate }}</option>
+              <option value="CG">{{ 'congo' | translate }}</option>
+              <option value="CD">
+                {{ 'Congo, the Democratic Republic of the' | translate }}
+              </option>
+              <option value="CK">{{ 'cook islands' | translate }}</option>
+              <option value="CR">{{ 'costa rica' | translate }}</option>
+              <option value="CI">{{'Côte d'Ivoire' | translate}}</option>
+              <option value="HR">{{ 'croatia' | translate }}</option>
+              <option value="CU">{{ 'cuba' | translate }}</option>
+              <option value="CW">{{ 'Curaçao' | translate }}</option>
+              <option value="CY">{{ 'cyprus' | translate }}</option>
+              <option value="CZ">{{ 'czech republic' | translate }}</option>
+              <option value="DK">{{ 'denmark' | translate }}</option>
+              <option value="DJ">{{ 'djibouti' | translate }}</option>
+              <option value="DM">{{ 'dominica' | translate }}</option>
+              <option value="DO">{{ 'dominican republic' | translate }}</option>
+              <option value="EC">{{ 'ecuador' | translate }}</option>
+              <option value="EG">{{ 'egypt' | translate }}</option>
+              <option value="SV">{{ 'el salvador' | translate }}</option>
+              <option value="GQ">{{ 'equatorial guinea' | translate }}</option>
+              <option value="ER">{{ 'eritrea' | translate }}</option>
+              <option value="EE">{{ 'estonia' | translate }}</option>
+              <option value="ET">{{ 'ethiopia' | translate }}</option>
               <option value="FK">Falkland Islands (Malvinas)</option>
-              <option value="FO">Faroe Islands</option>
-              <option value="FJ">Fiji</option>
-              <option value="FI">Finland</option>
-              <option value="FR">France</option>
-              <option value="GF">French Guiana</option>
-              <option value="PF">French Polynesia</option>
-              <option value="TF">French Southern Territories</option>
-              <option value="GA">Gabon</option>
-              <option value="GM">Gambia</option>
-              <option value="GE">Georgia</option>
-              <option value="DE">Germany</option>
-              <option value="GH">Ghana</option>
-              <option value="GI">Gibraltar</option>
-              <option value="GR">Greece</option>
-              <option value="GL">Greenland</option>
-              <option value="GD">Grenada</option>
-              <option value="GP">Guadeloupe</option>
-              <option value="GU">Guam</option>
-              <option value="GT">Guatemala</option>
-              <option value="GG">Guernsey</option>
-              <option value="GN">Guinea</option>
-              <option value="GW">Guinea-Bissau</option>
-              <option value="GY">Guyana</option>
-              <option value="HT">Haiti</option>
-              <option value="HM">Heard Island and McDonald Islands</option>
+              <option value="FO">{{ 'faroe islands' | translate }}</option>
+              <option value="FJ">{{ 'fiji' | translate }}</option>
+              <option value="FI">{{ 'finland' | translate }}</option>
+              <option value="FR">{{ 'france' | translate }}</option>
+              <option value="GF">{{ 'french guiana' | translate }}</option>
+              <option value="PF">{{ 'french polynesia' | translate }}</option>
+              <option value="TF">
+                {{ 'french southern territories' | translate }}
+              </option>
+              <option value="GA">{{ 'gabon' | translate }}</option>
+              <option value="GM">{{ 'gambia' | translate }}</option>
+              <option value="GE">{{ 'georgia' | translate }}</option>
+              <option value="DE">{{ 'germany' | translate }}</option>
+              <option value="GH">{{ 'ghana' | translate }}</option>
+              <option value="GI">{{ 'gibraltar' | translate }}</option>
+              <option value="GR">{{ 'greece' | translate }}</option>
+              <option value="GL">{{ 'greenland' | translate }}</option>
+              <option value="GD">{{ 'grenada' | translate }}</option>
+              <option value="GP">{{ 'guadeloupe' | translate }}</option>
+              <option value="GU">{{ 'guam' | translate }}</option>
+              <option value="GT">{{ 'guatemala' | translate }}</option>
+              <option value="GG">{{ 'guernsey' | translate }}</option>
+              <option value="GN">{{ 'guinea' | translate }}</option>
+              <option value="GW">{{ 'guinea-bissau' | translate }}</option>
+              <option value="GY">{{ 'guyana' | translate }}</option>
+              <option value="HT">{{ 'haiti' | translate }}</option>
+              <option value="HM">
+                {{ 'Heard Island and McDonald Islands' | translate }}
+              </option>
               <option value="VA">Holy See (Vatican City State)</option>
-              <option value="HN">Honduras</option>
-              <option value="HK">Hong Kong</option>
-              <option value="HU">Hungary</option>
-              <option value="IS">Iceland</option>
-              <option value="IN">India</option>
-              <option value="ID">Indonesia</option>
-              <option value="IR">Iran, Islamic Republic of</option>
-              <option value="IQ">Iraq</option>
-              <option value="IE">Ireland</option>
-              <option value="IM">Isle of Man</option>
-              <option value="IL">Israel</option>
-              <option value="IT">Italy</option>
-              <option value="JM">Jamaica</option>
-              <option value="JP">Japan</option>
-              <option value="JE">Jersey</option>
-              <option value="JO">Jordan</option>
-              <option value="KZ">Kazakhstan</option>
-              <option value="KE">Kenya</option>
-              <option value="KI">Kiribati</option>
-              <option value="KP">Korea, Democratic People's Republic of</option>
-              <option value="KW">Kuwait</option>
-              <option value="KG">Kyrgyzstan</option>
-              <option value="LA">Lao People's Democratic Republic</option>
-              <option value="LV">Latvia</option>
-              <option value="LB">Lebanon</option>
-              <option value="LS">Lesotho</option>
-              <option value="LR">Liberia</option>
-              <option value="LY">Libya</option>
-              <option value="LI">Liechtenstein</option>
-              <option value="LT">Lithuania</option>
-              <option value="LU">Luxembourg</option>
-              <option value="MO">Macao</option>
+              <option value="HN">{{ 'honduras' | translate }}</option>
+              <option value="HK">{{ 'hong kong' | translate }}</option>
+              <option value="HU">{{ 'hungary' | translate }}</option>
+              <option value="IS">{{ 'iceland' | translate }}</option>
+              <option value="IN">{{ 'india' | translate }}</option>
+              <option value="ID">{{ 'indonesia' | translate }}</option>
+              <option value="IR">
+                {{ 'Iran, Islamic Republic of' | translate }}
+              </option>
+              <option value="IQ">{{ 'iraq' | translate }}</option>
+              <option value="IE">{{ 'ireland' | translate }}</option>
+              <option value="IM">{{ 'isle of man' | translate }}</option>
+              <option value="IL">{{ 'israel' | translate }}</option>
+              <option value="IT">{{ 'italy' | translate }}</option>
+              <option value="JM">{{ 'jamaica' | translate }}</option>
+              <option value="JP">{{ 'japan' | translate }}</option>
+              <option value="JE">{{ 'jersey' | translate }}</option>
+              <option value="JO">{{ 'jordan' | translate }}</option>
+              <option value="KZ">{{ 'kazakhstan' | translate }}</option>
+              <option value="KE">{{ 'kenya' | translate }}</option>
+              <option value="KI">{{ 'kiribati' | translate }}</option>
+              <option value="KP">
+                {{'Korea, Democratic People's Republic of' | translate}}
+              </option>
+              <option value="KW">{{ 'kuwait' | translate }}</option>
+              <option value="KG">{{ 'kyrgyzstan' | translate }}</option>
+              <option value="LA">
+                {{'lao people's democratic republic' | translate}}
+              </option>
+              <option value="LV">{{ 'latvia' | translate }}</option>
+              <option value="LB">{{ 'lebanon' | translate }}</option>
+              <option value="LS">{{ 'lesotho' | translate }}</option>
+              <option value="LR">{{ 'liberia' | translate }}</option>
+              <option value="LY">{{ 'libya' | translate }}</option>
+              <option value="LI">{{ 'liechtenstein' | translate }}</option>
+              <option value="LT">{{ 'lithuania' | translate }}</option>
+              <option value="LU">{{ 'luxembourg' | translate }}</option>
+              <option value="MO">{{ 'macao' | translate }}</option>
               <option value="MK">
                 Macedonia, the former Yugoslav Republic of
               </option>
-              <option value="MG">Madagascar</option>
-              <option value="MW">Malawi</option>
-              <option value="MY">Malaysia</option>
-              <option value="MV">Maldives</option>
-              <option value="ML">Mali</option>
-              <option value="MT">Malta</option>
-              <option value="MH">Marshall Islands</option>
-              <option value="MQ">Martinique</option>
-              <option value="MR">Mauritania</option>
-              <option value="MU">Mauritius</option>
-              <option value="YT">Mayotte</option>
-              <option value="MX">Mexico</option>
-              <option value="FM">Micronesia, Federated States of</option>
-              <option value="MD">Moldova, Republic of</option>
-              <option value="MC">Monaco</option>
-              <option value="MN">Mongolia</option>
-              <option value="ME">Montenegro</option>
-              <option value="MS">Montserrat</option>
-              <option value="MA">Morocco</option>
-              <option value="MZ">Mozambique</option>
-              <option value="MM">Myanmar</option>
-              <option value="NA">Namibia</option>
-              <option value="NR">Nauru</option>
-              <option value="NP">Nepal</option>
-              <option value="NL">Netherlands</option>
-              <option value="NC">New Caledonia</option>
-              <option value="NZ">New Zealand</option>
-              <option value="NI">Nicaragua</option>
-              <option value="NE">Niger</option>
-              <option value="NG">Nigeria</option>
-              <option value="NU">Niue</option>
-              <option value="NF">Norfolk Island</option>
-              <option value="MP">Northern Mariana Islands</option>
-              <option value="NO">Norway</option>
-              <option value="OM">Oman</option>
-              <option value="PK">Pakistan</option>
-              <option value="PW">Palau</option>
-              <option value="PS">Palestinian Territory, Occupied</option>
-              <option value="PA">Panama</option>
-              <option value="PG">Papua New Guinea</option>
-              <option value="PY">Paraguay</option>
-              <option value="PE">Peru</option>
-              <option value="PH">Philippines</option>
-              <option value="PN">Pitcairn</option>
-              <option value="PL">Poland</option>
-              <option value="PT">Portugal</option>
-              <option value="PR">Puerto Rico</option>
-              <option value="QA">Qatar</option>
-              <option value="RE">Réunion</option>
-              <option value="RO">Romania</option>
-              <option value="RU">Russian Federation</option>
-              <option value="RW">Rwanda</option>
-              <option value="BL">Saint Barthélemy</option>
+              <option value="MG">{{ 'madagascar' | translate }}</option>
+              <option value="MW">{{ 'malawi' | translate }}</option>
+              <option value="MY">{{ 'malaysia' | translate }}</option>
+              <option value="MV">{{ 'maldives' | translate }}</option>
+              <option value="ML">{{ 'mali' | translate }}</option>
+              <option value="MT">{{ 'malta' | translate }}</option>
+              <option value="MH">{{ 'marshall islands' | translate }}</option>
+              <option value="MQ">{{ 'martinique' | translate }}</option>
+              <option value="MR">{{ 'mauritania' | translate }}</option>
+              <option value="MU">{{ 'mauritius' | translate }}</option>
+              <option value="YT">{{ 'mayotte' | translate }}</option>
+              <option value="MX">{{ 'mexico' | translate }}</option>
+              <option value="FM">
+                {{ 'Micronesia, Federated States of' | translate }}
+              </option>
+              <option value="MD">
+                {{ 'Moldova, Republic of' | translate }}
+              </option>
+              <option value="MC">{{ 'monaco' | translate }}</option>
+              <option value="MN">{{ 'mongolia' | translate }}</option>
+              <option value="ME">{{ 'montenegro' | translate }}</option>
+              <option value="MS">{{ 'montserrat' | translate }}</option>
+              <option value="MA">{{ 'morocco' | translate }}</option>
+              <option value="MZ">{{ 'mozambique' | translate }}</option>
+              <option value="MM">{{ 'myanmar' | translate }}</option>
+              <option value="NA">{{ 'namibia' | translate }}</option>
+              <option value="NR">{{ 'nauru' | translate }}</option>
+              <option value="NP">{{ 'nepal' | translate }}</option>
+              <option value="NL">{{ 'netherlands' | translate }}</option>
+              <option value="NC">{{ 'new caledonia' | translate }}</option>
+              <option value="NZ">{{ 'new zealand' | translate }}</option>
+              <option value="NI">{{ 'nicaragua' | translate }}</option>
+              <option value="NE">{{ 'niger' | translate }}</option>
+              <option value="NG">{{ 'nigeria' | translate }}</option>
+              <option value="NU">{{ 'niue' | translate }}</option>
+              <option value="NF">{{ 'norfolk island' | translate }}</option>
+              <option value="MP">
+                {{ 'northern mariana islands' | translate }}
+              </option>
+              <option value="NO">{{ 'norway' | translate }}</option>
+              <option value="OM">{{ 'oman' | translate }}</option>
+              <option value="PK">{{ 'pakistan' | translate }}</option>
+              <option value="PW">{{ 'palau' | translate }}</option>
+              <option value="PS">
+                {{ 'Palestinian Territory, Occupied' | translate }}
+              </option>
+              <option value="PA">{{ 'panama' | translate }}</option>
+              <option value="PG">{{ 'papua new guinea' | translate }}</option>
+              <option value="PY">{{ 'paraguay' | translate }}</option>
+              <option value="PE">{{ 'peru' | translate }}</option>
+              <option value="PH">{{ 'philippines' | translate }}</option>
+              <option value="PN">{{ 'pitcairn' | translate }}</option>
+              <option value="PL">{{ 'poland' | translate }}</option>
+              <option value="PT">{{ 'portugal' | translate }}</option>
+              <option value="PR">{{ 'puerto rico' | translate }}</option>
+              <option value="QA">{{ 'qatar' | translate }}</option>
+              <option value="RE">{{ 'Réunion' | translate }}</option>
+              <option value="RO">{{ 'romania' | translate }}</option>
+              <option value="RU">{{ 'russian federation' | translate }}</option>
+              <option value="RW">{{ 'rwanda' | translate }}</option>
+              <option value="BL">{{ 'Saint Barthélemy' | translate }}</option>
               <option value="SH">
                 Saint Helena, Ascension and Tristan da Cunha
               </option>
-              <option value="KN">Saint Kitts and Nevis</option>
-              <option value="LC">Saint Lucia</option>
+              <option value="KN">
+                {{ 'saint kitts and nevis' | translate }}
+              </option>
+              <option value="LC">{{ 'saint lucia' | translate }}</option>
               <option value="MF">Saint Martin (French part)</option>
-              <option value="PM">Saint Pierre and Miquelon</option>
-              <option value="VC">Saint Vincent and the Grenadines</option>
-              <option value="WS">Samoa</option>
-              <option value="SM">San Marino</option>
-              <option value="ST">Sao Tome and Principe</option>
-              <option value="SA">Saudi Arabia</option>
-              <option value="SN">Senegal</option>
-              <option value="RS">Serbia</option>
-              <option value="SC">Seychelles</option>
-              <option value="SL">Sierra Leone</option>
-              <option value="SG">Singapore</option>
+              <option value="PM">
+                {{ 'saint pierre and miquelon' | translate }}
+              </option>
+              <option value="VC">
+                {{ 'saint vincent and the grenadines' | translate }}
+              </option>
+              <option value="WS">{{ 'samoa' | translate }}</option>
+              <option value="SM">{{ 'san marino' | translate }}</option>
+              <option value="ST">
+                {{ 'sao tome and principe' | translate }}
+              </option>
+              <option value="SA">{{ 'saudi arabia' | translate }}</option>
+              <option value="SN">{{ 'senegal' | translate }}</option>
+              <option value="RS">{{ 'serbia' | translate }}</option>
+              <option value="SC">{{ 'seychelles' | translate }}</option>
+              <option value="SL">{{ 'sierra leone' | translate }}</option>
+              <option value="SG">{{ 'singapore' | translate }}</option>
               <option value="SX">Sint Maarten (Dutch part)</option>
-              <option value="SK">Slovakia</option>
-              <option value="SI">Slovenia</option>
-              <option value="SB">Solomon Islands</option>
-              <option value="SO">Somalia</option>
-              <option value="ZA">South Africa</option>
+              <option value="SK">{{ 'slovakia' | translate }}</option>
+              <option value="SI">{{ 'slovenia' | translate }}</option>
+              <option value="SB">{{ 'solomon islands' | translate }}</option>
+              <option value="SO">{{ 'somalia' | translate }}</option>
+              <option value="ZA">{{ 'south africa' | translate }}</option>
               <option value="GS">
                 South Georgia and the South Sandwich Islands
               </option>
-              <option value="KR">South Korea</option>
-              <option value="SS">South Sudan</option>
-              <option value="ES">Spain</option>
-              <option value="LK">Sri Lanka</option>
-              <option value="SD">Sudan</option>
-              <option value="SR">Suriname</option>
-              <option value="SJ">Svalbard and Jan Mayen</option>
-              <option value="SZ">Swaziland</option>
-              <option value="SE">Sweden</option>
-              <option value="CH">Switzerland</option>
-              <option value="SY">Syrian Arab Republic</option>
-              <option value="TW">Taiwan, Province of China</option>
-              <option value="TJ">Tajikistan</option>
-              <option value="TZ">Tanzania, United Republic of</option>
-              <option value="TH">Thailand</option>
-              <option value="TL">Timor-Leste</option>
-              <option value="TG">Togo</option>
-              <option value="TK">Tokelau</option>
-              <option value="TO">Tonga</option>
-              <option value="TT">Trinidad and Tobago</option>
-              <option value="TN">Tunisia</option>
-              <option value="TR">Turkey</option>
-              <option value="TM">Turkmenistan</option>
-              <option value="TC">Turks and Caicos Islands</option>
-              <option value="TV">Tuvalu</option>
-              <option value="UG">Uganda</option>
-              <option value="UA">Ukraine</option>
-              <option value="AE">United Arab Emirates</option>
-              <option value="GB">United Kingdom</option>
-              <option value="US">United States</option>
-              <option value="UY">Uruguay</option>
-              <option value="UZ">Uzbekistan</option>
-              <option value="VU">Vanuatu</option>
-              <option value="VE">Venezuela, Bolivarian Republic of</option>
-              <option value="VN">Vietnam</option>
-              <option value="VI">Virgin Islands</option>
-              <option value="WF">Wallis and Futuna</option>
-              <option value="EH">Western Sahara</option>
-              <option value="YE">Yemen</option>
-              <option value="ZM">Zambia</option>
-              <option value="ZW">Zimbabwe</option>
+              <option value="KR">{{ 'south korea' | translate }}</option>
+              <option value="SS">{{ 'south sudan' | translate }}</option>
+              <option value="ES">{{ 'spain' | translate }}</option>
+              <option value="LK">{{ 'sri lanka' | translate }}</option>
+              <option value="SD">{{ 'sudan' | translate }}</option>
+              <option value="SR">{{ 'suriname' | translate }}</option>
+              <option value="SJ">
+                {{ 'svalbard and jan mayen' | translate }}
+              </option>
+              <option value="SZ">{{ 'swaziland' | translate }}</option>
+              <option value="SE">{{ 'sweden' | translate }}</option>
+              <option value="CH">{{ 'switzerland' | translate }}</option>
+              <option value="SY">
+                {{ 'syrian arab republic' | translate }}
+              </option>
+              <option value="TW">
+                {{ 'Taiwan, Province of China' | translate }}
+              </option>
+              <option value="TJ">{{ 'tajikistan' | translate }}</option>
+              <option value="TZ">
+                {{ 'Tanzania, United Republic of' | translate }}
+              </option>
+              <option value="TH">{{ 'thailand' | translate }}</option>
+              <option value="TL">{{ 'Timor-Leste' | translate }}</option>
+              <option value="TG">{{ 'togo' | translate }}</option>
+              <option value="TK">{{ 'tokelau' | translate }}</option>
+              <option value="TO">{{ 'tonga' | translate }}</option>
+              <option value="TT">
+                {{ 'trinidad and tobago' | translate }}
+              </option>
+              <option value="TN">{{ 'tunisia' | translate }}</option>
+              <option value="TR">{{ 'turkey' | translate }}</option>
+              <option value="TM">{{ 'turkmenistan' | translate }}</option>
+              <option value="TC">
+                {{ 'turks and caicos islands' | translate }}
+              </option>
+              <option value="TV">{{ 'tuvalu' | translate }}</option>
+              <option value="UG">{{ 'uganda' | translate }}</option>
+              <option value="UA">{{ 'ukraine' | translate }}</option>
+              <option value="AE">
+                {{ 'united arab emirates' | translate }}
+              </option>
+              <option value="GB">{{ 'united kingdom' | translate }}</option>
+              <option value="US">{{ 'united states' | translate }}</option>
+              <option value="UY">{{ 'uruguay' | translate }}</option>
+              <option value="UZ">{{ 'uzbekistan' | translate }}</option>
+              <option value="VU">{{ 'vanuatu' | translate }}</option>
+              <option value="VE">
+                {{ 'Venezuela, Bolivarian Republic of' | translate }}
+              </option>
+              <option value="VN">{{ 'vietnam' | translate }}</option>
+              <option value="VI">{{ 'virgin islands' | translate }}</option>
+              <option value="WF">{{ 'wallis and futuna' | translate }}</option>
+              <option value="EH">{{ 'western sahara' | translate }}</option>
+              <option value="YE">{{ 'yemen' | translate }}</option>
+              <option value="ZM">{{ 'zambia' | translate }}</option>
+              <option value="ZW">{{ 'zimbabwe' | translate }}</option>
             </select>
             <!-- <div class="fv-plugins-message-container">
               <div class="fv-help-block">Country is required</div>
@@ -373,78 +428,100 @@
           </div>
         </div>
         <div class="row mb-6">
-          <label class="col-lg-4 col-form-label required fw-bold fs-6"
-            >Language</label
-          >
+          <label class="col-lg-4 col-form-label required fw-bold fs-6">
+            {{ 'language' | translate }}
+          </label>
           <div class="col-lg-8 fv-row">
             <select
               class="form-select form-select-solid form-select-lg"
               name="language"
             >
-              <option value="">Select a Language...</option>
-              <option value="id">Bahasa Indonesia - Indonesian</option>
-              <option value="msa">Bahasa Melayu - Malay</option>
-              <option value="ca">Català - Catalan</option>
-              <option value="cs">Čeština - Czech</option>
-              <option value="da">Dansk - Danish</option>
-              <option value="de">Deutsch - German</option>
-              <option value="en">English</option>
-              <option value="en-gb">English UK - British English</option>
-              <option value="es">Español - Spanish</option>
-              <option value="fil">Filipino</option>
-              <option value="fr">Français - French</option>
+              <option value="">{{ 'Select a Language...' | translate }}</option>
+              <option value="id">
+                {{ 'Bahasa Indonesia - Indonesian' | translate }}
+              </option>
+              <option value="msa">
+                {{ 'Bahasa Melayu - Malay' | translate }}
+              </option>
+              <option value="ca">{{ 'Català - Catalan' | translate }}</option>
+              <option value="cs">{{ 'Čeština - Czech' | translate }}</option>
+              <option value="da">{{ 'Dansk - Danish' | translate }}</option>
+              <option value="de">{{ 'Deutsch - German' | translate }}</option>
+              <option value="en">{{ 'english' | translate }}</option>
+              <option value="en-gb">
+                {{ 'English UK - British English' | translate }}
+              </option>
+              <option value="es">{{ 'Español - Spanish' | translate }}</option>
+              <option value="fil">{{ 'filipino' | translate }}</option>
+              <option value="fr">{{ 'Français - French' | translate }}</option>
               <option value="ga">Gaeilge - Irish (beta)</option>
               <option value="gl">Galego - Galician (beta)</option>
-              <option value="hr">Hrvatski - Croatian</option>
-              <option value="it">Italiano - Italian</option>
-              <option value="hu">Magyar - Hungarian</option>
-              <option value="nl">Nederlands - Dutch</option>
-              <option value="no">Norsk - Norwegian</option>
-              <option value="pl">Polski - Polish</option>
-              <option value="pt">Português - Portuguese</option>
-              <option value="ro">Română - Romanian</option>
-              <option value="sk">Slovenčina - Slovak</option>
-              <option value="fi">Suomi - Finnish</option>
-              <option value="sv">Svenska - Swedish</option>
-              <option value="vi">Tiếng Việt - Vietnamese</option>
-              <option value="tr">Türkçe - Turkish</option>
-              <option value="el">Ελληνικά - Greek</option>
-              <option value="bg">Български език - Bulgarian</option>
-              <option value="ru">Русский - Russian</option>
-              <option value="sr">Српски - Serbian</option>
-              <option value="uk">Українська мова - Ukrainian</option>
-              <option value="he">עִבְרִית - Hebrew</option>
+              <option value="hr">
+                {{ 'Hrvatski - Croatian' | translate }}
+              </option>
+              <option value="it">{{ 'Italiano - Italian' | translate }}</option>
+              <option value="hu">{{ 'Magyar - Hungarian' | translate }}</option>
+              <option value="nl">{{ 'Nederlands - Dutch' | translate }}</option>
+              <option value="no">{{ 'Norsk - Norwegian' | translate }}</option>
+              <option value="pl">{{ 'Polski - Polish' | translate }}</option>
+              <option value="pt">
+                {{ 'Português - Portuguese' | translate }}
+              </option>
+              <option value="ro">{{ 'Română - Romanian' | translate }}</option>
+              <option value="sk">
+                {{ 'Slovenčina - Slovak' | translate }}
+              </option>
+              <option value="fi">{{ 'Suomi - Finnish' | translate }}</option>
+              <option value="sv">{{ 'Svenska - Swedish' | translate }}</option>
+              <option value="vi">
+                {{ 'Tiếng Việt - Vietnamese' | translate }}
+              </option>
+              <option value="tr">{{ 'Türkçe - Turkish' | translate }}</option>
+              <option value="el">{{ 'Ελληνικά - Greek' | translate }}</option>
+              <option value="bg">
+                {{ 'Български език - Bulgarian' | translate }}
+              </option>
+              <option value="ru">{{ 'Русский - Russian' | translate }}</option>
+              <option value="sr">{{ 'Српски - Serbian' | translate }}</option>
+              <option value="uk">
+                {{ 'Українська мова - Ukrainian' | translate }}
+              </option>
+              <option value="he">{{ 'עִבְרִית - Hebrew' | translate }}</option>
               <option value="ur">اردو - Urdu (beta)</option>
-              <option value="ar">العربية - Arabic</option>
-              <option value="fa">فارسی - Persian</option>
-              <option value="mr">मराठी - Marathi</option>
-              <option value="hi">हिन्दी - Hindi</option>
-              <option value="bn">বাংলা - Bangla</option>
-              <option value="gu">ગુજરાતી - Gujarati</option>
-              <option value="ta">தமிழ் - Tamil</option>
-              <option value="kn">ಕನ್ನಡ - Kannada</option>
-              <option value="th">ภาษาไทย - Thai</option>
-              <option value="ko">한국어 - Korean</option>
-              <option value="ja">日本語 - Japanese</option>
-              <option value="zh-cn">简体中文 - Simplified Chinese</option>
-              <option value="zh-tw">繁體中文 - Traditional Chinese</option>
+              <option value="ar">{{ 'العربية - Arabic' | translate }}</option>
+              <option value="fa">{{ 'فارسی - Persian' | translate }}</option>
+              <option value="mr">{{ 'मराठी - Marathi' | translate }}</option>
+              <option value="hi">{{ 'हिन्दी - Hindi' | translate }}</option>
+              <option value="bn">{{ 'বাংলা - Bangla' | translate }}</option>
+              <option value="gu">{{ 'ગુજરાતી - Gujarati' | translate }}</option>
+              <option value="ta">{{ 'தமிழ் - Tamil' | translate }}</option>
+              <option value="kn">{{ 'ಕನ್ನಡ - Kannada' | translate }}</option>
+              <option value="th">{{ 'ภาษาไทย - Thai' | translate }}</option>
+              <option value="ko">{{ '한국어 - Korean' | translate }}</option>
+              <option value="ja">{{ '日本語 - Japanese' | translate }}</option>
+              <option value="zh-cn">
+                {{ '简体中文 - Simplified Chinese' | translate }}
+              </option>
+              <option value="zh-tw">
+                {{ '繁體中文 - Traditional Chinese' | translate }}
+              </option>
             </select>
             <div class="form-text">
-              Please select a preferred language, including date, time, and
-              number formatting.
+              {{"Please select a preferred language, including date, time, and" | translate}}
+              {{'number formatting.'|translate}}
             </div>
           </div>
         </div>
         <div class="row mb-6">
-          <label class="col-lg-4 col-form-label required fw-bold fs-6"
-            >Time Zone</label
-          >
+          <label class="col-lg-4 col-form-label required fw-bold fs-6">
+            {{ 'time zone' | translate }}
+          </label>
           <div class="col-lg-8 fv-row">
             <select
               class="form-select form-select-solid form-select-lg"
               name="timeZone"
             >
-              <option value="">Select a Timezone..</option>
+              <option value="">{{ 'Select a Timezone..' | translate }}</option>
               <option value="International Date Line West">
                 (GMT-11:00) International Date Line West
               </option>
@@ -610,58 +687,72 @@
           </div>
         </div>
         <div class="row mb-6">
-          <label class="col-lg-4 col-form-label required fw-bold fs-6"
-            >Currency</label
-          >
+          <label class="col-lg-4 col-form-label required fw-bold fs-6">
+            {{ 'currency' | translate }}
+          </label>
           <div class="col-lg-8 fv-row">
             <select
               class="form-select form-select-solid form-select-lg"
               name="currency"
             >
-              <option value="">Select a currency..</option>
-              <option value="USD">USD - USA dollar</option>
-              <option value="GBP">GBP - British pound</option>
-              <option value="AUD">AUD - Australian dollar</option>
-              <option value="JPY">JPY - Japanese yen</option>
-              <option value="SEK">SEK - Swedish krona</option>
-              <option value="CAD">CAD - Canadian dollar</option>
-              <option value="CHF">CHF - Swiss franc</option>
+              <option value="">{{ 'Select a currency..' | translate }}</option>
+              <option value="USD">{{ 'USD - USA dollar' | translate }}</option>
+              <option value="GBP">
+                {{ 'GBP - British pound' | translate }}
+              </option>
+              <option value="AUD">
+                {{ 'AUD - Australian dollar' | translate }}
+              </option>
+              <option value="JPY">
+                {{ 'JPY - Japanese yen' | translate }}
+              </option>
+              <option value="SEK">
+                {{ 'SEK - Swedish krona' | translate }}
+              </option>
+              <option value="CAD">
+                {{ 'CAD - Canadian dollar' | translate }}
+              </option>
+              <option value="CHF">{{ 'CHF - Swiss franc' | translate }}</option>
             </select>
           </div>
         </div>
         <div class="row mb-6">
-          <label class="col-lg-4 col-form-label fw-bold fs-6"
-            >Communication</label
-          >
+          <label class="col-lg-4 col-form-label fw-bold fs-6">
+            {{ 'communication' | translate }}
+          </label>
           <div class="col-lg-8 fv-row">
             <div class="d-flex align-items-center mt-3">
-              <label class="form-check form-check-inline form-check-solid me-5"
-                ><input
+              <label class="form-check form-check-inline form-check-solid me-5">
+                <input
                   class="form-check-input"
                   name="communication[]"
                   type="checkbox"
-                /><span class="fw-bold ps-2 fs-6">Email</span></label
-              ><label class="form-check form-check-inline form-check-solid"
-                ><input
+                />
+                <span class="fw-bold ps-2 fs-6">{{ 'email' | translate }}</span>
+              </label>
+              <label class="form-check form-check-inline form-check-solid">
+                <input
                   class="form-check-input"
                   name="communication[]"
                   type="checkbox"
-                /><span class="fw-bold ps-2 fs-6">Phone</span></label
-              >
+                />
+                <span class="fw-bold ps-2 fs-6">{{ 'phone' | translate }}</span>
+              </label>
             </div>
           </div>
         </div>
         <div class="row mb-0">
-          <label class="col-lg-4 col-form-label fw-bold fs-6"
-            >Allow Marketing</label
-          >
+          <label class="col-lg-4 col-form-label fw-bold fs-6">
+            {{ 'allow marketing' | translate }}
+          </label>
           <div class="col-lg-8 d-flex align-items-center">
             <div class="form-check form-check-solid form-switch fv-row">
               <input
                 class="form-check-input w-45px h-30px"
                 type="checkbox"
                 id="allowmarketing"
-              /><label class="form-check-label"></label>
+              />
+              <label class="form-check-label"></label>
             </div>
           </div>
         </div>
@@ -673,10 +764,12 @@
           [disabled]="isLoading"
           (click)="saveSettings()"
         >
-          <ng-container *ngIf="!isLoading">Save Changes</ng-container>
+          <ng-container *ngIf="!isLoading">
+            {{ 'save changes' | translate }}
+          </ng-container>
           <ng-container *ngIf="isLoading">
             <span clas="indicator-progress" [style.display]="'block'">
-              Please wait...{{ " " }}
+              {{'Please wait...'|translate}}{{ ' ' }}
               <span
                 class="spinner-border spinner-border-sm align-middle ms-2"
               ></span>

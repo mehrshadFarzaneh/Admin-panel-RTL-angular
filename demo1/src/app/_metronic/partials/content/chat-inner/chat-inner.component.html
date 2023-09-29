@@ -90,7 +90,7 @@
     class="form-control form-control-flush mb-3"
     rows="1"
     data-kt-element="input"
-    placeholder="Type a message"
+    [placeholder]="'Type a message'|translate"
   ></textarea>
 
   <div class="d-flex flex-stack">
@@ -98,14 +98,14 @@
       <button
         class="btn btn-sm btn-icon btn-active-light-primary me-1"
         type="button"
-        ngbTooltip="Coming soon"
+        attr.data.ngbTooltip="{{'Coming soon' | translate}}"
       >
         <i class="bi bi-paperclip fs-3"></i>
       </button>
       <button
         class="btn btn-sm btn-icon btn-active-light-primary me-1"
         type="button"
-        ngbTooltip="Coming soon"
+        [ngbTooltip]="'Coming soon' | translate"
       >
         <i class="bi bi-upload fs-3"></i>
       </button>
@@ -116,7 +116,7 @@
       data-kt-element="send"
       (click)="submitMessage()"
     >
-      Send
+      {{'Send'|translate}}
     </button>
   </div>
 </div>

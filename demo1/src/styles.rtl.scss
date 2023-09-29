@@ -2,7 +2,7 @@
 // @import "./assets/sass/style.scss"; comment
 // Replace above style with this css file to enable RTL styles
 // @import "./assets/css/style.rtl";
-// @import "./assets/sass/plugins.scss"; //comment
+@import "./assets/sass/plugins.scss"; //comment
 @import "./assets/css/style.rtl.css";
 @import "./assets/sass/style.angular.scss";
 
@@ -22,51 +22,43 @@
   direction: rtl;
   transition: 0.214s ease-in-out all;
 }
+%baseRtlBtn{
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-direction: row-reverse;
+}
 htm,
 body {
   @extend %text;
 }
-//#endregion
-
-// rtl fixture
-.navbar-item__app-user--rtl-fixture {
-  // reset unwanted styles
-  transform: initial !important;
-
-  //main style
-  position: absolute !important;
-  margin-right: calc(100% - 302px) !important;
-  margin-top: 60px !important;
+// more activity btn
+#kt_activities_footer,
+.see-more--centrerlize {
+  justify-content: center;
+  display: flex;
+  > a {
+    @extend %baseRtlBtn;
+  }
 }
-.navbar-item__them-picker--rtl-fixture {
-  // reset unwanted styles
-  transform: initial !important;
-
-  position: absolute !important;
-  margin-right: calc(100% - 250px) !important;
-  margin-top: 60px !important;
+.btn.btn-sm.btn-light.cursor-pointer{
+  display: flex;
+  gap: 3px;
 }
-.navbar-item__quick-link--rtl-fixture {
-  // reset unwanted styles
-  transform: initial !important;
-
-  position: absolute !important;
-  margin-right: calc(100% - 451.5px) !important;
-  margin-top: 60px !important;
+// plugins
+// plugins - chart tooltip
+.apexcharts-tooltip-text{
+  font-family: inherit;
+    font-size: 12px;
+    direction: rtl;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 10px;
 }
-.navbar-item-notification-inner--rtl-fixtur {
-  // reset unwanted styles
-  transform: initial !important;
-
-  position: absolute !important;
-  margin-right: calc(100% - 604px) !important;
-  margin-top: 60px !important;
+.indicator-label{
+  @extend %baseRtlBtn;
 }
-.navbar-item-search-result-inner--rtl-fixture {
-  // reset unwanted styles
-  transform: initial !important;
-
-  position: absolute !important;
-  margin-right: calc(100% - 695.5px) !important;
-  margin-top: 60px !important;
+.table-responsive .ki-arrow-right > span:first-child{
+  transform: scale(-1);
 }

@@ -2,8 +2,12 @@
 
 <div class="card-header border-0 pt-5">
   <h3 class="card-title align-items-start flex-column">
-    <span class="card-label fw-bolder fs-3 mb-1">Members Statistics</span>
-    <span class="text-muted mt-1 fw-bold fs-7">Over 500 members</span>
+    <span class="card-label fw-bolder fs-3 mb-1">
+      {{ 'members statistics' | translate }}
+    </span>
+    <span class="text-muted mt-1 fw-bold fs-7">
+      {{ 'over 500 members' | translate }}
+    </span>
   </h3>
   <div
     class="card-toolbar"
@@ -14,7 +18,7 @@
   >
     <a href="#" class="btn btn-sm btn-light-primary">
       <app-keenicon name="plus" class="fs-3"></app-keenicon>
-      New Member
+      {{'New Member'|translate}}
     </a>
   </div>
 </div>
@@ -32,9 +36,7 @@
         <tr class="fw-bolder text-muted">
           <th class="w-25px">
             <div
-              class="
-                form-check form-check-sm form-check-custom form-check-solid
-              "
+              class="form-check form-check-sm form-check-custom form-check-solid"
             >
               <input
                 class="form-check-input"
@@ -45,10 +47,10 @@
               />
             </div>
           </th>
-          <th class="min-w-150px">Authors</th>
-          <th class="min-w-140px">Company</th>
-          <th class="min-w-120px">Progress</th>
-          <th class="min-w-100px text-end">Actions</th>
+          <th class="min-w-150px">{{ 'authors' | translate }}</th>
+          <th class="min-w-140px">{{ 'company' | translate }}</th>
+          <th class="min-w-120px">{{ 'progress' | translate }}</th>
+          <th class="min-w-100px text-end">{{ 'actions' | translate }}</th>
         </tr>
       </thead>
       <!-- end::Table head -->
@@ -57,9 +59,7 @@
         <tr>
           <td>
             <div
-              class="
-                form-check form-check-sm form-check-custom form-check-solid
-              "
+              class="form-check form-check-sm form-check-custom form-check-solid"
             >
               <input
                 class="form-check-input widget-9-check"
@@ -112,27 +112,19 @@
             <div class="d-flex justify-content-end flex-shrink-0">
               <a
                 href="#"
-                class="
-                  btn btn-icon btn-bg-light btn-active-color-primary btn-sm
-                  me-1
-                "
+                class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm me-1"
               >
                 <app-keenicon name="switch" class="fs-3"></app-keenicon>
               </a>
               <a
                 href="#"
-                class="
-                  btn btn-icon btn-bg-light btn-active-color-primary btn-sm
-                  me-1
-                "
+                class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm me-1"
               >
                 <app-keenicon name="pencil" class="fs-3"></app-keenicon>
               </a>
               <a
                 href="#"
-                class="
-                  btn btn-icon btn-bg-light btn-active-color-primary btn-sm
-                "
+                class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm"
               >
                 <app-keenicon name="trash" class="fs-3"></app-keenicon>
               </a>
@@ -142,9 +134,7 @@
         <tr>
           <td>
             <div
-              class="
-                form-check form-check-sm form-check-custom form-check-solid
-              "
+              class="form-check form-check-sm form-check-custom form-check-solid"
             >
               <input
                 class="form-check-input widget-9-check"
@@ -182,7 +172,9 @@
           <td class="text-end">
             <div class="d-flex flex-column w-100 me-2">
               <div class="d-flex flex-stack mb-2">
-                <span class="text-muted me-2 fs-7 fw-bold">70%</span>
+                <span class="text-muted me-2 fs-7 fw-bold">
+                  {{ '70%' | translate }}
+                </span>
               </div>
               <div class="progress h-6px w-100">
                 <div
@@ -197,27 +189,19 @@
             <div class="d-flex justify-content-end flex-shrink-0">
               <a
                 href="#"
-                class="
-                  btn btn-icon btn-bg-light btn-active-color-primary btn-sm
-                  me-1
-                "
+                class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm me-1"
               >
                 <app-keenicon name="switch" class="fs-3"></app-keenicon>
               </a>
               <a
                 href="#"
-                class="
-                  btn btn-icon btn-bg-light btn-active-color-primary btn-sm
-                  me-1
-                "
+                class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm me-1"
               >
                 <app-keenicon name="pencil" class="fs-3"></app-keenicon>
               </a>
               <a
                 href="#"
-                class="
-                  btn btn-icon btn-bg-light btn-active-color-primary btn-sm
-                "
+                class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm"
               >
                 <app-keenicon name="trash" class="fs-3"></app-keenicon>
               </a>
@@ -227,9 +211,7 @@
         <tr>
           <td>
             <div
-              class="
-                form-check form-check-sm form-check-custom form-check-solid
-              "
+              class="form-check form-check-sm form-check-custom form-check-solid"
             >
               <input
                 class="form-check-input widget-9-check"
@@ -260,14 +242,16 @@
             >
               RoadGee
             </a>
-            <span class="text-muted fw-bold text-muted d-block fs-7"
-              >Transportation</span
-            >
+            <span class="text-muted fw-bold text-muted d-block fs-7">
+              {{ 'transportation' | translate }}
+            </span>
           </td>
           <td class="text-end">
             <div class="d-flex flex-column w-100 me-2">
               <div class="d-flex flex-stack mb-2">
-                <span class="text-muted me-2 fs-7 fw-bold">60%</span>
+                <span class="text-muted me-2 fs-7 fw-bold">
+                  {{ '60%' | translate }}
+                </span>
               </div>
               <div class="progress h-6px w-100">
                 <div
@@ -282,27 +266,19 @@
             <div class="d-flex justify-content-end flex-shrink-0">
               <a
                 href="#"
-                class="
-                  btn btn-icon btn-bg-light btn-active-color-primary btn-sm
-                  me-1
-                "
+                class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm me-1"
               >
                 <app-keenicon name="switch" class="fs-3"></app-keenicon>
               </a>
               <a
                 href="#"
-                class="
-                  btn btn-icon btn-bg-light btn-active-color-primary btn-sm
-                  me-1
-                "
+                class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm me-1"
               >
                 <app-keenicon name="pencil" class="fs-3"></app-keenicon>
               </a>
               <a
                 href="#"
-                class="
-                  btn btn-icon btn-bg-light btn-active-color-primary btn-sm
-                "
+                class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm"
               >
                 <app-keenicon name="trash" class="fs-3"></app-keenicon>
               </a>
@@ -312,9 +288,7 @@
         <tr>
           <td>
             <div
-              class="
-                form-check form-check-sm form-check-custom form-check-solid
-              "
+              class="form-check form-check-sm form-check-custom form-check-solid"
             >
               <input
                 class="form-check-input widget-9-check"
@@ -345,9 +319,9 @@
             >
               The Hill
             </a>
-            <span class="text-muted fw-bold text-muted d-block fs-7"
-              >Insurance</span
-            >
+            <span class="text-muted fw-bold text-muted d-block fs-7">
+              {{ 'insurance' | translate }}
+            </span>
           </td>
           <td class="text-end">
             <div class="d-flex flex-column w-100 me-2">
@@ -367,27 +341,19 @@
             <div class="d-flex justify-content-end flex-shrink-0">
               <a
                 href="#"
-                class="
-                  btn btn-icon btn-bg-light btn-active-color-primary btn-sm
-                  me-1
-                "
+                class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm me-1"
               >
                 <app-keenicon name="switch" class="fs-3"></app-keenicon>
               </a>
               <a
                 href="#"
-                class="
-                  btn btn-icon btn-bg-light btn-active-color-primary btn-sm
-                  me-1
-                "
+                class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm me-1"
               >
                 <app-keenicon name="pencil" class="fs-3"></app-keenicon>
               </a>
               <a
                 href="#"
-                class="
-                  btn btn-icon btn-bg-light btn-active-color-primary btn-sm
-                "
+                class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm"
               >
                 <app-keenicon name="trash" class="fs-3"></app-keenicon>
               </a>
@@ -397,9 +363,7 @@
         <tr>
           <td>
             <div
-              class="
-                form-check form-check-sm form-check-custom form-check-solid
-              "
+              class="form-check form-check-sm form-check-custom form-check-solid"
             >
               <input
                 class="form-check-input widget-9-check"
@@ -430,14 +394,16 @@
             >
               RoadGee
             </a>
-            <span class="text-muted fw-bold text-muted d-block fs-7"
-              >Art Director</span
-            >
+            <span class="text-muted fw-bold text-muted d-block fs-7">
+              {{ 'art director' | translate }}
+            </span>
           </td>
           <td class="text-end">
             <div class="d-flex flex-column w-100 me-2">
               <div class="d-flex flex-stack mb-2">
-                <span class="text-muted me-2 fs-7 fw-bold">90%</span>
+                <span class="text-muted me-2 fs-7 fw-bold">
+                  {{ '90%' | translate }}
+                </span>
               </div>
               <div class="progress h-6px w-100">
                 <div
@@ -452,27 +418,19 @@
             <div class="d-flex justify-content-end flex-shrink-0">
               <a
                 href="#"
-                class="
-                  btn btn-icon btn-bg-light btn-active-color-primary btn-sm
-                  me-1
-                "
+                class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm me-1"
               >
                 <app-keenicon name="switch" class="fs-3"></app-keenicon>
               </a>
               <a
                 href="#"
-                class="
-                  btn btn-icon btn-bg-light btn-active-color-primary btn-sm
-                  me-1
-                "
+                class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm me-1"
               >
                 <app-keenicon name="pencil" class="fs-3"></app-keenicon>
               </a>
               <a
                 href="#"
-                class="
-                  btn btn-icon btn-bg-light btn-active-color-primary btn-sm
-                "
+                class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm"
               >
                 <app-keenicon name="trash" class="fs-3"></app-keenicon>
               </a>

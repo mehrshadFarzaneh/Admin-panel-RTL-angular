@@ -2,15 +2,17 @@
   <!-- Header -->
   <div class="card-header border-0 py-5">
     <h3 class="card-title align-items-start flex-column">
-      <span class="card-label font-weight-bolder text-dark">Agents Stats</span>
-      <span class="text-muted mt-3 font-weight-bold font-size-sm"
-        >More than 400+ new members</span
-      >
+      <span class="card-label font-weight-bolder text-dark">
+        {{ 'agents stats' | translate }}
+      </span>
+      <span class="text-muted mt-3 font-weight-bold font-size-sm">
+        {{'More than 400+ new members'|translate}}
+      </span>
     </h3>
     <div class="card-toolbar">
       <a class="btn btn-success font-weight-bolder font-size-sm cursor-pointer">
         <app-keenicon name="plus" class="fs-md- text-white"></app-keenicon>
-        Add New Member
+        {{'Add New Member'|translate}}
       </a>
     </div>
   </div>
@@ -30,11 +32,15 @@
                 <span></span>
               </label>
             </th>
-            <th class="pr-0" style="width: 50px">authors</th>
+            <th class="pr-0" style="width: 50px">
+              {{ 'authors' | translate }}
+            </th>
             <th style="min-width: 200px"></th>
-            <th style="min-width: 150px">company</th>
-            <th style="min-width: 150px">progress</th>
-            <th class="pr-0 text-right" style="min-width: 150px">action</th>
+            <th style="min-width: 150px">{{ 'company' | translate }}</th>
+            <th style="min-width: 150px">{{ 'progress' | translate }}</th>
+            <th class="pr-0 text-right" style="min-width: 150px">
+              {{ 'action' | translate }}
+            </th>
           </tr>
         </thead>
         <tbody>
@@ -57,19 +63,13 @@
             </td>
             <td class="pl-0">
               <a
-                class="
-                  text-dark-75
-                  font-weight-bolder
-                  text-hover-primary
-                  mb-1
-                  font-size-lg
-                  cursor-pointer
-                "
-                >Brad Simmons</a
+                class="text-dark-75 font-weight-bolder text-hover-primary mb-1 font-size-lg cursor-pointer"
               >
-              <span class="text-muted font-weight-bold text-muted d-block"
-                >HTML, JS, ReactJS</span
-              >
+                {{ 'brad simmons' | translate }}
+              </a>
+              <span class="text-muted font-weight-bold text-muted d-block">
+                {{ 'HTML, JS, ReactJS' | translate }}
+              </span>
             </td>
             <td>
               <span
@@ -78,7 +78,7 @@
                 Intertico
               </span>
               <span class="text-muted font-weight-bold">
-                Web, UI/UX Design
+                {{ 'Web, UI/UX Design' | translate }}
               </span>
             </td>
             <td>
@@ -107,29 +107,28 @@
             </td>
             <td class="pr-0 text-right">
               <a
-                class="
-                  btn btn-icon btn-light btn-hover-primary btn-sm
-                  cursor-pointer
-                "
+                class="btn btn-icon btn-light btn-hover-primary btn-sm cursor-pointer"
               >
-                <app-keenicon name="setting-2" class="fs-md text-primary"></app-keenicon>
+                <app-keenicon
+                  name="setting-2"
+                  class="fs-md text-primary"
+                ></app-keenicon>
               </a>
               <a
-                class="
-                  btn btn-icon btn-light btn-hover-primary btn-sm
-                  mx-3
-                  cursor-pointer
-                "
+                class="btn btn-icon btn-light btn-hover-primary btn-sm mx-3 cursor-pointer"
               >
-                <app-keenicon name="pencil" class="fs-md text-primary"></app-keenicon>
+                <app-keenicon
+                  name="pencil"
+                  class="fs-md text-primary"
+                ></app-keenicon>
               </a>
               <a
-                class="
-                  btn btn-icon btn-light btn-hover-primary btn-sm
-                  cursor-pointer
-                "
+                class="btn btn-icon btn-light btn-hover-primary btn-sm cursor-pointer"
               >
-                <app-keenicon name="trash" class=" svg-icon-md text-primary"></app-keenicon>
+                <app-keenicon
+                  name="trash"
+                  class="svg-icon-md text-primary"
+                ></app-keenicon>
               </a>
             </td>
           </tr>
@@ -153,18 +152,13 @@
             <td class="pl-0">
               <a
                 href="#"
-                class="
-                  text-dark-75
-                  font-weight-bolder
-                  text-hover-primary
-                  mb-1
-                  font-size-lg
-                "
-                >Jessie Clarcson</a
+                class="text-dark-75 font-weight-bolder text-hover-primary mb-1 font-size-lg"
               >
-              <span class="text-muted font-weight-bold text-muted d-block"
-                >C#, ASP.NET, MS SQL</span
-              >
+                {{ 'jessie clarcson' | translate }}
+              </a>
+              <span class="text-muted font-weight-bold text-muted d-block">
+                {{ 'C#, ASP.NET, MS SQL' | translate }}
+              </span>
             </td>
             <td>
               <span
@@ -172,7 +166,9 @@
               >
                 Agoda
               </span>
-              <span class="text-muted font-weight-bold"> Houses & Hotels </span>
+              <span class="text-muted font-weight-bold">
+                {{ 'Houses & Hotels' | translate }}
+              </span>
             </td>
             <td>
               <div class="d-flex flex-column w-100 mr-2">
@@ -203,19 +199,28 @@
                 href="#"
                 class="btn btn-icon btn-light btn-hover-primary btn-sm"
               >
-                <app-keenicon name="switch" class="fs-md text-primary"></app-keenicon>
+                <app-keenicon
+                  name="switch"
+                  class="fs-md text-primary"
+                ></app-keenicon>
               </a>
               <a
                 href="#"
                 class="btn btn-icon btn-light btn-hover-primary btn-sm mx-3"
               >
-                <app-keenicon name="pencil" class="fs-md text-primary"></app-keenicon>
+                <app-keenicon
+                  name="pencil"
+                  class="fs-md text-primary"
+                ></app-keenicon>
               </a>
               <a
                 href="#"
                 class="btn btn-icon btn-light btn-hover-primary btn-sm"
               >
-                <app-keenicon name="trash" class=" svg-icon-md text-primary"></app-keenicon>
+                <app-keenicon
+                  name="trash"
+                  class="svg-icon-md text-primary"
+                ></app-keenicon>
               </a>
             </td>
           </tr>
@@ -239,18 +244,13 @@
             <td class="pl-0">
               <a
                 href="#"
-                class="
-                  text-dark-75
-                  font-weight-bolder
-                  text-hover-primary
-                  mb-1
-                  font-size-lg
-                "
-                >Lebron Wayde</a
+                class="text-dark-75 font-weight-bolder text-hover-primary mb-1 font-size-lg"
               >
-              <span class="text-muted font-weight-bold text-muted d-block"
-                >PHP, Laravel, VueJS</span
-              >
+                {{ 'lebron wayde' | translate }}
+              </a>
+              <span class="text-muted font-weight-bold text-muted d-block">
+                {{ 'PHP, Laravel, VueJS' | translate }}
+              </span>
             </td>
             <td>
               <span
@@ -258,7 +258,9 @@
               >
                 RoadGee
               </span>
-              <span class="text-muted font-weight-bold"> Transportation </span>
+              <span class="text-muted font-weight-bold">
+                {{ 'Transportation' | translate }}
+              </span>
             </td>
             <td>
               <div class="d-flex flex-column w-100 mr-2">
@@ -289,19 +291,28 @@
                 href="#"
                 class="btn btn-icon btn-light btn-hover-primary btn-sm"
               >
-                <app-keenicon name="switch" class="fs-md text-primary"></app-keenicon>
+                <app-keenicon
+                  name="switch"
+                  class="fs-md text-primary"
+                ></app-keenicon>
               </a>
               <a
                 href="#"
                 class="btn btn-icon btn-light btn-hover-primary btn-sm mx-3"
               >
-                <app-keenicon name="pencil" class="fs-md text-primary"></app-keenicon>
+                <app-keenicon
+                  name="pencil"
+                  class="fs-md text-primary"
+                ></app-keenicon>
               </a>
               <a
                 href="#"
                 class="btn btn-icon btn-light btn-hover-primary btn-sm"
               >
-                <app-keenicon name="trash" class=" svg-icon-md text-primary"></app-keenicon>
+                <app-keenicon
+                  name="trash"
+                  class="svg-icon-md text-primary"
+                ></app-keenicon>
               </a>
             </td>
           </tr>
@@ -325,18 +336,13 @@
             <td class="pl-0">
               <a
                 href="#"
-                class="
-                  text-dark-75
-                  font-weight-bolder
-                  text-hover-primary
-                  mb-1
-                  font-size-lg
-                "
-                >Natali Trump</a
+                class="text-dark-75 font-weight-bolder text-hover-primary mb-1 font-size-lg"
               >
-              <span class="text-muted font-weight-bold text-muted d-block"
-                >Python, PostgreSQL, ReactJS</span
-              >
+                {{ 'natali trump' | translate }}
+              </a>
+              <span class="text-muted font-weight-bold text-muted d-block">
+                {{ 'Python, PostgreSQL, ReactJS' | translate }}
+              </span>
             </td>
             <td>
               <span
@@ -344,7 +350,9 @@
               >
                 The Hill
               </span>
-              <span class="text-muted font-weight-bold"> Insurance </span>
+              <span class="text-muted font-weight-bold">
+                {{ 'Insurance' | translate }}
+              </span>
             </td>
             <td>
               <div class="d-flex flex-column w-100 mr-2">
@@ -375,19 +383,28 @@
                 href="#"
                 class="btn btn-icon btn-light btn-hover-primary btn-sm"
               >
-                <app-keenicon name="switch" class="fs-md text-primary"></app-keenicon>
+                <app-keenicon
+                  name="switch"
+                  class="fs-md text-primary"
+                ></app-keenicon>
               </a>
               <a
                 href="#"
                 class="btn btn-icon btn-light btn-hover-primary btn-sm mx-3"
               >
-                <app-keenicon name="pencil" class="fs-md text-primary"></app-keenicon>
+                <app-keenicon
+                  name="pencil"
+                  class="fs-md text-primary"
+                ></app-keenicon>
               </a>
               <a
                 href="#"
                 class="btn btn-icon btn-light btn-hover-primary btn-sm"
               >
-                <app-keenicon name="trash" class=" svg-icon-md text-primary"></app-keenicon>
+                <app-keenicon
+                  name="trash"
+                  class="svg-icon-md text-primary"
+                ></app-keenicon>
               </a>
             </td>
           </tr>

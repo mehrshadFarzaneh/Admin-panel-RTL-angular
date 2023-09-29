@@ -1,14 +1,15 @@
 <div class="pb-10 pb-lg-12">
-  <h2 class="fw-bolder text-dark">Business Details</h2>
+  <h2 class="fw-bolder text-dark">{{ 'business details' | translate }}</h2>
   <div class="text-gray-400 fw-bold fs-6">
     If you need more info, please check out
-    <a href="#" class="link-primary fw-bolder">Help Page</a>.
+    <a href="#" class="link-primary fw-bolder">{{ 'help page' | translate }}</a>
+    .
   </div>
 </div>
 <div [formGroup]="form">
   <div class="fv-row mb-10">
-    <label class="form-label required">Business Name</label
-    ><input
+    <label class="form-label required">{{ 'business name' | translate }}</label>
+    <input
       name="businessName"
       class="form-control form-control-lg form-control-solid"
       formControlName="businessName"
@@ -24,9 +25,10 @@
     </div>
   </div>
   <div class="fv-row mb-10">
-    <label class="d-flex align-items-center form-label"
-      ><span class="required">Shortened Descriptor</span></label
-    ><input
+    <label class="d-flex align-items-center form-label">
+      <span class="required">{{ 'shortened descriptor' | translate }}</span>
+    </label>
+    <input
       name="businessDescriptor"
       class="form-control form-control-lg form-control-solid"
       formControlName="businessDescriptor"
@@ -45,23 +47,25 @@
     </div>
   </div>
   <div class="fv-row mb-10">
-    <label class="form-label required">Corporation Type</label
-    ><select
+    <label class="form-label required">
+      {{ 'corporation type' | translate }}
+    </label>
+    <select
       name="businessType"
       class="form-select form-select-lg form-select-solid"
       formControlName="businessType"
     >
-      <option value="1">S Corporation</option>
-      <option value="1">C Corporation</option>
-      <option value="2">Sole Proprietorship</option>
-      <option value="3">Non-profit</option>
-      <option value="4">Limited Liability</option>
-      <option value="5">General Partnership</option>
+      <option value="1">{{ 's corporation' | translate }}</option>
+      <option value="1">{{ 'c corporation' | translate }}</option>
+      <option value="2">{{ 'sole proprietorship' | translate }}</option>
+      <option value="3">{{ 'Non-profit' | translate }}</option>
+      <option value="4">{{ 'limited liability' | translate }}</option>
+      <option value="5">{{ 'general partnership' | translate }}</option>
     </select>
   </div>
   <div class="fv-row mb-10">
-    <label class="form-label">Business Description</label
-    ><textarea
+    <label class="form-label">{{ 'business description' | translate }}</label>
+    <textarea
       name="businessDescription"
       class="form-control form-control-lg form-control-solid"
       rows="3"
@@ -69,8 +73,10 @@
     ></textarea>
   </div>
   <div class="fv-row mb-0">
-    <label class="fs-6 fw-bold form-label required">Contact Email</label
-    ><input
+    <label class="fs-6 fw-bold form-label required">
+      {{ 'contact email' | translate }}
+    </label>
+    <input
       name="businessEmail"
       class="form-control form-control-lg form-control-solid"
       formControlName="businessEmail"

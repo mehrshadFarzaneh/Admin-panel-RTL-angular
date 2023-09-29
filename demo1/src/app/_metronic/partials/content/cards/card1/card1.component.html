@@ -15,17 +15,7 @@
 
       <ng-container *ngIf="online">
         <div
-          class="
-            symbol-badge
-            bg-success
-            start-100
-            top-100
-            border-4
-            h-15px
-            w-15px
-            ms-n3
-            mt-n3
-          "
+          class="symbol-badge bg-success start-100 top-100 border-4 h-15px w-15px ms-n3 mt-n3"
         ></div>
       </ng-container>
     </div>
@@ -41,33 +31,17 @@
 
   <div class="d-flex flex-center flex-wrap mb-5">
     <div
-      class="
-        border border-gray-300 border-dashed
-        rounded
-        min-w-125px
-        py-3
-        px-4
-        mx-3
-        mb-3
-      "
+      class="border border-gray-300 border-dashed rounded min-w-125px py-3 px-4 mx-3 mb-3"
     >
       <div class="fs-6 fw-bolder text-gray-700">{{ avgEarnings }}</div>
-      <div class="fw-bold text-gray-400">Avg. Earnings</div>
+      <div class="fw-bold text-gray-400">{{ 'Avg. Earnings' | translate }}</div>
     </div>
 
     <div
-      class="
-        border border-gray-300 border-dashed
-        rounded
-        min-w-125px
-        py-3
-        mx-3
-        px-4
-        mb-3
-      "
+      class="border border-gray-300 border-dashed rounded min-w-125px py-3 mx-3 px-4 mb-3"
     >
       <div class="fs-6 fw-bolder text-gray-700">{{ totalEarnings }}</div>
-      <div class="fw-bold text-gray-400">Total Sales</div>
+      <div class="fw-bold text-gray-400">{{ 'total sales' | translate }}</div>
     </div>
   </div>
 
@@ -75,6 +49,6 @@
     class="btn btn-sm btn-light-primary fw-bolder"
     id="kt_drawer_chat_toggle"
   >
-    Send Message
+    {{'Send Message'|translate}}
   </button>
 </div>

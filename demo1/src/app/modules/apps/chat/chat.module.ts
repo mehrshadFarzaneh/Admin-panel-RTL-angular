@@ -11,7 +11,8 @@ import {
   ChatInnerModule,
   CardsModule,
 } from '../../../_metronic/partials';
-import {SharedModule} from "../../../_metronic/shared/shared.module";
+import { SharedModule } from "../../../_metronic/shared/shared.module";
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
   declarations: [
@@ -29,4 +30,4 @@ import {SharedModule} from "../../../_metronic/shared/shared.module";
     SharedModule,
   ],
 })
-export class ChatModule {}
+export class ChatModule { }

@@ -50,7 +50,7 @@ export class TranslationService {
     const needToChangeLayout = LangUtil.isRtlLang(this.getSelectedLanguage()) != LangUtil.isRtlLang(lang);
     localStorage.setItem(LOCALIZATION_LOCAL_STORAGE_KEY, lang);
     // make layout rtl or ltr
-    debugger;
+
     this.appFacade.setLayoutDirection(LangUtil.isRtlLang(lang));
     console.log("what")
     // }
@@ -66,5 +66,8 @@ export class TranslationService {
       localStorage.getItem(LOCALIZATION_LOCAL_STORAGE_KEY) ||
       this.translate.getDefaultLang()
     );
+  }
+  isCurrentLanguageRtl(){
+    return LangUtil.isRtlLang(this.getSelectedLanguage());
   }
 }

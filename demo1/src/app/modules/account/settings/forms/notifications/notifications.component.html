@@ -8,7 +8,7 @@
     aria-controls="kt_account_notifications"
   >
     <div class="card-title m-0">
-      <h3 class="fw-bolder m-0">Notifications</h3>
+      <h3 class="fw-bolder m-0">{{ 'notifications' | translate }}</h3>
     </div>
   </div>
   <div id="kt_account_notifications" class="collapse show">
@@ -20,7 +20,9 @@
           >
             <tbody class="fs-6 fw-bold">
               <tr>
-                <td class="min-w-250px fs-4 fw-bolder">Notifications</td>
+                <td class="min-w-250px fs-4 fw-bolder">
+                  {{ 'notifications' | translate }}
+                </td>
                 <td class="w-125px">
                   <div class="form-check form-check-solid">
                     <input
@@ -29,11 +31,13 @@
                       id="kt_settings_notification_email"
                       value=""
                       checked=""
-                    /><label
+                    />
+                    <label
                       class="form-check-label ps-2"
                       for="kt_settings_notification_email"
-                      >Email</label
                     >
+                      {{ 'email' | translate }}
+                    </label>
                   </div>
                 </td>
                 <td class="w-125px">
@@ -44,16 +48,18 @@
                       id="kt_settings_notification_phone"
                       value=""
                       checked=""
-                    /><label
+                    />
+                    <label
                       class="form-check-label ps-2"
                       for="kt_settings_notification_phone"
-                      >Phone</label
                     >
+                      {{ 'phone' | translate }}
+                    </label>
                   </div>
                 </td>
               </tr>
               <tr>
-                <td>Billing Updates</td>
+                <td>{{ 'billing updates' | translate }}</td>
                 <td>
                   <div class="form-check form-check-solid">
                     <input
@@ -62,10 +68,8 @@
                       id="billing1"
                       value="1"
                       checked=""
-                    /><label
-                      class="form-check-label ps-2"
-                      for="billing1"
-                    ></label>
+                    />
+                    <label class="form-check-label ps-2" for="billing1"></label>
                   </div>
                 </td>
                 <td>
@@ -76,15 +80,13 @@
                       id="billing2"
                       value=""
                       checked=""
-                    /><label
-                      class="form-check-label ps-2"
-                      for="billing2"
-                    ></label>
+                    />
+                    <label class="form-check-label ps-2" for="billing2"></label>
                   </div>
                 </td>
               </tr>
               <tr>
-                <td>New Team Members</td>
+                <td>{{ 'new team members' | translate }}</td>
                 <td>
                   <div class="form-check form-check-solid">
                     <input
@@ -93,7 +95,8 @@
                       id="team1"
                       value=""
                       checked=""
-                    /><label class="form-check-label ps-2" for="team1"></label>
+                    />
+                    <label class="form-check-label ps-2" for="team1"></label>
                   </div>
                 </td>
                 <td>
@@ -103,12 +106,13 @@
                       type="checkbox"
                       id="team2"
                       value=""
-                    /><label class="form-check-label ps-2" for="team2"></label>
+                    />
+                    <label class="form-check-label ps-2" for="team2"></label>
                   </div>
                 </td>
               </tr>
               <tr>
-                <td>Completed Projects</td>
+                <td>{{ 'completed projects' | translate }}</td>
                 <td>
                   <div class="form-check form-check-solid">
                     <input
@@ -116,10 +120,8 @@
                       type="checkbox"
                       id="project1"
                       value=""
-                    /><label
-                      class="form-check-label ps-2"
-                      for="project1"
-                    ></label>
+                    />
+                    <label class="form-check-label ps-2" for="project1"></label>
                   </div>
                 </td>
                 <td>
@@ -130,15 +132,13 @@
                       id="project2"
                       value=""
                       checked=""
-                    /><label
-                      class="form-check-label ps-2"
-                      for="project2"
-                    ></label>
+                    />
+                    <label class="form-check-label ps-2" for="project2"></label>
                   </div>
                 </td>
               </tr>
               <tr>
-                <td class="border-bottom-0">Newsletters</td>
+                <td class="border-bottom-0">{{ 'newsletters' | translate }}</td>
                 <td class="border-bottom-0">
                   <div class="form-check form-check-solid">
                     <input
@@ -146,7 +146,8 @@
                       type="checkbox"
                       id="newsletter1"
                       value=""
-                    /><label
+                    />
+                    <label
                       class="form-check-label ps-2"
                       for="newsletter1"
                     ></label>
@@ -159,7 +160,8 @@
                       type="checkbox"
                       id="newsletter2"
                       value=""
-                    /><label
+                    />
+                    <label
                       class="form-check-label ps-2"
                       for="newsletter2"
                     ></label>
@@ -172,12 +174,15 @@
       </div>
       <div class="card-footer d-flex justify-content-end py-6 px-9">
         <button class="btn btn-light btn-active-light-primary me-2">
-          Discard</button
-        ><button type="button" class="btn btn-primary" (click)="saveSettings()">
-          <ng-container *ngIf="!isLoading">Save Changes</ng-container>
+          {{'Discard' | translate}}
+        </button>
+        <button type="button" class="btn btn-primary" (click)="saveSettings()">
+          <ng-container *ngIf="!isLoading">
+            {{ 'save changes' | translate }}
+          </ng-container>
           <ng-container *ngIf="isLoading">
             <span class="indicator-progress" [style.display]="'block'">
-              Please wait...{{ " " }}
+              {{'Please wait...'|translate}}{{ ' ' }}
               <span
                 class="spinner-border spinner-border-sm align-middle ms-2"
               ></span>

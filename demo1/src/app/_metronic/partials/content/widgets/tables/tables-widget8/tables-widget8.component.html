@@ -1,51 +1,38 @@
 <!-- begin::Header -->
 <div class="card-header border-0 pt-5">
   <h3 class="card-title align-items-start flex-column">
-    <span class="card-label fw-bolder fs-3 mb-1">Latest Products</span>
-    <span class="text-muted mt-1 fw-bold fs-7">More than 100 new orders</span>
+    <span class="card-label fw-bolder fs-3 mb-1">
+      {{ 'latest products' | translate }}
+    </span>
+    <span class="text-muted mt-1 fw-bold fs-7">
+      {{ 'more than 100 new orders' | translate }}
+    </span>
   </h3>
   <div class="card-toolbar">
     <ul class="nav">
       <li class="nav-item">
         <a
-          class="
-            nav-link
-            btn btn-sm btn-color-muted btn-active btn-active-light-primary
-            fw-bolder
-            px-4
-            me-1
-          "
+          class="nav-link btn btn-sm btn-color-muted btn-active btn-active-light-primary fw-bolder px-4 me-1"
           data-bs-toggle="tab"
           [ngClass]="activeClass('kt_table_widget_8_tab_1')"
           (click)="setTab('kt_table_widget_8_tab_1')"
         >
-          Month
+        {{'Month' | translate}}
         </a>
       </li>
       <li class="nav-item">
         <a
-          class="
-            nav-link
-            btn btn-sm btn-color-muted btn-active btn-active-light-primary
-            fw-bolder
-            px-4
-            me-1
-          "
+          class="nav-link btn btn-sm btn-color-muted btn-active btn-active-light-primary fw-bolder px-4 me-1"
           data-bs-toggle="tab"
           [ngClass]="activeClass('kt_table_widget_8_tab_2')"
           (click)="setTab('kt_table_widget_8_tab_2')"
         >
-          Week
+        {{'Week' | translate}}
         </a>
       </li>
       <li class="nav-item">
         <a
-          class="
-            nav-link
-            btn btn-sm btn-color-muted btn-active btn-active-light-primary
-            fw-bolder
-            px-4
-          "
+          class="nav-link btn btn-sm btn-color-muted btn-active btn-active-light-primary fw-bolder px-4"
           data-bs-toggle="tab"
           [ngClass]="activeClass('kt_table_widget_8_tab_3')"
           (click)="setTab('kt_table_widget_8_tab_3')"
@@ -85,7 +72,10 @@
               <td>
                 <div class="symbol symbol-50px me-2">
                   <span class="symbol-label bg-light-danger">
-                    <app-keenicon name="scroll" class="fs-2x text-danger"></app-keenicon>
+                    <app-keenicon
+                      name="scroll"
+                      class="fs-2x text-danger"
+                    ></app-keenicon>
                   </span>
                 </div>
               </td>
@@ -96,22 +86,22 @@
                 >
                   School Music Festival
                 </a>
-                <span class="text-muted fw-bold d-block fs-7"
-                  >by Rose Liam</span
-                >
+                <span class="text-muted fw-bold d-block fs-7">
+                  {{ 'by rose liam' | translate }}
+                </span>
               </td>
               <td class="text-end">
-                <span class="text-dark fw-bolder d-block fs-7"
-                  >4:20PM, 03 Sep</span
-                >
-                <span class="text-muted fw-bold d-block fs-8">Date</span>
+                <span class="text-dark fw-bolder d-block fs-7">
+                  {{ '4:20PM, 03 Sep' | translate }}
+                </span>
+                <span class="text-muted fw-bold d-block fs-8">
+                  {{ 'date' | translate }}
+                </span>
               </td>
               <td class="text-end">
                 <a
                   href="#"
-                  class="
-                    btn btn-sm btn-icon btn-bg-light btn-active-color-primary
-                  "
+                  class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary"
                 >
                   <i class="bi bi-three-dots fs-5"></i>
                 </a>
@@ -121,7 +111,10 @@
               <td>
                 <div class="symbol symbol-50px me-2">
                   <span class="symbol-label bg-light-warning">
-                    <app-keenicon name="category" class="fs-2x text-warning"></app-keenicon>
+                    <app-keenicon
+                      name="category"
+                      class="fs-2x text-warning"
+                    ></app-keenicon>
                   </span>
                 </div>
               </td>
@@ -132,20 +125,22 @@
                 >
                   Maths Championship
                 </a>
-                <span class="text-muted fw-bold d-block fs-7">By Tom Gere</span>
+                <span class="text-muted fw-bold d-block fs-7">
+                  {{ 'by tom gere' | translate }}
+                </span>
               </td>
               <td class="text-end">
-                <span class="text-dark fw-bolder d-block fs-7"
-                  >10:05PM, 25 Oct</span
-                >
-                <span class="text-muted fw-bold d-block fs-8">Date</span>
+                <span class="text-dark fw-bolder d-block fs-7">
+                  {{ '10:05PM, 25 Oct' | translate }}
+                </span>
+                <span class="text-muted fw-bold d-block fs-8">
+                  {{ 'date' | translate }}
+                </span>
               </td>
               <td class="text-end">
                 <a
                   href="#"
-                  class="
-                    btn btn-sm btn-icon btn-bg-light btn-active-color-primary
-                  "
+                  class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary"
                 >
                   <i class="bi bi-three-dots fs-5"></i>
                 </a>
@@ -155,7 +150,10 @@
               <td>
                 <div class="symbol symbol-50px me-2">
                   <span class="symbol-label bg-light-info">
-                    <app-keenicon name="document" class="fs-2x text-info"></app-keenicon>
+                    <app-keenicon
+                      name="document"
+                      class="fs-2x text-info"
+                    ></app-keenicon>
                   </span>
                 </div>
               </td>
@@ -166,22 +164,22 @@
                 >
                   Who Knows Geography
                 </a>
-                <span class="text-muted fw-bold d-block fs-7"
-                  >By Zoey Dylan</span
-                >
+                <span class="text-muted fw-bold d-block fs-7">
+                  {{ 'by zoey dylan' | translate }}
+                </span>
               </td>
               <td class="text-end">
-                <span class="text-dark fw-bolder d-block fs-7"
-                  >3:22PM, 07 Sep</span
-                >
-                <span class="text-muted fw-bold d-block fs-8">Date</span>
+                <span class="text-dark fw-bolder d-block fs-7">
+                  {{ '3:22PM, 07 Sep' | translate }}
+                </span>
+                <span class="text-muted fw-bold d-block fs-8">
+                  {{ 'date' | translate }}
+                </span>
               </td>
               <td class="text-end">
                 <a
                   href="#"
-                  class="
-                    btn btn-sm btn-icon btn-bg-light btn-active-color-primary
-                  "
+                  class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary"
                 >
                   <i class="bi bi-three-dots fs-5"></i>
                 </a>
@@ -191,7 +189,10 @@
               <td>
                 <div class="symbol symbol-50px me-2">
                   <span class="symbol-label bg-light-primary">
-                    <app-keenicon name="abstract-26" class="fs-2x text-primary"></app-keenicon>
+                    <app-keenicon
+                      name="abstract-26"
+                      class="fs-2x text-primary"
+                    ></app-keenicon>
                   </span>
                 </div>
               </td>
@@ -202,22 +203,22 @@
                 >
                   Napoleon Days
                 </a>
-                <span class="text-muted fw-bold d-block fs-7"
-                  >By Luke Owen</span
-                >
+                <span class="text-muted fw-bold d-block fs-7">
+                  {{ 'by luke owen' | translate }}
+                </span>
               </td>
               <td class="text-end">
-                <span class="text-dark fw-bolder d-block fs-7"
-                  >1:20PM, 02 Dec</span
-                >
-                <span class="text-muted fw-bold d-block fs-8">Date</span>
+                <span class="text-dark fw-bolder d-block fs-7">
+                  {{ '1:20PM, 02 Dec' | translate }}
+                </span>
+                <span class="text-muted fw-bold d-block fs-8">
+                  {{ 'date' | translate }}
+                </span>
               </td>
               <td class="text-end">
                 <a
                   href="#"
-                  class="
-                    btn btn-sm btn-icon btn-bg-light btn-active-color-primary
-                  "
+                  class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary"
                 >
                   <i class="bi bi-three-dots fs-5"></i>
                 </a>
@@ -227,7 +228,10 @@
               <td>
                 <div class="symbol symbol-50px me-2">
                   <span class="symbol-label bg-light-success">
-                    <app-keenicon name="bucket" class="fs-2x text-success"></app-keenicon>
+                    <app-keenicon
+                      name="bucket"
+                      class="fs-2x text-success"
+                    ></app-keenicon>
                   </span>
                 </div>
               </td>
@@ -238,22 +242,22 @@
                 >
                   The School Art Leads
                 </a>
-                <span class="text-muted fw-bold d-block fs-7"
-                  >By Ellie Cole</span
-                >
+                <span class="text-muted fw-bold d-block fs-7">
+                  {{ 'by ellie cole' | translate }}
+                </span>
               </td>
               <td class="text-end">
-                <span class="text-dark fw-bolder d-block fs-7"
-                  >6:20PM, 07 Sep</span
-                >
-                <span class="text-muted fw-bold d-block fs-8">Date</span>
+                <span class="text-dark fw-bolder d-block fs-7">
+                  {{ '6:20PM, 07 Sep' | translate }}
+                </span>
+                <span class="text-muted fw-bold d-block fs-8">
+                  {{ 'date' | translate }}
+                </span>
               </td>
               <td class="text-end">
                 <a
                   href="#"
-                  class="
-                    btn btn-sm btn-icon btn-bg-light btn-active-color-primary
-                  "
+                  class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary"
                 >
                   <i class="bi bi-three-dots fs-5"></i>
                 </a>
@@ -291,7 +295,10 @@
               <td>
                 <div class="symbol symbol-50px me-2">
                   <span class="symbol-label bg-light-info">
-                    <app-keenicon name="document" class="fs-2x text-info"></app-keenicon>
+                    <app-keenicon
+                      name="document"
+                      class="fs-2x text-info"
+                    ></app-keenicon>
                   </span>
                 </div>
               </td>
@@ -302,22 +309,22 @@
                 >
                   Who Knows Geography
                 </a>
-                <span class="text-muted fw-bold d-block fs-7"
-                  >By Zoey Dylan</span
-                >
+                <span class="text-muted fw-bold d-block fs-7">
+                  {{ 'by zoey dylan' | translate }}
+                </span>
               </td>
               <td class="text-end">
-                <span class="text-dark fw-bolder d-block fs-7"
-                  >3:22PM, 07 Sep</span
-                >
-                <span class="text-muted fw-bold d-block fs-8">Date</span>
+                <span class="text-dark fw-bolder d-block fs-7">
+                  {{ '3:22PM, 07 Sep' | translate }}
+                </span>
+                <span class="text-muted fw-bold d-block fs-8">
+                  {{ 'date' | translate }}
+                </span>
               </td>
               <td class="text-end">
                 <a
                   href="#"
-                  class="
-                    btn btn-sm btn-icon btn-bg-light btn-active-color-primary
-                  "
+                  class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary"
                 >
                   <i class="bi bi-three-dots fs-5"></i>
                 </a>
@@ -327,7 +334,10 @@
               <td>
                 <div class="symbol symbol-50px me-2">
                   <span class="symbol-label bg-light-warning">
-                    <app-keenicon name="category" class="fs-2x text-warning"></app-keenicon>
+                    <app-keenicon
+                      name="category"
+                      class="fs-2x text-warning"
+                    ></app-keenicon>
                   </span>
                 </div>
               </td>
@@ -338,20 +348,22 @@
                 >
                   Maths Championship
                 </a>
-                <span class="text-muted fw-bold d-block fs-7">By Tom Gere</span>
+                <span class="text-muted fw-bold d-block fs-7">
+                  {{ 'by tom gere' | translate }}
+                </span>
               </td>
               <td class="text-end">
-                <span class="text-dark fw-bolder d-block fs-7"
-                  >10:05PM, 25 Oct</span
-                >
-                <span class="text-muted fw-bold d-block fs-8">Date</span>
+                <span class="text-dark fw-bolder d-block fs-7">
+                  {{ '10:05PM, 25 Oct' | translate }}
+                </span>
+                <span class="text-muted fw-bold d-block fs-8">
+                  {{ 'date' | translate }}
+                </span>
               </td>
               <td class="text-end">
                 <a
                   href="#"
-                  class="
-                    btn btn-sm btn-icon btn-bg-light btn-active-color-primary
-                  "
+                  class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary"
                 >
                   <i class="bi bi-three-dots fs-5"></i>
                 </a>
@@ -361,7 +373,10 @@
               <td>
                 <div class="symbol symbol-50px me-2">
                   <span class="symbol-label bg-light-danger">
-                    <app-keenicon name="scroll" class="fs-2x text-danger"></app-keenicon>
+                    <app-keenicon
+                      name="scroll"
+                      class="fs-2x text-danger"
+                    ></app-keenicon>
                   </span>
                 </div>
               </td>
@@ -372,22 +387,22 @@
                 >
                   School Music Festival
                 </a>
-                <span class="text-muted fw-bold d-block fs-7"
-                  >by Rose Liam</span
-                >
+                <span class="text-muted fw-bold d-block fs-7">
+                  {{ 'by rose liam' | translate }}
+                </span>
               </td>
               <td class="text-end">
-                <span class="text-dark fw-bolder d-block fs-7"
-                  >4:20PM, 03 Sep</span
-                >
-                <span class="text-muted fw-bold d-block fs-8">Date</span>
+                <span class="text-dark fw-bolder d-block fs-7">
+                  {{ '4:20PM, 03 Sep' | translate }}
+                </span>
+                <span class="text-muted fw-bold d-block fs-8">
+                  {{ 'date' | translate }}
+                </span>
               </td>
               <td class="text-end">
                 <a
                   href="#"
-                  class="
-                    btn btn-sm btn-icon btn-bg-light btn-active-color-primary
-                  "
+                  class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary"
                 >
                   <i class="bi bi-three-dots fs-5"></i>
                 </a>
@@ -425,7 +440,10 @@
               <td>
                 <div class="symbol symbol-50px me-2">
                   <span class="symbol-label bg-light-warning">
-                    <app-keenicon name="category" class="fs-2x text-warning"></app-keenicon>
+                    <app-keenicon
+                      name="category"
+                      class="fs-2x text-warning"
+                    ></app-keenicon>
                   </span>
                 </div>
               </td>
@@ -436,20 +454,22 @@
                 >
                   Maths Championship
                 </a>
-                <span class="text-muted fw-bold d-block fs-7">By Tom Gere</span>
+                <span class="text-muted fw-bold d-block fs-7">
+                  {{ 'by tom gere' | translate }}
+                </span>
               </td>
               <td class="text-end">
-                <span class="text-dark fw-bolder d-block fs-7"
-                  >10:05PM, 25 Oct</span
-                >
-                <span class="text-muted fw-bold d-block fs-8">Date</span>
+                <span class="text-dark fw-bolder d-block fs-7">
+                  {{ '10:05PM, 25 Oct' | translate }}
+                </span>
+                <span class="text-muted fw-bold d-block fs-8">
+                  {{ 'date' | translate }}
+                </span>
               </td>
               <td class="text-end">
                 <a
                   href="#"
-                  class="
-                    btn btn-sm btn-icon btn-bg-light btn-active-color-primary
-                  "
+                  class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary"
                 >
                   <i class="bi bi-three-dots fs-5"></i>
                 </a>
@@ -459,7 +479,10 @@
               <td>
                 <div class="symbol symbol-50px me-2">
                   <span class="symbol-label bg-light-info">
-                    <app-keenicon name="document" class="fs-2x text-info"></app-keenicon>
+                    <app-keenicon
+                      name="document"
+                      class="fs-2x text-info"
+                    ></app-keenicon>
                   </span>
                 </div>
               </td>
@@ -470,22 +493,22 @@
                 >
                   Who Knows Geography
                 </a>
-                <span class="text-muted fw-bold d-block fs-7"
-                  >By Zoey Dylan</span
-                >
+                <span class="text-muted fw-bold d-block fs-7">
+                  {{ 'by zoey dylan' | translate }}
+                </span>
               </td>
               <td class="text-end">
-                <span class="text-dark fw-bolder d-block fs-7"
-                  >3:22PM, 07 Sep</span
-                >
-                <span class="text-muted fw-bold d-block fs-8">Date</span>
+                <span class="text-dark fw-bolder d-block fs-7">
+                  {{ '3:22PM, 07 Sep' | translate }}
+                </span>
+                <span class="text-muted fw-bold d-block fs-8">
+                  {{ 'date' | translate }}
+                </span>
               </td>
               <td class="text-end">
                 <a
                   href="#"
-                  class="
-                    btn btn-sm btn-icon btn-bg-light btn-active-color-primary
-                  "
+                  class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary"
                 >
                   <i class="bi bi-three-dots fs-5"></i>
                 </a>
@@ -495,7 +518,10 @@
               <td>
                 <div class="symbol symbol-50px me-2">
                   <span class="symbol-label bg-light-primary">
-                    <app-keenicon name="document" class="fs-2x text-primary"></app-keenicon>
+                    <app-keenicon
+                      name="document"
+                      class="fs-2x text-primary"
+                    ></app-keenicon>
                   </span>
                 </div>
               </td>
@@ -506,22 +532,22 @@
                 >
                   Napoleon Days
                 </a>
-                <span class="text-muted fw-bold d-block fs-7"
-                  >By Luke Owen</span
-                >
+                <span class="text-muted fw-bold d-block fs-7">
+                  {{ 'by luke owen' | translate }}
+                </span>
               </td>
               <td class="text-end">
-                <span class="text-dark fw-bolder d-block fs-7"
-                  >1:20PM, 02 Dec</span
-                >
-                <span class="text-muted fw-bold d-block fs-8">Date</span>
+                <span class="text-dark fw-bolder d-block fs-7">
+                  {{ '1:20PM, 02 Dec' | translate }}
+                </span>
+                <span class="text-muted fw-bold d-block fs-8">
+                  {{ 'date' | translate }}
+                </span>
               </td>
               <td class="text-end">
                 <a
                   href="#"
-                  class="
-                    btn btn-sm btn-icon btn-bg-light btn-active-color-primary
-                  "
+                  class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary"
                 >
                   <i class="bi bi-three-dots fs-5"></i>
                 </a>
@@ -531,7 +557,10 @@
               <td>
                 <div class="symbol symbol-50px me-2">
                   <span class="symbol-label bg-light-danger">
-                    <app-keenicon name="scroll" class="fs-2x text-danger"></app-keenicon>
+                    <app-keenicon
+                      name="scroll"
+                      class="fs-2x text-danger"
+                    ></app-keenicon>
                   </span>
                 </div>
               </td>
@@ -542,22 +571,22 @@
                 >
                   School Music Festival
                 </a>
-                <span class="text-muted fw-bold d-block fs-7"
-                  >by Rose Liam</span
-                >
+                <span class="text-muted fw-bold d-block fs-7">
+                  {{ 'by rose liam' | translate }}
+                </span>
               </td>
               <td class="text-end">
-                <span class="text-dark fw-bolder d-block fs-7"
-                  >4:20PM, 03 Sep</span
-                >
-                <span class="text-muted fw-bold d-block fs-8">Date</span>
+                <span class="text-dark fw-bolder d-block fs-7">
+                  {{ '4:20PM, 03 Sep' | translate }}
+                </span>
+                <span class="text-muted fw-bold d-block fs-8">
+                  {{ 'date' | translate }}
+                </span>
               </td>
               <td class="text-end">
                 <a
                   href="#"
-                  class="
-                    btn btn-sm btn-icon btn-bg-light btn-active-color-primary
-                  "
+                  class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary"
                 >
                   <i class="bi bi-three-dots fs-5"></i>
                 </a>

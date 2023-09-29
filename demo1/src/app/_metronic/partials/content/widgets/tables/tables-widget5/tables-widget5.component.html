@@ -1,56 +1,43 @@
 <!-- begin::Header -->
 <div class="card-header border-0 pt-5">
   <h3 class="card-title align-items-start flex-column">
-    <span class="card-label fw-bolder fs-3 mb-1">Latest Products</span>
-    <span class="text-muted mt-1 fw-bold fs-7">More than 400 new products</span>
+    <span class="card-label fw-bolder fs-3 mb-1">
+      {{ 'latest products' | translate }}
+    </span>
+    <span class="text-muted mt-1 fw-bold fs-7">
+      {{ 'more than 400 new products' | translate }}
+    </span>
   </h3>
   <div class="card-toolbar">
     <ul class="nav">
       <li class="nav-item">
         <a
-          class="
-            nav-link
-            btn btn-sm btn-color-muted btn-active btn-active-light-primary
-            fw-bolder
-            px-4
-            me-1
-          "
+          class="nav-link btn btn-sm btn-color-muted btn-active btn-active-light-primary fw-bolder px-4 me-1"
           data-bs-toggle="tab"
           [ngClass]="activeClass('kt_table_widget_5_tab_1')"
           (click)="setTab('kt_table_widget_5_tab_1')"
         >
-          Month
+        {{'Month' | translate}}
         </a>
       </li>
       <li class="nav-item">
         <a
-          class="
-            nav-link
-            btn btn-sm btn-color-muted btn-active btn-active-light-primary
-            fw-bolder
-            px-4
-            me-1
-          "
+          class="nav-link btn btn-sm btn-color-muted btn-active btn-active-light-primary fw-bolder px-4 me-1"
           data-bs-toggle="tab"
           [ngClass]="activeClass('kt_table_widget_5_tab_2')"
           (click)="setTab('kt_table_widget_5_tab_2')"
         >
-          Week
+          {{'Week' | translate}}
         </a>
       </li>
       <li class="nav-item">
         <a
-          class="
-            nav-link
-            btn btn-sm btn-color-muted btn-active btn-active-light-primary
-            fw-bolder
-            px-4
-          "
+          class="nav-link btn btn-sm btn-color-muted btn-active btn-active-light-primary fw-bolder px-4"
           data-bs-toggle="tab"
           [ngClass]="activeClass('kt_table_widget_5_tab_3')"
           (click)="setTab('kt_table_widget_5_tab_3')"
         >
-          Day
+          {{'Day' | translate}}
         </a>
       </li>
     </ul>
@@ -70,12 +57,7 @@
       <div class="table-responsive">
         <!-- begin::Table -->
         <table
-          class="
-            table table-row-dashed table-row-gray-200
-            align-middle
-            gs-0
-            gy-4
-          "
+          class="table table-row-dashed table-row-gray-200 align-middle gs-0 gy-4"
         >
           <!-- begin::Table head -->
           <thead>
@@ -109,18 +91,22 @@
                 >
                   Brad Simmons
                 </a>
-                <span class="text-muted fw-bold d-block">Movie Creator</span>
+                <span class="text-muted fw-bold d-block">
+                  {{ 'movie creator' | translate }}
+                </span>
               </td>
-              <td class="text-end text-muted fw-bold">React, HTML</td>
+              <td class="text-end text-muted fw-bold">
+                {{ 'React, HTML' | translate }}
+              </td>
               <td class="text-end">
-                <span class="badge badge-light-success">Approved</span>
+                <span class="badge badge-light-success">
+                  {{ 'approved' | translate }}
+                </span>
               </td>
               <td class="text-end">
                 <a
                   href="#"
-                  class="
-                    btn btn-sm btn-icon btn-bg-light btn-active-color-primary
-                  "
+                  class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary"
                 >
                   <app-keenicon name="arrow-right" class="fs-2"></app-keenicon>
                 </a>
@@ -145,18 +131,22 @@
                 >
                   Popular Authors
                 </a>
-                <span class="text-muted fw-bold d-block">Most Successful</span>
+                <span class="text-muted fw-bold d-block">
+                  {{ 'most successful' | translate }}
+                </span>
               </td>
-              <td class="text-end text-muted fw-bold">Python, MySQL</td>
+              <td class="text-end text-muted fw-bold">
+                {{ 'Python, MySQL' | translate }}
+              </td>
               <td class="text-end">
-                <span class="badge badge-light-warning">In Progress</span>
+                <span class="badge badge-light-warning">
+                  {{ 'in progress' | translate }}
+                </span>
               </td>
               <td class="text-end">
                 <a
                   href="#"
-                  class="
-                    btn btn-sm btn-icon btn-bg-light btn-active-color-primary
-                  "
+                  class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary"
                 >
                   <app-keenicon name="arrow-right" class="fs-2"></app-keenicon>
                 </a>
@@ -181,18 +171,22 @@
                 >
                   New Users
                 </a>
-                <span class="text-muted fw-bold d-block">Awesome Users</span>
+                <span class="text-muted fw-bold d-block">
+                  {{ 'awesome users' | translate }}
+                </span>
               </td>
-              <td class="text-end text-muted fw-bold">Laravel,Metronic</td>
+              <td class="text-end text-muted fw-bold">
+                {{ 'Laravel,Metronic' | translate }}
+              </td>
               <td class="text-end">
-                <span class="badge badge-light-primary">Success</span>
+                <span class="badge badge-light-primary">
+                  {{ 'success' | translate }}
+                </span>
               </td>
               <td class="text-end">
                 <a
                   href="#"
-                  class="
-                    btn btn-sm btn-icon btn-bg-light btn-active-color-primary
-                  "
+                  class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary"
                 >
                   <app-keenicon name="arrow-right" class="fs-2"></app-keenicon>
                 </a>
@@ -217,18 +211,22 @@
                 >
                   Active Customers
                 </a>
-                <span class="text-muted fw-bold d-block">Movie Creator</span>
+                <span class="text-muted fw-bold d-block">
+                  {{ 'movie creator' | translate }}
+                </span>
               </td>
-              <td class="text-end text-muted fw-bold">AngularJS, C#</td>
+              <td class="text-end text-muted fw-bold">
+                {{ 'AngularJS, C#' | translate }}
+              </td>
               <td class="text-end">
-                <span class="badge badge-light-danger">Rejected</span>
+                <span class="badge badge-light-danger">
+                  {{ 'rejected' | translate }}
+                </span>
               </td>
               <td class="text-end">
                 <a
                   href="#"
-                  class="
-                    btn btn-sm btn-icon btn-bg-light btn-active-color-primary
-                  "
+                  class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary"
                 >
                   <app-keenicon name="arrow-right" class="fs-2"></app-keenicon>
                 </a>
@@ -253,18 +251,22 @@
                 >
                   Bestseller Theme
                 </a>
-                <span class="text-muted fw-bold d-block">Best Customers</span>
+                <span class="text-muted fw-bold d-block">
+                  {{ 'best customers' | translate }}
+                </span>
               </td>
-              <td class="text-end text-muted fw-bold">ReactJS, Ruby</td>
+              <td class="text-end text-muted fw-bold">
+                {{ 'ReactJS, Ruby' | translate }}
+              </td>
               <td class="text-end">
-                <span class="badge badge-light-warning">In Progress</span>
+                <span class="badge badge-light-warning">
+                  {{ 'in progress' | translate }}
+                </span>
               </td>
               <td class="text-end">
                 <a
                   href="#"
-                  class="
-                    btn btn-sm btn-icon btn-bg-light btn-active-color-primary
-                  "
+                  class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary"
                 >
                   <app-keenicon name="arrow-right" class="fs-2"></app-keenicon>
                 </a>
@@ -287,12 +289,7 @@
       <div class="table-responsive">
         <!-- begin::Table -->
         <table
-          class="
-            table table-row-dashed table-row-gray-200
-            align-middle
-            gs-0
-            gy-4
-          "
+          class="table table-row-dashed table-row-gray-200 align-middle gs-0 gy-4"
         >
           <!-- begin::Table head -->
           <thead>
@@ -326,18 +323,22 @@
                 >
                   Brad Simmons
                 </a>
-                <span class="text-muted fw-bold d-block">Movie Creator</span>
+                <span class="text-muted fw-bold d-block">
+                  {{ 'movie creator' | translate }}
+                </span>
               </td>
-              <td class="text-end text-muted fw-bold">React, HTML</td>
+              <td class="text-end text-muted fw-bold">
+                {{ 'React, HTML' | translate }}
+              </td>
               <td class="text-end">
-                <span class="badge badge-light-success">Approved</span>
+                <span class="badge badge-light-success">
+                  {{ 'approved' | translate }}
+                </span>
               </td>
               <td class="text-end">
                 <a
                   href="#"
-                  class="
-                    btn btn-sm btn-icon btn-bg-light btn-active-color-primary
-                  "
+                  class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary"
                 >
                   <app-keenicon name="arrow-right" class="fs-2"></app-keenicon>
                 </a>
@@ -362,18 +363,22 @@
                 >
                   Popular Authors
                 </a>
-                <span class="text-muted fw-bold d-block">Most Successful</span>
+                <span class="text-muted fw-bold d-block">
+                  {{ 'most successful' | translate }}
+                </span>
               </td>
-              <td class="text-end text-muted fw-bold">Python, MySQL</td>
+              <td class="text-end text-muted fw-bold">
+                {{ 'Python, MySQL' | translate }}
+              </td>
               <td class="text-end">
-                <span class="badge badge-light-warning">In Progress</span>
+                <span class="badge badge-light-warning">
+                  {{ 'in progress' | translate }}
+                </span>
               </td>
               <td class="text-end">
                 <a
                   href="#"
-                  class="
-                    btn btn-sm btn-icon btn-bg-light btn-active-color-primary
-                  "
+                  class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary"
                 >
                   <app-keenicon name="arrow-right" class="fs-2"></app-keenicon>
                 </a>
@@ -398,18 +403,22 @@
                 >
                   Active Customers
                 </a>
-                <span class="text-muted fw-bold d-block">Movie Creator</span>
+                <span class="text-muted fw-bold d-block">
+                  {{ 'movie creator' | translate }}
+                </span>
               </td>
-              <td class="text-end text-muted fw-bold">AngularJS, C#</td>
+              <td class="text-end text-muted fw-bold">
+                {{ 'AngularJS, C#' | translate }}
+              </td>
               <td class="text-end">
-                <span class="badge badge-light-danger">Rejected</span>
+                <span class="badge badge-light-danger">
+                  {{ 'rejected' | translate }}
+                </span>
               </td>
               <td class="text-end">
                 <a
                   href="#"
-                  class="
-                    btn btn-sm btn-icon btn-bg-light btn-active-color-primary
-                  "
+                  class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary"
                 >
                   <app-keenicon name="arrow-right" class="fs-2"></app-keenicon>
                 </a>
@@ -432,12 +441,7 @@
       <div class="table-responsive">
         <!-- begin::Table -->
         <table
-          class="
-            table table-row-dashed table-row-gray-200
-            align-middle
-            gs-0
-            gy-4
-          "
+          class="table table-row-dashed table-row-gray-200 align-middle gs-0 gy-4"
         >
           <!-- begin::Table head -->
           <thead>
@@ -471,18 +475,22 @@
                 >
                   Bestseller Theme
                 </a>
-                <span class="text-muted fw-bold d-block">Best Customers</span>
+                <span class="text-muted fw-bold d-block">
+                  {{ 'best customers' | translate }}
+                </span>
               </td>
-              <td class="text-end text-muted fw-bold">ReactJS, Ruby</td>
+              <td class="text-end text-muted fw-bold">
+                {{ 'ReactJS, Ruby' | translate }}
+              </td>
               <td class="text-end">
-                <span class="badge badge-light-warning">In Progress</span>
+                <span class="badge badge-light-warning">
+                  {{ 'in progress' | translate }}
+                </span>
               </td>
               <td class="text-end">
                 <a
                   href="#"
-                  class="
-                    btn btn-sm btn-icon btn-bg-light btn-active-color-primary
-                  "
+                  class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary"
                 >
                   <app-keenicon name="arrow-right" class="fs-2"></app-keenicon>
                 </a>
@@ -507,18 +515,22 @@
                 >
                   Active Customers
                 </a>
-                <span class="text-muted fw-bold d-block">Movie Creator</span>
+                <span class="text-muted fw-bold d-block">
+                  {{ 'movie creator' | translate }}
+                </span>
               </td>
-              <td class="text-end text-muted fw-bold">AngularJS, C#</td>
+              <td class="text-end text-muted fw-bold">
+                {{ 'AngularJS, C#' | translate }}
+              </td>
               <td class="text-end">
-                <span class="badge badge-light-danger">Rejected</span>
+                <span class="badge badge-light-danger">
+                  {{ 'rejected' | translate }}
+                </span>
               </td>
               <td class="text-end">
                 <a
                   href="#"
-                  class="
-                    btn btn-sm btn-icon btn-bg-light btn-active-color-primary
-                  "
+                  class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary"
                 >
                   <app-keenicon name="arrow-right" class="fs-2"></app-keenicon>
                 </a>
@@ -543,18 +555,22 @@
                 >
                   New Users
                 </a>
-                <span class="text-muted fw-bold d-block">Awesome Users</span>
+                <span class="text-muted fw-bold d-block">
+                  {{ 'awesome users' | translate }}
+                </span>
               </td>
-              <td class="text-end text-muted fw-bold">Laravel,Metronic</td>
+              <td class="text-end text-muted fw-bold">
+                {{ 'Laravel,Metronic' | translate }}
+              </td>
               <td class="text-end">
-                <span class="badge badge-light-primary">Success</span>
+                <span class="badge badge-light-primary">
+                  {{ 'success' | translate }}
+                </span>
               </td>
               <td class="text-end">
                 <a
                   href="#"
-                  class="
-                    btn btn-sm btn-icon btn-bg-light btn-active-color-primary
-                  "
+                  class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary"
                 >
                   <app-keenicon name="arrow-right" class="fs-2"></app-keenicon>
                 </a>
@@ -579,18 +595,22 @@
                 >
                   Popular Authors
                 </a>
-                <span class="text-muted fw-bold d-block">Most Successful</span>
+                <span class="text-muted fw-bold d-block">
+                  {{ 'most successful' | translate }}
+                </span>
               </td>
-              <td class="text-end text-muted fw-bold">Python, MySQL</td>
+              <td class="text-end text-muted fw-bold">
+                {{ 'Python, MySQL' | translate }}
+              </td>
               <td class="text-end">
-                <span class="badge badge-light-warning">In Progress</span>
+                <span class="badge badge-light-warning">
+                  {{ 'in progress' | translate }}
+                </span>
               </td>
               <td class="text-end">
                 <a
                   href="#"
-                  class="
-                    btn btn-sm btn-icon btn-bg-light btn-active-color-primary
-                  "
+                  class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary"
                 >
                   <app-keenicon name="arrow-right" class="fs-2"></app-keenicon>
                 </a>

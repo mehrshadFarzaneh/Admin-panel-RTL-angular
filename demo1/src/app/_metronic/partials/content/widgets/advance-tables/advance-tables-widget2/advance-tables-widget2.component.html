@@ -2,10 +2,12 @@
   <!-- Header -->
   <div class="card-header border-0 pt-5">
     <h3 class="card-title align-items-start flex-column">
-      <span class="card-label font-weight-bolder text-dark">New Arrivals</span>
-      <span class="text-muted mt-3 font-weight-bold font-size-sm"
-        >More than 400+ new members</span
-      >
+      <span class="card-label font-weight-bolder text-dark">
+        {{ 'new arrivals' | translate }}
+      </span>
+      <span class="text-muted mt-3 font-weight-bold font-size-sm">
+        {{'More than 400+ new members'|translate}}
+      </span>
     </h3>
     <div class="card-toolbar">
       <ul class="nav nav-pills nav-pills-sm nav-dark-75">
@@ -18,8 +20,9 @@
             class="nav-link py-2 px-4"
             [class.active]="currentTab === 'Month'"
             data-toggle="tab"
-            >Month</a
           >
+            {{ 'month' | translate }}
+          </a>
         </li>
         <li
           class="nav-item"
@@ -30,8 +33,9 @@
             class="nav-link py-2 px-4"
             [class.active]="currentTab === 'Week'"
             data-toggle="tab"
-            >Week</a
           >
+            {{ 'week' | translate }}
+          </a>
         </li>
         <li
           class="nav-item"
@@ -42,8 +46,9 @@
             class="nav-link py-2 px-4"
             [class.active]="currentTab === 'Day'"
             data-toggle="tab"
-            >Day</a
           >
+            {{ 'day' | translate }}
+          </a>
         </li>
       </ul>
     </div>
@@ -79,14 +84,17 @@
             <td class="pl-0">
               <a
                 class="text-dark-75 font-weight-bolder text-hover-primary mb-1 font-size-lg cursor-pointer"
-                >Sant Outstanding</a
               >
+                {{ 'sant outstanding' | translate }}
+              </a>
               <div>
-                <span class="font-weight-bolder">Email:</span>&nbsp;
+                <span class="font-weight-bolder">Email:</span>
+                &nbsp;
                 <a
                   class="text-muted font-weight-bold text-hover-primary cursor-pointer"
-                  >bprow@bnc.cc</a
                 >
+                  {{ 'bprow@bnc.cc' | translate }}
+                </a>
               </div>
             </td>
             <td class="text-right">
@@ -96,28 +104,37 @@
                 $2,000,000
               </span>
               <span class="text-muted font-weight-bold">
-                Paid
+                {{ 'Paid' | translate }}
               </span>
             </td>
             <td class="text-right">
               <span class="text-muted font-weight-500">
-                ReactJs, HTML
+                {{ 'ReactJs, HTML' | translate }}
               </span>
             </td>
             <td class="text-right">
-              <span class="label label-lg label-light-primary label-inline"
-                >Approved</span
-              >
+              <span class="label label-lg label-light-primary label-inline">
+                {{ 'approved' | translate }}
+              </span>
             </td>
             <td class="text-right pr-0">
               <a class="btn btn-icon btn-light btn-sm cursor-pointer">
-                <app-keenicon name="switch" class="fs-md text-primary"></app-keenicon>
+                <app-keenicon
+                  name="switch"
+                  class="fs-md text-primary"
+                ></app-keenicon>
               </a>
               <a class="btn btn-icon btn-light btn-sm mx-3 cursor-pointer">
-                <app-keenicon name="pencil" class="fs-md text-primary"></app-keenicon>
+                <app-keenicon
+                  name="pencil"
+                  class="fs-md text-primary"
+                ></app-keenicon>
               </a>
               <a class="btn btn-icon btn-light btn-sm cursor-pointer">
-                <app-keenicon name="trash" class=" svg-icon-md text-primary"></app-keenicon>
+                <app-keenicon
+                  name="trash"
+                  class="svg-icon-md text-primary"
+                ></app-keenicon>
               </a>
             </td>
           </tr>
@@ -136,14 +153,17 @@
             <td class="pl-0">
               <a
                 class="text-dark-75 font-weight-bolder text-hover-primary mb-1 font-size-lg cursor-pointer"
-                >Application Development</a
               >
+                {{ 'application development' | translate }}
+              </a>
               <div>
-                <span class="font-weight-bolder">Email:</span>&nbsp;
+                <span class="font-weight-bolder">Email:</span>
+                &nbsp;
                 <a
                   class="text-muted font-weight-bold text-hover-primary cursor-pointer"
-                  >app@dev.com</a
                 >
+                  {{ 'app@dev.com' | translate }}
+                </a>
               </div>
             </td>
             <td class="text-right">
@@ -153,28 +173,37 @@
                 $4,600,000
               </span>
               <span class="text-muted font-weight-bold">
-                Paid
+                {{ 'Paid' | translate }}
               </span>
             </td>
             <td class="text-right">
               <span class="text-muted font-weight-500">
-                Python, MySQL
+                {{ 'Python, MySQL' | translate }}
               </span>
             </td>
             <td class="text-right">
-              <span class="label label-lg label-light-warning label-inline"
-                >In Progress</span
-              >
+              <span class="label label-lg label-light-warning label-inline">
+                {{ 'in progress' | translate }}
+              </span>
             </td>
             <td class="text-right pr-0">
               <a class="btn btn-icon btn-light btn-sm cursor-pointer">
-                <app-keenicon name="switch" class="fs-md text-primary"></app-keenicon>
+                <app-keenicon
+                  name="switch"
+                  class="fs-md text-primary"
+                ></app-keenicon>
               </a>
               <a class="btn btn-icon btn-light btn-sm mx-3 cursor-pointer">
-                <app-keenicon name="pencil" class="fs-md text-primary"></app-keenicon>
+                <app-keenicon
+                  name="pencil"
+                  class="fs-md text-primary"
+                ></app-keenicon>
               </a>
               <a class="btn btn-icon btn-light btn-sm cursor-pointer">
-                <app-keenicon name="trash" class=" svg-icon-md text-primary"></app-keenicon>
+                <app-keenicon
+                  name="trash"
+                  class="svg-icon-md text-primary"
+                ></app-keenicon>
               </a>
             </td>
           </tr>
@@ -193,14 +222,17 @@
             <td class="pl-0">
               <a
                 class="text-dark-75 font-weight-bolder text-hover-primary mb-1 font-size-lg cursor-pointer"
-                >Payrol Application</a
               >
+                {{ 'payrol application' | translate }}
+              </a>
               <div>
-                <span class="font-weight-bolder">Email:</span>&nbsp;
+                <span class="font-weight-bolder">Email:</span>
+                &nbsp;
                 <a
                   class="text-muted font-weight-bold text-hover-primary cursor-pointer"
-                  >company@dev.com</a
                 >
+                  {{ 'company@dev.com' | translate }}
+                </a>
               </div>
             </td>
             <td class="text-right">
@@ -210,28 +242,35 @@
                 $560,000
               </span>
               <span class="text-muted font-weight-bold">
-                Paid
+                {{ 'Paid' | translate }}
               </span>
             </td>
             <td class="text-right">
-              <span class="text-muted font-weight-500">
-                Laravel, Metronic
-              </span>
+              <span class="text-muted font-weight-500">Laravel, Metronic</span>
             </td>
             <td class="text-right">
-              <span class="label label-lg label-light-success label-inline"
-                >Success</span
-              >
+              <span class="label label-lg label-light-success label-inline">
+                {{ 'success' | translate }}
+              </span>
             </td>
             <td class="text-right pr-0">
               <a class="btn btn-icon btn-light btn-sm cursor-pointer">
-                <app-keenicon name="switch" class="fs-md text-primary"></app-keenicon>
+                <app-keenicon
+                  name="switch"
+                  class="fs-md text-primary"
+                ></app-keenicon>
               </a>
               <a class="btn btn-icon btn-light btn-sm mx-3 cursor-pointer">
-                <app-keenicon name="pencil" class="fs-md text-primary"></app-keenicon>
+                <app-keenicon
+                  name="pencil"
+                  class="fs-md text-primary"
+                ></app-keenicon>
               </a>
               <a class="btn btn-icon btn-light btn-sm cursor-pointer">
-                <app-keenicon name="trash" class=" svg-icon-md text-primary"></app-keenicon>
+                <app-keenicon
+                  name="trash"
+                  class="svg-icon-md text-primary"
+                ></app-keenicon>
               </a>
             </td>
           </tr>
@@ -250,14 +289,17 @@
             <td class="pl-0">
               <a
                 class="text-dark-75 font-weight-bolder text-hover-primary mb-1 font-size-lg cursor-pointer"
-                >HR Management System</a
               >
+                {{ 'hr management system' | translate }}
+              </a>
               <div>
-                <span class="font-weight-bolder">Email:</span>&nbsp;
+                <span class="font-weight-bolder">Email:</span>
+                &nbsp;
                 <a
                   class="text-muted font-weight-bold text-hover-primary cursor-pointer"
-                  >hr@demo.com</a
                 >
+                  {{ 'hr@demo.com' | translate }}
+                </a>
               </div>
             </td>
             <td class="text-right">
@@ -267,28 +309,37 @@
                 $57,000
               </span>
               <span class="text-muted font-weight-bold">
-                Paid
+                {{ 'Paid' | translate }}
               </span>
             </td>
             <td class="text-right">
               <span class="text-muted font-weight-bold">
-                AngularJS, C#
+                {{ 'AngularJS, C#' | translate }}
               </span>
             </td>
             <td class="text-right">
-              <span class="label label-lg label-light-danger label-inline"
-                >Rejected</span
-              >
+              <span class="label label-lg label-light-danger label-inline">
+                {{ 'rejected' | translate }}
+              </span>
             </td>
             <td class="text-right pr-0">
               <a class="btn btn-icon btn-light btn-sm cursor-pointer">
-                <app-keenicon name="switch" class="fs-md text-primary"></app-keenicon>
+                <app-keenicon
+                  name="switch"
+                  class="fs-md text-primary"
+                ></app-keenicon>
               </a>
               <a class="btn btn-icon btn-light btn-sm mx-3 cursor-pointer">
-                <app-keenicon name="pencil" class="fs-md text-primary"></app-keenicon>
+                <app-keenicon
+                  name="pencil"
+                  class="fs-md text-primary"
+                ></app-keenicon>
               </a>
               <a class="btn btn-icon btn-light btn-sm cursor-pointer">
-                <app-keenicon name="trash" class=" svg-icon-md text-primary"></app-keenicon>
+                <app-keenicon
+                  name="trash"
+                  class="svg-icon-md text-primary"
+                ></app-keenicon>
               </a>
             </td>
           </tr>
@@ -307,14 +358,17 @@
             <td class="pl-0">
               <a
                 class="text-dark-75 font-weight-bolder text-hover-primary mb-1 font-size-lg cursor-pointer"
-                >KTR Mobile Application</a
               >
+                {{ 'ktr mobile application' | translate }}
+              </a>
               <div>
-                <span class="font-weight-bolder">Email:</span>&nbsp;
+                <span class="font-weight-bolder">Email:</span>
+                &nbsp;
                 <a
                   class="text-muted font-weight-bold text-hover-primary cursor-pointer"
-                  >ktr@demo.com</a
                 >
+                  {{ 'ktr@demo.com' | translate }}
+                </a>
               </div>
             </td>
             <td class="text-right">
@@ -324,28 +378,37 @@
                 $45,200,000
               </span>
               <span class="text-muted font-weight-bold">
-                Paid
+                {{ 'Paid' | translate }}
               </span>
             </td>
             <td class="text-right">
               <span class="text-muted font-weight-500">
-                ReactJS, Ruby
+                {{ 'ReactJS, Ruby' | translate }}
               </span>
             </td>
             <td class="text-right">
-              <span class="label label-lg label-light-warning label-inline"
-                >In Progress</span
-              >
+              <span class="label label-lg label-light-warning label-inline">
+                {{ 'in progress' | translate }}
+              </span>
             </td>
             <td class="text-right pr-0">
               <a class="btn btn-icon btn-light btn-sm cursor-pointer">
-                <app-keenicon name="switch" class="fs-md text-primary"></app-keenicon>
+                <app-keenicon
+                  name="switch"
+                  class="fs-md text-primary"
+                ></app-keenicon>
               </a>
               <a class="btn btn-icon btn-light btn-sm mx-3 cursor-pointer">
-                <app-keenicon name="pencil" class="fs-md text-primary"></app-keenicon>
+                <app-keenicon
+                  name="pencil"
+                  class="fs-md text-primary"
+                ></app-keenicon>
               </a>
               <a class="btn btn-icon btn-light btn-sm cursor-pointer">
-                <app-keenicon name="trash" class=" svg-icon-md text-primary"></app-keenicon>
+                <app-keenicon
+                  name="trash"
+                  class="svg-icon-md text-primary"
+                ></app-keenicon>
               </a>
             </td>
           </tr>

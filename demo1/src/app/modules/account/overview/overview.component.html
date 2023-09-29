@@ -1,31 +1,37 @@
 <div class="card mb-5 mb-xl-10" id="kt_profile_details_view">
   <div class="card-header cursor-pointer">
     <div class="card-title m-0">
-      <h3 class="fw-bolder m-0">Profile Details</h3>
+      <h3 class="fw-bolder m-0">{{ 'profile details' | translate }}</h3>
     </div>
 
     <a
       routerLink="/crafted/account/settings"
       class="btn btn-primary align-self-center"
     >
-      Edit Profile
+      {{'Edit Profile'|translate}}
     </a>
   </div>
 
   <div class="card-body p-9">
     <div class="row mb-7">
-      <label class="col-lg-4 fw-bold text-muted">Full Name</label>
+      <label class="col-lg-4 fw-bold text-muted">
+        {{ 'full name' | translate }}
+      </label>
 
       <div class="col-lg-8">
-        <span class="fw-bolder fs-6 text-dark">Max Smith</span>
+        <span class="fw-bolder fs-6 text-dark">
+          {{ 'max smith' | translate }}
+        </span>
       </div>
     </div>
 
     <div class="row mb-7">
-      <label class="col-lg-4 fw-bold text-muted">Company</label>
+      <label class="col-lg-4 fw-bold text-muted">
+        {{ 'company' | translate }}
+      </label>
 
       <div class="col-lg-8 fv-row">
-        <span class="fw-bold fs-6">Keenthemes</span>
+        <span class="fw-bold fs-6">{{ 'keenthemes' | translate }}</span>
       </div>
     </div>
 
@@ -40,14 +46,18 @@
       </label>
 
       <div class="col-lg-8 d-flex align-items-center">
-        <span class="fw-bolder fs-6 me-2">044 3276 454 935</span>
+        <span class="fw-bolder fs-6 me-2">
+          {{ '044 3276 454 935' | translate }}
+        </span>
 
-        <span class="badge badge-success">Verified</span>
+        <span class="badge badge-success">{{ 'verified' | translate }}</span>
       </div>
     </div>
 
     <div class="row mb-7">
-      <label class="col-lg-4 fw-bold text-muted">Company Site</label>
+      <label class="col-lg-4 fw-bold text-muted">
+        {{ 'company site' | translate }}
+      </label>
 
       <div class="col-lg-8">
         <a href="#" class="fw-bold fs-6 text-dark text-hover-primary">
@@ -67,12 +77,16 @@
       </label>
 
       <div class="col-lg-8">
-        <span class="fw-bolder fs-6 text-dark">Germany</span>
+        <span class="fw-bolder fs-6 text-dark">
+          {{ 'germany' | translate }}
+        </span>
       </div>
     </div>
 
     <div class="row mb-7">
-      <label class="col-lg-4 fw-bold text-muted">Communication</label>
+      <label class="col-lg-4 fw-bold text-muted">
+        {{ 'communication' | translate }}
+      </label>
 
       <div class="col-lg-8">
         <span class="fw-bolder fs-6 text-dark">Email, Phone</span>
@@ -80,31 +94,31 @@
     </div>
 
     <div class="row mb-10">
-      <label class="col-lg-4 fw-bold text-muted">Allow Changes</label>
+      <label class="col-lg-4 fw-bold text-muted">
+        {{ 'allow changes' | translate }}
+      </label>
 
       <div class="col-lg-8">
-        <span class="fw-bold fs-6">Yes</span>
+        <span class="fw-bold fs-6">{{ 'yes' | translate }}</span>
       </div>
     </div>
 
     <div
-      class="
-        notice
-        d-flex
-        bg-light-warning
-        rounded
-        border-warning border border-dashed
-        p-6
-      "
+      class="notice d-flex bg-light-warning rounded border-warning border border-dashed p-6"
     >
-      <app-keenicon name="information-5" class="fs-2 text-warning me-4"></app-keenicon>
+      <app-keenicon
+        name="information-5"
+        class="fs-2 text-warning me-4"
+      ></app-keenicon>
       <div class="d-flex flex-stack flex-grow-1">
         <div class="fw-bold">
-          <h4 class="text-gray-800 fw-bolder">We need your attention!</h4>
+          <h4 class="text-gray-800 fw-bolder">
+            {{ 'We need your attention!' | translate }}
+          </h4>
           <div class="fs-6 text-gray-600">
             Your payment was declined. To start using tools, please
             <a class="fw-bolder" routerLink="/crafted/account/settings">
-              {{ " " }}
+              {{ ' ' }}
               Add Payment Method
             </a>
             .

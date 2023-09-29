@@ -9,6 +9,7 @@ import { MixedComponent } from './mixed/mixed.component';
 import { TablesComponent } from './tables/tables.component';
 import { FeedsComponent } from './feeds/feeds.component';
 import { WidgetsModule } from '../../_metronic/partials';
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,6 @@ import { WidgetsModule } from '../../_metronic/partials';
     TablesComponent,
     FeedsComponent,
   ],
-  imports: [CommonModule, WidgetsExamplesRoutingModule, WidgetsModule],
+  imports: [CommonModule, WidgetsExamplesRoutingModule, WidgetsModule,TranslateModule],
 })
 export class WidgetsExamplesModule {}

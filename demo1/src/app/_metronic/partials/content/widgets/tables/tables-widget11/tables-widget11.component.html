@@ -1,13 +1,17 @@
 <!-- begin::Header -->
 <div class="card-header border-0 pt-5">
   <h3 class="card-title align-items-start flex-column">
-    <span class="card-label fw-bolder fs-3 mb-1">New Arrivals</span>
-    <span class="text-muted mt-1 fw-bold fs-7">Over 500 new products</span>
+    <span class="card-label fw-bolder fs-3 mb-1">
+      {{ 'new arrivals' | translate }}
+    </span>
+    <span class="text-muted mt-1 fw-bold fs-7">
+      {{ 'over 500 new products' | translate }}
+    </span>
   </h3>
   <div class="card-toolbar">
     <a href="#" class="btn btn-sm btn-light-primary">
       <app-keenicon name="plus" class="fs-3"></app-keenicon>
-      New Member
+      {{'New Member'|translate}}
     </a>
   </div>
 </div>
@@ -21,11 +25,13 @@
       <!-- begin::Table head -->
       <thead>
         <tr class="fw-bolder text-muted bg-light">
-          <th class="ps-4 min-w-325px rounded-start">Product</th>
-          <th class="min-w-125px">Price</th>
-          <th class="min-w-125px">Deposit</th>
-          <th class="min-w-200px">Agent</th>
-          <th class="min-w-150px">Status</th>
+          <th class="ps-4 min-w-325px rounded-start">
+            {{ 'product' | translate }}
+          </th>
+          <th class="min-w-125px">{{ 'price' | translate }}</th>
+          <th class="min-w-125px">{{ 'deposit' | translate }}</th>
+          <th class="min-w-200px">{{ 'agent' | translate }}</th>
+          <th class="min-w-150px">{{ 'status' | translate }}</th>
           <th class="min-w-200px text-end rounded-end"></th>
         </tr>
       </thead>
@@ -62,7 +68,9 @@
             >
               $2,790
             </a>
-            <span class="text-muted fw-bold text-muted d-block fs-7">Paid</span>
+            <span class="text-muted fw-bold text-muted d-block fs-7">
+              {{ 'paid' | translate }}
+            </span>
           </td>
           <td>
             <a
@@ -71,9 +79,9 @@
             >
               $520
             </a>
-            <span class="text-muted fw-bold text-muted d-block fs-7"
-              >Rejected</span
-            >
+            <span class="text-muted fw-bold text-muted d-block fs-7">
+              {{ 'rejected' | translate }}
+            </span>
           </td>
           <td>
             <a
@@ -82,29 +90,25 @@
             >
               Bradly Beal
             </a>
-            <span class="text-muted fw-bold text-muted d-block fs-7"
-              >Insurance</span
-            >
+            <span class="text-muted fw-bold text-muted d-block fs-7">
+              {{ 'insurance' | translate }}
+            </span>
           </td>
           <td>
-            <span class="badge badge-light-primary fs-7 fw-bold">Approved</span>
+            <span class="badge badge-light-primary fs-7 fw-bold">
+              {{ 'approved' | translate }}
+            </span>
           </td>
           <td class="text-end">
             <a
               href="#"
-              class="
-                btn btn-icon btn-bg-light btn-active-color-primary btn-sm
-                me-1
-              "
+              class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm me-1"
             >
               <app-keenicon name="switch" class="fs-3"></app-keenicon>
             </a>
             <a
               href="#"
-              class="
-                btn btn-icon btn-bg-light btn-active-color-primary btn-sm
-                me-1
-              "
+              class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm me-1"
             >
               <app-keenicon name="pencil" class="fs-3"></app-keenicon>
             </a>
@@ -146,7 +150,9 @@
             >
               $4,790
             </a>
-            <span class="text-muted fw-bold text-muted d-block fs-7">Paid</span>
+            <span class="text-muted fw-bold text-muted d-block fs-7">
+              {{ 'paid' | translate }}
+            </span>
           </td>
           <td>
             <a
@@ -155,9 +161,9 @@
             >
               $240
             </a>
-            <span class="text-muted fw-bold text-muted d-block fs-7"
-              >Rejected</span
-            >
+            <span class="text-muted fw-bold text-muted d-block fs-7">
+              {{ 'rejected' | translate }}
+            </span>
           </td>
           <td>
             <a
@@ -166,31 +172,25 @@
             >
               Chris Thompson
             </a>
-            <span class="text-muted fw-bold text-muted d-block fs-7"
-              >NBA Player</span
-            >
+            <span class="text-muted fw-bold text-muted d-block fs-7">
+              {{ 'nba player' | translate }}
+            </span>
           </td>
           <td>
-            <span class="badge badge-light-danger fs-7 fw-bold"
-              >In Progress</span
-            >
+            <span class="badge badge-light-danger fs-7 fw-bold">
+              {{ 'in progress' | translate }}
+            </span>
           </td>
           <td class="text-end">
             <a
               href="#"
-              class="
-                btn btn-icon btn-bg-light btn-active-color-primary btn-sm
-                me-1
-              "
+              class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm me-1"
             >
               <app-keenicon name="switch" class="fs-3"></app-keenicon>
             </a>
             <a
               href="#"
-              class="
-                btn btn-icon btn-bg-light btn-active-color-primary btn-sm
-                me-1
-              "
+              class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm me-1"
             >
               <app-keenicon name="pencil" class="fs-3"></app-keenicon>
             </a>
@@ -232,7 +232,9 @@
             >
               $4,390
             </a>
-            <span class="text-muted fw-bold text-muted d-block fs-7">Paid</span>
+            <span class="text-muted fw-bold text-muted d-block fs-7">
+              {{ 'paid' | translate }}
+            </span>
           </td>
           <td>
             <a
@@ -241,9 +243,9 @@
             >
               $593
             </a>
-            <span class="text-muted fw-bold text-muted d-block fs-7"
-              >Rejected</span
-            >
+            <span class="text-muted fw-bold text-muted d-block fs-7">
+              {{ 'rejected' | translate }}
+            </span>
           </td>
           <td>
             <a
@@ -252,29 +254,25 @@
             >
               Zoey McGee
             </a>
-            <span class="text-muted fw-bold text-muted d-block fs-7"
-              >Ruby Developer</span
-            >
+            <span class="text-muted fw-bold text-muted d-block fs-7">
+              {{ 'ruby developer' | translate }}
+            </span>
           </td>
           <td>
-            <span class="badge badge-light-success fs-7 fw-bold">Success</span>
+            <span class="badge badge-light-success fs-7 fw-bold">
+              {{ 'success' | translate }}
+            </span>
           </td>
           <td class="text-end">
             <a
               href="#"
-              class="
-                btn btn-icon btn-bg-light btn-active-color-primary btn-sm
-                me-1
-              "
+              class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm me-1"
             >
               <app-keenicon name="switch" class="fs-3"></app-keenicon>
             </a>
             <a
               href="#"
-              class="
-                btn btn-icon btn-bg-light btn-active-color-primary btn-sm
-                me-1
-              "
+              class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm me-1"
             >
               <app-keenicon name="pencil" class="fs-3"></app-keenicon>
             </a>
@@ -316,7 +314,9 @@
             >
               $7,990
             </a>
-            <span class="text-muted fw-bold text-muted d-block fs-7">Paid</span>
+            <span class="text-muted fw-bold text-muted d-block fs-7">
+              {{ 'paid' | translate }}
+            </span>
           </td>
           <td>
             <a
@@ -325,9 +325,9 @@
             >
               $980
             </a>
-            <span class="text-muted fw-bold text-muted d-block fs-7"
-              >Rejected</span
-            >
+            <span class="text-muted fw-bold text-muted d-block fs-7">
+              {{ 'rejected' | translate }}
+            </span>
           </td>
           <td>
             <a
@@ -336,29 +336,25 @@
             >
               Brandon Ingram
             </a>
-            <span class="text-muted fw-bold text-muted d-block fs-7"
-              >Insurance</span
-            >
+            <span class="text-muted fw-bold text-muted d-block fs-7">
+              {{ 'insurance' | translate }}
+            </span>
           </td>
           <td>
-            <span class="badge badge-light-info fs-7 fw-bold">Rejected</span>
+            <span class="badge badge-light-info fs-7 fw-bold">
+              {{ 'rejected' | translate }}
+            </span>
           </td>
           <td class="text-end">
             <a
               href="#"
-              class="
-                btn btn-icon btn-bg-light btn-active-color-primary btn-sm
-                me-1
-              "
+              class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm me-1"
             >
               <app-keenicon name="switch" class="fs-3"></app-keenicon>
             </a>
             <a
               href="#"
-              class="
-                btn btn-icon btn-bg-light btn-active-color-primary btn-sm
-                me-1
-              "
+              class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm me-1"
             >
               <app-keenicon name="pencil" class="fs-3"></app-keenicon>
             </a>
@@ -400,7 +396,9 @@
             >
               $5,790
             </a>
-            <span class="text-muted fw-bold text-muted d-block fs-7">Paid</span>
+            <span class="text-muted fw-bold text-muted d-block fs-7">
+              {{ 'paid' | translate }}
+            </span>
           </td>
           <td>
             <a
@@ -409,9 +407,9 @@
             >
               $750
             </a>
-            <span class="text-muted fw-bold text-muted d-block fs-7"
-              >Rejected</span
-            >
+            <span class="text-muted fw-bold text-muted d-block fs-7">
+              {{ 'rejected' | translate }}
+            </span>
           </td>
           <td>
             <a
@@ -420,29 +418,25 @@
             >
               Natali Trump
             </a>
-            <span class="text-muted fw-bold text-muted d-block fs-7"
-              >Insurance</span
-            >
+            <span class="text-muted fw-bold text-muted d-block fs-7">
+              {{ 'insurance' | translate }}
+            </span>
           </td>
           <td>
-            <span class="badge badge-light-warning fs-7 fw-bold">Approved</span>
+            <span class="badge badge-light-warning fs-7 fw-bold">
+              {{ 'approved' | translate }}
+            </span>
           </td>
           <td class="text-end">
             <a
               href="#"
-              class="
-                btn btn-icon btn-bg-light btn-active-color-primary btn-sm
-                me-1
-              "
+              class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm me-1"
             >
               <app-keenicon name="switch" class="fs-3"></app-keenicon>
             </a>
             <a
               href="#"
-              class="
-                btn btn-icon btn-bg-light btn-active-color-primary btn-sm
-                me-1
-              "
+              class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm me-1"
             >
               <app-keenicon name="pencil" class="fs-3"></app-keenicon>
             </a>

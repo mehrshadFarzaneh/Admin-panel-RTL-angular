@@ -2,10 +2,12 @@
   <!-- Header -->
   <div class="card-header border-0 pt-5">
     <h3 class="card-title align-items-start flex-column">
-      <span class="card-label font-weight-bolder text-dark">New Arrivals</span>
-      <span class="text-muted mt-3 font-weight-bold font-size-sm"
-        >More than 400+ new members</span
-      >
+      <span class="card-label font-weight-bolder text-dark">
+        {{ 'new arrivals' | translate }}
+      </span>
+      <span class="text-muted mt-3 font-weight-bold font-size-sm">
+        {{'More than 400+ new members'|translate}}
+      </span>
     </h3>
     <div class="card-toolbar">
       <ul class="nav nav-pills nav-pills-sm nav-dark-75">
@@ -18,8 +20,9 @@
             class="nav-link py-2 px-4"
             [class.active]="currentTab === TABS[0]"
             data-toggle="tab"
-            >Month</a
           >
+            {{ 'month' | translate }}
+          </a>
         </li>
         <li
           class="nav-item"
@@ -30,8 +33,9 @@
             class="nav-link py-2 px-4"
             [class.active]="currentTab === TABS[1]"
             data-toggle="tab"
-            >Week</a
           >
+            {{ 'week' | translate }}
+          </a>
         </li>
         <li
           class="nav-item"
@@ -42,8 +46,9 @@
             class="nav-link py-2 px-4"
             [class.active]="currentTab === TABS[2]"
             data-toggle="tab"
-            >Day</a
           >
+            {{ 'day' | translate }}
+          </a>
         </li>
       </ul>
     </div>
@@ -89,23 +94,29 @@
                   <a
                     href="#"
                     class="text-dark font-weight-bolder text-hover-primary mb-1 font-size-lg"
-                    >Top Authors</a
                   >
-                  <span class="text-muted font-weight-bold d-block"
-                    >Successful Fellas</span
-                  >
-                </td>
-                <td class="text-right">
-                  <span class="text-muted font-weight-bold">
-                    ReactJs, HTML
+                    {{ 'top authors' | translate }}
+                  </a>
+                  <span class="text-muted font-weight-bold d-block">
+                    {{ 'successful fellas' | translate }}
                   </span>
                 </td>
                 <td class="text-right">
-                  <span class="text-muted font-weight-bold"> 4600 Users </span>
+                  <span class="text-muted font-weight-bold">
+                    {{ 'ReactJs, HTML' | translate }}
+                  </span>
+                </td>
+                <td class="text-right">
+                  <span class="text-muted font-weight-bold">
+                    {{ '4600 Users' | translate }}
+                  </span>
                 </td>
                 <td class="text-right pr-0">
                   <a href="#" class="btn btn-icon btn-light btn-sm">
-                    <app-keenicon name="arrow-right" class="fs-md text-success"></app-keenicon>
+                    <app-keenicon
+                      name="arrow-right"
+                      class="fs-md text-success"
+                    ></app-keenicon>
                   </a>
                 </td>
               </tr>
@@ -126,23 +137,29 @@
                   <a
                     href="#"
                     class="text-dark font-weight-bolder text-hover-primary mb-1 font-size-lg"
-                    >Bestseller Theme</a
                   >
-                  <span class="text-muted font-weight-bold d-block"
-                    >Amazing Templates</span
-                  >
-                </td>
-                <td class="text-right">
-                  <span class="text-muted font-weight-bold">
-                    ReactJS, Ruby
+                    {{ 'bestseller theme' | translate }}
+                  </a>
+                  <span class="text-muted font-weight-bold d-block">
+                    {{ 'amazing templates' | translate }}
                   </span>
                 </td>
                 <td class="text-right">
-                  <span class="text-muted font-weight-bold"> 354 Users </span>
+                  <span class="text-muted font-weight-bold">
+                    {{ 'ReactJS, Ruby' | translate }}
+                  </span>
+                </td>
+                <td class="text-right">
+                  <span class="text-muted font-weight-bold">
+                    {{ '354 Users' | translate }}
+                  </span>
                 </td>
                 <td class="text-right pr-0">
                   <a href="#" class="btn btn-icon btn-light btn-sm">
-                    <app-keenicon name="arrow-right" class="fs-md text-success"></app-keenicon>
+                    <app-keenicon
+                      name="arrow-right"
+                      class="fs-md text-success"
+                    ></app-keenicon>
                   </a>
                 </td>
               </tr>
@@ -151,7 +168,9 @@
                   <div class="symbol symbol-50 symbol-light mr-2">
                     <span class="symbol-label">
                       <span
-                        [inlineSVG]="'./assets/media/svg/brand-logos/telegram.svg'"
+                        [inlineSVG]="
+                          './assets/media/svg/brand-logos/telegram.svg'
+                        "
                         class="svg-icon h-50 align-self-end"
                       ></span>
                     </span>
@@ -161,23 +180,29 @@
                   <a
                     href="#"
                     class="text-dark font-weight-bolder text-hover-primary mb-1 font-size-lg"
-                    >Popular Authors</a
                   >
-                  <span class="text-muted font-weight-bold d-block"
-                    >Most Successful</span
-                  >
-                </td>
-                <td class="text-right">
-                  <span class="text-muted font-weight-bold">
-                    Python, MySQL
+                    {{ 'popular authors' | translate }}
+                  </a>
+                  <span class="text-muted font-weight-bold d-block">
+                    {{ 'most successful' | translate }}
                   </span>
                 </td>
                 <td class="text-right">
-                  <span class="text-muted font-weight-bold"> 7200 Users </span>
+                  <span class="text-muted font-weight-bold">
+                    {{ 'Python, MySQL' | translate }}
+                  </span>
+                </td>
+                <td class="text-right">
+                  <span class="text-muted font-weight-bold">
+                    {{ '7200 Users' | translate }}
+                  </span>
                 </td>
                 <td class="text-right pr-0">
                   <a href="#" class="btn btn-icon btn-light btn-sm">
-                    <app-keenicon name="arrow-right" class="fs-md text-success"></app-keenicon>
+                    <app-keenicon
+                      name="arrow-right"
+                      class="fs-md text-success"
+                    ></app-keenicon>
                   </a>
                 </td>
               </tr>
@@ -196,11 +221,12 @@
                   <a
                     href="#"
                     class="text-dark font-weight-bolder text-hover-primary mb-1 font-size-lg"
-                    >New Users</a
                   >
-                  <span class="text-muted font-weight-bold d-block"
-                    >Awesome Users</span
-                  >
+                    {{ 'new users' | translate }}
+                  </a>
+                  <span class="text-muted font-weight-bold d-block">
+                    {{ 'awesome users' | translate }}
+                  </span>
                 </td>
                 <td class="text-right">
                   <span class="text-muted font-weight-bold">
@@ -208,11 +234,16 @@
                   </span>
                 </td>
                 <td class="text-right">
-                  <span class="text-muted font-weight-bold"> 890 Users </span>
+                  <span class="text-muted font-weight-bold">
+                    {{ '890 Users' | translate }}
+                  </span>
                 </td>
                 <td class="text-right pr-0">
                   <a href="#" class="btn btn-icon btn-light btn-sm">
-                    <app-keenicon name="arrow-right" class="fs-md text-success"></app-keenicon>
+                    <app-keenicon
+                      name="arrow-right"
+                      class="fs-md text-success"
+                    ></app-keenicon>
                   </a>
                 </td>
               </tr>
@@ -231,23 +262,29 @@
                   <a
                     href="#"
                     class="text-dark font-weight-bolder text-hover-primary mb-1 font-size-lg"
-                    >Active Customers</a
                   >
-                  <span class="text-muted font-weight-bold d-block"
-                    >Best Customers</span
-                  >
-                </td>
-                <td class="text-right">
-                  <span class="text-muted font-weight-bold">
-                    AngularJS, C#
+                    {{ 'active customers' | translate }}
+                  </a>
+                  <span class="text-muted font-weight-bold d-block">
+                    {{ 'best customers' | translate }}
                   </span>
                 </td>
                 <td class="text-right">
-                  <span class="text-muted font-weight-bold"> 6370 Users </span>
+                  <span class="text-muted font-weight-bold">
+                    {{ 'AngularJS, C#' | translate }}
+                  </span>
+                </td>
+                <td class="text-right">
+                  <span class="text-muted font-weight-bold">
+                    {{ '6370 Users' | translate }}
+                  </span>
                 </td>
                 <td class="text-right pr-0">
                   <a href="#" class="btn btn-icon btn-light btn-sm">
-                    <app-keenicon name="arrow-right" class="fs-md text-success"></app-keenicon>
+                    <app-keenicon
+                      name="arrow-right"
+                      class="fs-md text-success"
+                    ></app-keenicon>
                   </a>
                 </td>
               </tr>
@@ -285,7 +322,9 @@
                   <div class="symbol symbol-50 symbol-light mr-2">
                     <span class="symbol-label">
                       <span
-                        [inlineSVG]="'./assets/media/svg/brand-logos/telegram.svg'"
+                        [inlineSVG]="
+                          './assets/media/svg/brand-logos/telegram.svg'
+                        "
                         class="svg-icon h-50 align-self-center"
                       ></span>
                     </span>
@@ -295,23 +334,29 @@
                   <a
                     href="#"
                     class="text-dark font-weight-bolder text-hover-primary mb-1 font-size-lg"
-                    >Popular Authors</a
                   >
-                  <span class="text-muted font-weight-bold d-block"
-                    >Most Successful</span
-                  >
-                </td>
-                <td class="text-right">
-                  <span class="text-muted font-weight-bold">
-                    Python, MySQL
+                    {{ 'popular authors' | translate }}
+                  </a>
+                  <span class="text-muted font-weight-bold d-block">
+                    {{ 'most successful' | translate }}
                   </span>
                 </td>
                 <td class="text-right">
-                  <span class="text-muted font-weight-bold"> 7200 Users </span>
+                  <span class="text-muted font-weight-bold">
+                    {{ 'Python, MySQL' | translate }}
+                  </span>
+                </td>
+                <td class="text-right">
+                  <span class="text-muted font-weight-bold">
+                    {{ '7200 Users' | translate }}
+                  </span>
                 </td>
                 <td class="text-right pr-0">
                   <a href="#" class="btn btn-icon btn-light btn-sm">
-                    <app-keenicon name="arrow-right" class="fs-md text-success"></app-keenicon>
+                    <app-keenicon
+                      name="arrow-right"
+                      class="fs-md text-success"
+                    ></app-keenicon>
                   </a>
                 </td>
               </tr>
@@ -330,11 +375,12 @@
                   <a
                     href="#"
                     class="text-dark font-weight-bolder text-hover-primary mb-1 font-size-lg"
-                    >New Users</a
                   >
-                  <span class="text-muted font-weight-bold d-block"
-                    >Awesome Users</span
-                  >
+                    {{ 'new users' | translate }}
+                  </a>
+                  <span class="text-muted font-weight-bold d-block">
+                    {{ 'awesome users' | translate }}
+                  </span>
                 </td>
                 <td class="text-right">
                   <span class="text-muted font-weight-bold">
@@ -342,11 +388,16 @@
                   </span>
                 </td>
                 <td class="text-right">
-                  <span class="text-muted font-weight-bold"> 890 Users </span>
+                  <span class="text-muted font-weight-bold">
+                    {{ '890 Users' | translate }}
+                  </span>
                 </td>
                 <td class="text-right pr-0">
                   <a href="#" class="btn btn-icon btn-light btn-sm">
-                    <app-keenicon name="arrow-right" class="fs-md text-success"></app-keenicon>
+                    <app-keenicon
+                      name="arrow-right"
+                      class="fs-md text-success"
+                    ></app-keenicon>
                   </a>
                 </td>
               </tr>
@@ -365,23 +416,29 @@
                   <a
                     href="#"
                     class="text-dark font-weight-bolder text-hover-primary mb-1 font-size-lg"
-                    >Active Customers</a
                   >
-                  <span class="text-muted font-weight-bold d-block"
-                    >Best Customers</span
-                  >
-                </td>
-                <td class="text-right">
-                  <span class="text-muted font-weight-bold">
-                    AngularJS, C#
+                    {{ 'active customers' | translate }}
+                  </a>
+                  <span class="text-muted font-weight-bold d-block">
+                    {{ 'best customers' | translate }}
                   </span>
                 </td>
                 <td class="text-right">
-                  <span class="text-muted font-weight-bold"> 6370 Users </span>
+                  <span class="text-muted font-weight-bold">
+                    {{ 'AngularJS, C#' | translate }}
+                  </span>
+                </td>
+                <td class="text-right">
+                  <span class="text-muted font-weight-bold">
+                    {{ '6370 Users' | translate }}
+                  </span>
                 </td>
                 <td class="text-right pr-0">
                   <a href="#" class="btn btn-icon btn-light btn-sm">
-                    <app-keenicon name="arrow-right" class="fs-md text-success"></app-keenicon>
+                    <app-keenicon
+                      name="arrow-right"
+                      class="fs-md text-success"
+                    ></app-keenicon>
                   </a>
                 </td>
               </tr>
@@ -400,23 +457,29 @@
                   <a
                     href="#"
                     class="text-dark font-weight-bolder text-hover-primary mb-1 font-size-lg"
-                    >Top Authors</a
                   >
-                  <span class="text-muted font-weight-bold d-block"
-                    >Successful Fellas</span
-                  >
-                </td>
-                <td class="text-right">
-                  <span class="text-muted font-weight-bold">
-                    ReactJs, HTML
+                    {{ 'top authors' | translate }}
+                  </a>
+                  <span class="text-muted font-weight-bold d-block">
+                    {{ 'successful fellas' | translate }}
                   </span>
                 </td>
                 <td class="text-right">
-                  <span class="text-muted font-weight-bold"> 4600 Users </span>
+                  <span class="text-muted font-weight-bold">
+                    {{ 'ReactJs, HTML' | translate }}
+                  </span>
+                </td>
+                <td class="text-right">
+                  <span class="text-muted font-weight-bold">
+                    {{ '4600 Users' | translate }}
+                  </span>
                 </td>
                 <td class="text-right pr-0">
                   <a href="#" class="btn btn-icon btn-light btn-sm">
-                    <app-keenicon name="arrow-right" class="fs-md text-success"></app-keenicon>
+                    <app-keenicon
+                      name="arrow-right"
+                      class="fs-md text-success"
+                    ></app-keenicon>
                   </a>
                 </td>
               </tr>
@@ -437,23 +500,29 @@
                   <a
                     href="#"
                     class="text-dark font-weight-bolder text-hover-primary mb-1 font-size-lg"
-                    >Bestseller Theme</a
                   >
-                  <span class="text-muted font-weight-bold d-block"
-                    >Amazing Templates</span
-                  >
-                </td>
-                <td class="text-right">
-                  <span class="text-muted font-weight-bold">
-                    ReactJS, Ruby
+                    {{ 'bestseller theme' | translate }}
+                  </a>
+                  <span class="text-muted font-weight-bold d-block">
+                    {{ 'amazing templates' | translate }}
                   </span>
                 </td>
                 <td class="text-right">
-                  <span class="text-muted font-weight-bold"> 354 Users </span>
+                  <span class="text-muted font-weight-bold">
+                    {{ 'ReactJS, Ruby' | translate }}
+                  </span>
+                </td>
+                <td class="text-right">
+                  <span class="text-muted font-weight-bold">
+                    {{ '354 Users' | translate }}
+                  </span>
                 </td>
                 <td class="text-right pr-0">
                   <a href="#" class="btn btn-icon btn-light btn-sm">
-                    <app-keenicon name="arrow-right" class="fs-md text-success"></app-keenicon>
+                    <app-keenicon
+                      name="arrow-right"
+                      class="fs-md text-success"
+                    ></app-keenicon>
                   </a>
                 </td>
               </tr>
@@ -501,23 +570,29 @@
                   <a
                     href="#"
                     class="text-dark font-weight-bolder text-hover-primary mb-1 font-size-lg"
-                    >Top Authors</a
                   >
-                  <span class="text-muted font-weight-bold d-block"
-                    >Successful Fellas</span
-                  >
-                </td>
-                <td class="text-right">
-                  <span class="text-muted font-weight-bold">
-                    ReactJs, HTML
+                    {{ 'top authors' | translate }}
+                  </a>
+                  <span class="text-muted font-weight-bold d-block">
+                    {{ 'successful fellas' | translate }}
                   </span>
                 </td>
                 <td class="text-right">
-                  <span class="text-muted font-weight-bold"> 4600 Users </span>
+                  <span class="text-muted font-weight-bold">
+                    {{ 'ReactJs, HTML' | translate }}
+                  </span>
+                </td>
+                <td class="text-right">
+                  <span class="text-muted font-weight-bold">
+                    {{ '4600 Users' | translate }}
+                  </span>
                 </td>
                 <td class="text-right pr-0">
                   <a href="#" class="btn btn-icon btn-light btn-sm">
-                    <app-keenicon name="arrow-right" class="fs-md text-success"></app-keenicon>
+                    <app-keenicon
+                      name="arrow-right"
+                      class="fs-md text-success"
+                    ></app-keenicon>
                   </a>
                 </td>
               </tr>
@@ -526,7 +601,9 @@
                   <div class="symbol symbol-50 symbol-light mr-2">
                     <span class="symbol-label">
                       <span
-                        [inlineSVG]="'./assets/media/svg/brand-logos/telegram.svg'"
+                        [inlineSVG]="
+                          './assets/media/svg/brand-logos/telegram.svg'
+                        "
                         class="svg-icon h-50 align-self-center"
                       ></span>
                     </span>
@@ -536,23 +613,29 @@
                   <a
                     href="#"
                     class="text-dark font-weight-bolder text-hover-primary mb-1 font-size-lg"
-                    >Popular Authors</a
                   >
-                  <span class="text-muted font-weight-bold d-block"
-                    >Most Successful</span
-                  >
-                </td>
-                <td class="text-right">
-                  <span class="text-muted font-weight-bold">
-                    Python, MySQL
+                    {{ 'popular authors' | translate }}
+                  </a>
+                  <span class="text-muted font-weight-bold d-block">
+                    {{ 'most successful' | translate }}
                   </span>
                 </td>
                 <td class="text-right">
-                  <span class="text-muted font-weight-bold"> 7200 Users </span>
+                  <span class="text-muted font-weight-bold">
+                    {{ 'Python, MySQL' | translate }}
+                  </span>
+                </td>
+                <td class="text-right">
+                  <span class="text-muted font-weight-bold">
+                    {{ '7200 Users' | translate }}
+                  </span>
                 </td>
                 <td class="text-right pr-0">
                   <a href="#" class="btn btn-icon btn-light btn-sm">
-                    <app-keenicon name="arrow-right" class="fs-md text-success"></app-keenicon>
+                    <app-keenicon
+                      name="arrow-right"
+                      class="fs-md text-success"
+                    ></app-keenicon>
                   </a>
                 </td>
               </tr>
@@ -571,11 +654,12 @@
                   <a
                     href="#"
                     class="text-dark font-weight-bolder text-hover-primary mb-1 font-size-lg"
-                    >New Users</a
                   >
-                  <span class="text-muted font-weight-bold d-block"
-                    >Awesome Users</span
-                  >
+                    {{ 'new users' | translate }}
+                  </a>
+                  <span class="text-muted font-weight-bold d-block">
+                    {{ 'awesome users' | translate }}
+                  </span>
                 </td>
                 <td class="text-right">
                   <span class="text-muted font-weight-bold">
@@ -583,11 +667,16 @@
                   </span>
                 </td>
                 <td class="text-right">
-                  <span class="text-muted font-weight-bold"> 890 Users </span>
+                  <span class="text-muted font-weight-bold">
+                    {{ '890 Users' | translate }}
+                  </span>
                 </td>
                 <td class="text-right pr-0">
                   <a href="#" class="btn btn-icon btn-light btn-sm">
-                    <app-keenicon name="arrow-right" class="fs-md text-success"></app-keenicon>
+                    <app-keenicon
+                      name="arrow-right"
+                      class="fs-md text-success"
+                    ></app-keenicon>
                   </a>
                 </td>
               </tr>
@@ -606,23 +695,29 @@
                   <a
                     href="#"
                     class="text-dark font-weight-bolder text-hover-primary mb-1 font-size-lg"
-                    >Active Customers</a
                   >
-                  <span class="text-muted font-weight-bold d-block"
-                    >Best Customers</span
-                  >
-                </td>
-                <td class="text-right">
-                  <span class="text-muted font-weight-bold">
-                    AngularJS, C#
+                    {{ 'active customers' | translate }}
+                  </a>
+                  <span class="text-muted font-weight-bold d-block">
+                    {{ 'best customers' | translate }}
                   </span>
                 </td>
                 <td class="text-right">
-                  <span class="text-muted font-weight-bold"> 6370 Users </span>
+                  <span class="text-muted font-weight-bold">
+                    {{ 'AngularJS, C#' | translate }}
+                  </span>
+                </td>
+                <td class="text-right">
+                  <span class="text-muted font-weight-bold">
+                    {{ '6370 Users' | translate }}
+                  </span>
                 </td>
                 <td class="text-right pr-0">
                   <a href="#" class="btn btn-icon btn-light btn-sm">
-                    <app-keenicon name="arrow-right" class="fs-md text-success"></app-keenicon>
+                    <app-keenicon
+                      name="arrow-right"
+                      class="fs-md text-success"
+                    ></app-keenicon>
                   </a>
                 </td>
               </tr>
@@ -643,23 +738,29 @@
                   <a
                     href="#"
                     class="text-dark font-weight-bolder text-hover-primary mb-1 font-size-lg"
-                    >Bestseller Theme</a
                   >
-                  <span class="text-muted font-weight-bold d-block"
-                    >Amazing Templates</span
-                  >
-                </td>
-                <td class="text-right">
-                  <span class="text-muted font-weight-bold">
-                    ReactJS, Ruby
+                    {{ 'bestseller theme' | translate }}
+                  </a>
+                  <span class="text-muted font-weight-bold d-block">
+                    {{ 'amazing templates' | translate }}
                   </span>
                 </td>
                 <td class="text-right">
-                  <span class="text-muted font-weight-bold"> 354 Users </span>
+                  <span class="text-muted font-weight-bold">
+                    {{ 'ReactJS, Ruby' | translate }}
+                  </span>
+                </td>
+                <td class="text-right">
+                  <span class="text-muted font-weight-bold">
+                    {{ '354 Users' | translate }}
+                  </span>
                 </td>
                 <td class="text-right pr-0">
                   <a href="#" class="btn btn-icon btn-light btn-sm">
-                    <app-keenicon name="arrow-right" class="fs-md text-success"></app-keenicon>
+                    <app-keenicon
+                      name="arrow-right"
+                      class="fs-md text-success"
+                    ></app-keenicon>
                   </a>
                 </td>
               </tr>

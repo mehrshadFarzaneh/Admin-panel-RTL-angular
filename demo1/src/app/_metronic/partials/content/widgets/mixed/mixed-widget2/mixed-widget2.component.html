@@ -1,14 +1,12 @@
 <div class="card-header border-0 py-5" [ngClass]="'bg-' + chartColor">
-  <h3 class="card-title fw-bolder text-white">Sales Statistics</h3>
+  <h3 class="card-title fw-bolder text-white">
+    {{ 'sales statistics' | translate }}
+  </h3>
   <div class="card-toolbar">
     <!-- begin::Menu -->
     <button
       type="button"
-      class="
-        btn btn-sm btn-icon btn-color-white btn-active-white btn-active-color-
-        border-0
-        me-n3
-      "
+      class="btn btn-sm btn-icon btn-color-white btn-active-white btn-active-color- border-0 me-n3"
       data-kt-menu-trigger="click"
       data-kt-menu-placement="bottom-end"
       data-kt-menu-flip="top-end"
@@ -51,14 +49,24 @@
     <div class="row g-0">
       <!-- begin::Col -->
       <div class="col bg-light-warning px-6 py-8 rounded-2 me-7 mb-7">
-        <app-keenicon name="chart-simple" class="fs-3x text-warning d-block my-2"></app-keenicon>
-        <a href="#" class="text-warning fw-bold fs-6"> Weekly Sales </a>
+        <app-keenicon
+          name="chart-simple"
+          class="fs-3x text-warning d-block my-2"
+        ></app-keenicon>
+        <a href="#" class="text-warning fw-bold fs-6">
+          {{ 'Weekly Sales' | translate }}
+        </a>
       </div>
       <!-- end::Col -->
       <!-- begin::Col -->
       <div class="col bg-light-primary px-6 py-8 rounded-2 mb-7">
-        <app-keenicon name="briefcase" class="fs-3x text-primary d-block my-2"></app-keenicon>
-        <a href="#" class="text-primary fw-bold fs-6"> New Projects </a>
+        <app-keenicon
+          name="briefcase"
+          class="fs-3x text-primary d-block my-2"
+        ></app-keenicon>
+        <a href="#" class="text-primary fw-bold fs-6">
+          {{ 'New Projects' | translate }}
+        </a>
       </div>
       <!-- end::Col -->
     </div>
@@ -67,14 +75,24 @@
     <div class="row g-0">
       <!-- begin::Col -->
       <div class="col bg-light-danger px-6 py-8 rounded-2 me-7">
-        <app-keenicon name="abstract-26" class="fs-3x text-danger d-block my-2"></app-keenicon>
-        <a href="#" class="text-danger fw-bold fs-6 mt-2"> Item Orders </a>
+        <app-keenicon
+          name="abstract-26"
+          class="fs-3x text-danger d-block my-2"
+        ></app-keenicon>
+        <a href="#" class="text-danger fw-bold fs-6 mt-2">
+          {{ 'Item Orders' | translate }}
+        </a>
       </div>
       <!-- end::Col -->
       <!-- begin::Col -->
       <div class="col bg-light-success px-6 py-8 rounded-2">
-        <app-keenicon name="sms" class="fs-3x text-success d-block my-2"></app-keenicon>
-        <a href="#" class="text-success fw-bold fs-6 mt-2"> Bug Reports </a>
+        <app-keenicon
+          name="sms"
+          class="fs-3x text-success d-block my-2"
+        ></app-keenicon>
+        <a href="#" class="text-success fw-bold fs-6 mt-2">
+          {{ 'Bug Reports' | translate }}
+        </a>
       </div>
       <!-- end::Col -->
     </div>

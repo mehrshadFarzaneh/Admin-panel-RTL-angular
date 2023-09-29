@@ -10,6 +10,7 @@ import { Card5Component } from './card5/card5.component';
 import { UserListComponent } from './user-list/user-list.component';
 import { DropdownMenusModule } from '../dropdown-menus/dropdown-menus.module';
 import { SharedModule } from "../../../shared/shared.module";
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { SharedModule } from "../../../shared/shared.module";
     InlineSVGModule,
     NgbTooltipModule,
     DropdownMenusModule,
-    SharedModule
+    SharedModule,
+    TranslateModule
   ],
   exports: [
     Card1Component,
@@ -36,4 +38,4 @@ import { SharedModule } from "../../../shared/shared.module";
     UserListComponent,
   ],
 })
-export class CardsModule {}
+export class CardsModule { }

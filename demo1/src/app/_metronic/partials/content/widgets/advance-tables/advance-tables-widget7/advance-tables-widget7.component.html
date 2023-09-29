@@ -3,10 +3,12 @@
   <!--begin::Header-->
   <div class="card-header border-0 pt-5">
     <h3 class="card-title align-items-start flex-column">
-      <span class="card-label font-weight-bolder text-dark">New Arrivals</span>
-      <span class="text-muted mt-3 font-weight-bold font-size-sm"
-        >More than 400+ new members</span
-      >
+      <span class="card-label font-weight-bolder text-dark">
+        {{ 'new arrivals' | translate }}
+      </span>
+      <span class="text-muted mt-3 font-weight-bold font-size-sm">
+        {{'More than 400+ new members'|translate}}
+      </span>
     </h3>
     <div class="card-toolbar">
       <ul class="nav nav-pills nav-pills-sm nav-dark-75">
@@ -20,7 +22,7 @@
             [class.active]="currentTab === 'Month'"
             data-toggle="tab"
           >
-            Month
+          {{'Month' | translate}}
           </a>
         </li>
         <li
@@ -32,8 +34,9 @@
             class="nav-link py-2 px-4"
             [class.active]="currentTab === 'Week'"
             data-toggle="tab"
-            >Week</a
           >
+            {{ 'week' | translate }}
+          </a>
         </li>
         <li
           class="nav-item"
@@ -44,8 +47,9 @@
             class="nav-link py-2 px-4 active"
             [class.active]="currentTab === 'Day'"
             data-toggle="tab"
-            >Day</a
           >
+            {{ 'day' | translate }}
+          </a>
         </li>
       </ul>
     </div>
@@ -88,19 +92,13 @@
                 </td>
                 <td class="pl-0">
                   <a
-                    class="
-                      text-dark
-                      font-weight-bolder
-                      text-hover-primary
-                      mb-1
-                      font-size-lg
-                      cursor-pointer
-                    "
-                    >Beats Studio</a
+                    class="text-dark font-weight-bolder text-hover-primary mb-1 font-size-lg cursor-pointer"
                   >
-                  <span class="text-muted font-weight-bold d-block"
-                    >FTP: bprow@bnc.cc</span
-                  >
+                    {{ 'beats studio' | translate }}
+                  </a>
+                  <span class="text-muted font-weight-bold d-block">
+                    {{ 'FTP: bprow@bnc.cc' | translate }}
+                  </span>
                 </td>
                 <td class="text-right pr-0">
                   <span
@@ -108,43 +106,44 @@
                   >
                     $57,000
                   </span>
-                  <span class="text-muted font-weight-bold"> Paid </span>
-                </td>
-                <td class="text-right">
                   <span class="text-muted font-weight-bold">
-                    AngularJS, C#
+                    {{ 'Paid' | translate }}
                   </span>
                 </td>
                 <td class="text-right">
-                  <span class="label label-lg label-light-danger label-inline"
-                    >Rejected</span
-                  >
+                  <span class="text-muted font-weight-bold">
+                    {{ 'AngularJS, C#' | translate }}
+                  </span>
+                </td>
+                <td class="text-right">
+                  <span class="label label-lg label-light-danger label-inline">
+                    {{ 'rejected' | translate }}
+                  </span>
                 </td>
                 <td class="pr-0 text-right">
                   <a
-                    class="
-                      btn btn-icon btn-light btn-hover-primary btn-sm
-                      cursor-pointer
-                    "
+                    class="btn btn-icon btn-light btn-hover-primary btn-sm cursor-pointer"
                   >
-                    <app-keenicon name="switch" class="fs-md text-primary"></app-keenicon>
+                    <app-keenicon
+                      name="switch"
+                      class="fs-md text-primary"
+                    ></app-keenicon>
                   </a>
                   <a
-                    class="
-                      btn btn-icon btn-light btn-hover-primary btn-sm
-                      mx-3
-                      cursor-pointer
-                    "
+                    class="btn btn-icon btn-light btn-hover-primary btn-sm mx-3 cursor-pointer"
                   >
-                    <app-keenicon name="pencil" class="fs-md text-primary"></app-keenicon>
+                    <app-keenicon
+                      name="pencil"
+                      class="fs-md text-primary"
+                    ></app-keenicon>
                   </a>
                   <a
-                    class="
-                      btn btn-icon btn-light btn-hover-primary btn-sm
-                      cursor-pointer
-                    "
+                    class="btn btn-icon btn-light btn-hover-primary btn-sm cursor-pointer"
                   >
-                    <app-keenicon name="trash" class=" svg-icon-md text-primary"></app-keenicon>
+                    <app-keenicon
+                      name="trash"
+                      class="svg-icon-md text-primary"
+                    ></app-keenicon>
                   </a>
                 </td>
               </tr>
@@ -164,19 +163,16 @@
                 <td class="pl-0">
                   <a
                     href="#"
-                    class="
-                      text-dark-75
-                      font-weight-bolder
-                      text-hover-primary
-                      mb-1
-                      font-size-lg
-                    "
-                    >KTR Application</a
+                    class="text-dark-75 font-weight-bolder text-hover-primary mb-1 font-size-lg"
                   >
-                  <span class="text-muted font-weight-bold d-block"
-                    ><span class="font-weight-bolder text-dark-75">FTP:</span>
-                    bprow@bnc.cc</span
-                  >
+                    {{ 'ktr application' | translate }}
+                  </a>
+                  <span class="text-muted font-weight-bold d-block">
+                    <span class="font-weight-bolder text-dark-75">
+                      {{ 'FTP:' | translate }}
+                    </span>
+                    bprow@bnc.cc
+                  </span>
                 </td>
                 <td class="text-right">
                   <span
@@ -184,43 +180,44 @@
                   >
                     $45,200,000
                   </span>
-                  <span class="text-muted font-weight-bold"> Paid </span>
-                </td>
-                <td class="text-right">
                   <span class="text-muted font-weight-bold">
-                    ReactJS, Ruby
+                    {{ 'Paid' | translate }}
                   </span>
                 </td>
                 <td class="text-right">
-                  <span class="label label-lg label-light-warning label-inline"
-                    >In Progress</span
-                  >
+                  <span class="text-muted font-weight-bold">
+                    {{ 'ReactJS, Ruby' | translate }}
+                  </span>
+                </td>
+                <td class="text-right">
+                  <span class="label label-lg label-light-warning label-inline">
+                    {{ 'in progress' | translate }}
+                  </span>
                 </td>
                 <td class="pr-0 text-right">
                   <a
-                    class="
-                      btn btn-icon btn-light btn-hover-primary btn-sm
-                      cursor-pointer
-                    "
+                    class="btn btn-icon btn-light btn-hover-primary btn-sm cursor-pointer"
                   >
-                    <app-keenicon name="switch" class="fs-md text-primary"></app-keenicon>
+                    <app-keenicon
+                      name="switch"
+                      class="fs-md text-primary"
+                    ></app-keenicon>
                   </a>
                   <a
-                    class="
-                      btn btn-icon btn-light btn-hover-primary btn-sm
-                      mx-3
-                      cursor-pointer
-                    "
+                    class="btn btn-icon btn-light btn-hover-primary btn-sm mx-3 cursor-pointer"
                   >
-                    <app-keenicon name="pencil" class="fs-md text-primary"></app-keenicon>
+                    <app-keenicon
+                      name="pencil"
+                      class="fs-md text-primary"
+                    ></app-keenicon>
                   </a>
                   <a
-                    class="
-                      btn btn-icon btn-light btn-hover-primary btn-sm
-                      cursor-pointer
-                    "
+                    class="btn btn-icon btn-light btn-hover-primary btn-sm cursor-pointer"
                   >
-                    <app-keenicon name="trash" class=" svg-icon-md text-primary"></app-keenicon>
+                    <app-keenicon
+                      name="trash"
+                      class="svg-icon-md text-primary"
+                    ></app-keenicon>
                   </a>
                 </td>
               </tr>
@@ -238,22 +235,18 @@
                 <td class="pl-0">
                   <a
                     href="#"
-                    class="
-                      text-dark-75
-                      font-weight-bolder
-                      text-hover-primary
-                      mb-1
-                      font-size-lg
-                    "
-                    >Sant Outstanding</a
+                    class="text-dark-75 font-weight-bolder text-hover-primary mb-1 font-size-lg"
                   >
+                    {{ 'sant outstanding' | translate }}
+                  </a>
                   <div>
                     <span class="font-weight-bolder">Email:</span>
                     <a
                       class="text-muted font-weight-bold text-hover-primary"
                       href="#"
-                      >bprow@bnc.cc</a
                     >
+                      {{ 'bprow@bnc.cc' | translate }}
+                    </a>
                   </div>
                 </td>
                 <td class="text-right">
@@ -262,43 +255,44 @@
                   >
                     $2,000,000
                   </span>
-                  <span class="text-muted font-weight-bold"> Paid </span>
-                </td>
-                <td class="text-right">
                   <span class="text-muted font-weight-bold">
-                    ReactJs, HTML
+                    {{ 'Paid' | translate }}
                   </span>
                 </td>
                 <td class="text-right">
-                  <span class="label label-lg label-light-primary label-inline"
-                    >Approved</span
-                  >
+                  <span class="text-muted font-weight-bold">
+                    {{ 'ReactJs, HTML' | translate }}
+                  </span>
+                </td>
+                <td class="text-right">
+                  <span class="label label-lg label-light-primary label-inline">
+                    {{ 'approved' | translate }}
+                  </span>
                 </td>
                 <td class="pr-0 text-right">
                   <a
-                    class="
-                      btn btn-icon btn-light btn-hover-primary btn-sm
-                      cursor-pointer
-                    "
+                    class="btn btn-icon btn-light btn-hover-primary btn-sm cursor-pointer"
                   >
-                    <app-keenicon name="switch" class="fs-md text-primary"></app-keenicon>
+                    <app-keenicon
+                      name="switch"
+                      class="fs-md text-primary"
+                    ></app-keenicon>
                   </a>
                   <a
-                    class="
-                      btn btn-icon btn-light btn-hover-primary btn-sm
-                      mx-3
-                      cursor-pointer
-                    "
+                    class="btn btn-icon btn-light btn-hover-primary btn-sm mx-3 cursor-pointer"
                   >
-                    <app-keenicon name="pencil" class="fs-md text-primary"></app-keenicon>
+                    <app-keenicon
+                      name="pencil"
+                      class="fs-md text-primary"
+                    ></app-keenicon>
                   </a>
                   <a
-                    class="
-                      btn btn-icon btn-light btn-hover-primary btn-sm
-                      cursor-pointer
-                    "
+                    class="btn btn-icon btn-light btn-hover-primary btn-sm cursor-pointer"
                   >
-                    <app-keenicon name="trash" class=" svg-icon-md text-primary"></app-keenicon>
+                    <app-keenicon
+                      name="trash"
+                      class="svg-icon-md text-primary"
+                    ></app-keenicon>
                   </a>
                 </td>
               </tr>
@@ -307,7 +301,9 @@
                   <div class="symbol symbol-50 symbol-light mr-5">
                     <span class="symbol-label">
                       <span
-                        [inlineSVG]="'./assets/media/svg/brand-logos/telegram.svg'"
+                        [inlineSVG]="
+                          './assets/media/svg/brand-logos/telegram.svg'
+                        "
                         class="svg-icon h-50 align-self-center"
                       ></span>
                     </span>
@@ -316,19 +312,16 @@
                 <td class="pl-0">
                   <a
                     href="#"
-                    class="
-                      text-dark-75
-                      font-weight-bolder
-                      text-hover-primary
-                      mb-1
-                      font-size-lg
-                    "
-                    >Telegram Mobile</a
+                    class="text-dark-75 font-weight-bolder text-hover-primary mb-1 font-size-lg"
                   >
-                  <span class="text-muted font-weight-bold d-block"
-                    ><span class="font-weight-bolder text-dark-75">FTP:</span>
-                    bprow@bnc.cc</span
-                  >
+                    {{ 'telegram mobile' | translate }}
+                  </a>
+                  <span class="text-muted font-weight-bold d-block">
+                    <span class="font-weight-bolder text-dark-75">
+                      {{ 'FTP:' | translate }}
+                    </span>
+                    bprow@bnc.cc
+                  </span>
                 </td>
                 <td class="text-right">
                   <span
@@ -336,43 +329,44 @@
                   >
                     $4,600,000
                   </span>
-                  <span class="text-muted font-weight-bold"> Paid </span>
-                </td>
-                <td class="text-right">
                   <span class="text-muted font-weight-bold">
-                    Python, MySQL
+                    {{ 'Paid' | translate }}
                   </span>
                 </td>
                 <td class="text-right">
-                  <span class="label label-lg label-light-warning label-inline"
-                    >In Progress</span
-                  >
+                  <span class="text-muted font-weight-bold">
+                    {{ 'Python, MySQL' | translate }}
+                  </span>
+                </td>
+                <td class="text-right">
+                  <span class="label label-lg label-light-warning label-inline">
+                    {{ 'in progress' | translate }}
+                  </span>
                 </td>
                 <td class="pr-0 text-right">
                   <a
-                    class="
-                      btn btn-icon btn-light btn-hover-primary btn-sm
-                      cursor-pointer
-                    "
+                    class="btn btn-icon btn-light btn-hover-primary btn-sm cursor-pointer"
                   >
-                    <app-keenicon name="switch" class="fs-md text-primary"></app-keenicon>
+                    <app-keenicon
+                      name="switch"
+                      class="fs-md text-primary"
+                    ></app-keenicon>
                   </a>
                   <a
-                    class="
-                      btn btn-icon btn-light btn-hover-primary btn-sm
-                      mx-3
-                      cursor-pointer
-                    "
+                    class="btn btn-icon btn-light btn-hover-primary btn-sm mx-3 cursor-pointer"
                   >
-                    <app-keenicon name="pencil" class="fs-md text-primary"></app-keenicon>
+                    <app-keenicon
+                      name="pencil"
+                      class="fs-md text-primary"
+                    ></app-keenicon>
                   </a>
                   <a
-                    class="
-                      btn btn-icon btn-light btn-hover-primary btn-sm
-                      cursor-pointer
-                    "
+                    class="btn btn-icon btn-light btn-hover-primary btn-sm cursor-pointer"
                   >
-                    <app-keenicon name="trash" class=" svg-icon-md text-primary"></app-keenicon>
+                    <app-keenicon
+                      name="trash"
+                      class="svg-icon-md text-primary"
+                    ></app-keenicon>
                   </a>
                 </td>
               </tr>
@@ -390,19 +384,16 @@
                 <td class="pl-0">
                   <a
                     href="#"
-                    class="
-                      text-dark-75
-                      font-weight-bolder
-                      text-hover-primary
-                      mb-1
-                      font-size-lg
-                    "
-                    >Cisco Management</a
+                    class="text-dark-75 font-weight-bolder text-hover-primary mb-1 font-size-lg"
                   >
-                  <span class="text-muted font-weight-bold d-block"
-                    ><span class="font-weight-bolder text-dark-75">FTP:</span>
-                    bprow@bnc.cc</span
-                  >
+                    {{ 'cisco management' | translate }}
+                  </a>
+                  <span class="text-muted font-weight-bold d-block">
+                    <span class="font-weight-bolder text-dark-75">
+                      {{ 'FTP:' | translate }}
+                    </span>
+                    bprow@bnc.cc
+                  </span>
                 </td>
                 <td class="text-right">
                   <span
@@ -410,7 +401,9 @@
                   >
                     $560,000
                   </span>
-                  <span class="text-muted font-weight-bold"> Paid </span>
+                  <span class="text-muted font-weight-bold">
+                    {{ 'Paid' | translate }}
+                  </span>
                 </td>
                 <td class="text-right">
                   <span class="text-muted font-weight-bold">
@@ -418,35 +411,34 @@
                   </span>
                 </td>
                 <td class="text-right">
-                  <span class="label label-lg label-light-success label-inline"
-                    >Success</span
-                  >
+                  <span class="label label-lg label-light-success label-inline">
+                    {{ 'success' | translate }}
+                  </span>
                 </td>
                 <td class="pr-0 text-right">
                   <a
-                    class="
-                      btn btn-icon btn-light btn-hover-primary btn-sm
-                      cursor-pointer
-                    "
+                    class="btn btn-icon btn-light btn-hover-primary btn-sm cursor-pointer"
                   >
-                    <app-keenicon name="switch" class="fs-md text-primary"></app-keenicon>
+                    <app-keenicon
+                      name="switch"
+                      class="fs-md text-primary"
+                    ></app-keenicon>
                   </a>
                   <a
-                    class="
-                      btn btn-icon btn-light btn-hover-primary btn-sm
-                      mx-3
-                      cursor-pointer
-                    "
+                    class="btn btn-icon btn-light btn-hover-primary btn-sm mx-3 cursor-pointer"
                   >
-                    <app-keenicon name="pencil" class="fs-md text-primary"></app-keenicon>
+                    <app-keenicon
+                      name="pencil"
+                      class="fs-md text-primary"
+                    ></app-keenicon>
                   </a>
                   <a
-                    class="
-                      btn btn-icon btn-light btn-hover-primary btn-sm
-                      cursor-pointer
-                    "
+                    class="btn btn-icon btn-light btn-hover-primary btn-sm cursor-pointer"
                   >
-                    <app-keenicon name="trash" class=" svg-icon-md text-primary"></app-keenicon>
+                    <app-keenicon
+                      name="trash"
+                      class="svg-icon-md text-primary"
+                    ></app-keenicon>
                   </a>
                 </td>
               </tr>
@@ -482,7 +474,9 @@
                   <div class="symbol symbol-50 symbol-light mr-5">
                     <span class="symbol-label">
                       <span
-                        [inlineSVG]="'./assets/media/svg/brand-logos/telegram.svg'"
+                        [inlineSVG]="
+                          './assets/media/svg/brand-logos/telegram.svg'
+                        "
                         class="svg-icon h-50 align-self-center"
                       ></span>
                     </span>
@@ -491,19 +485,16 @@
                 <td class="pl-0">
                   <a
                     href="#"
-                    class="
-                      text-dark-75
-                      font-weight-bolder
-                      text-hover-primary
-                      mb-1
-                      font-size-lg
-                    "
-                    >Telegram Mobile</a
+                    class="text-dark-75 font-weight-bolder text-hover-primary mb-1 font-size-lg"
                   >
-                  <span class="text-muted font-weight-bold d-block"
-                    ><span class="font-weight-bolder text-dark-75">FTP:</span>
-                    bprow@bnc.cc</span
-                  >
+                    {{ 'telegram mobile' | translate }}
+                  </a>
+                  <span class="text-muted font-weight-bold d-block">
+                    <span class="font-weight-bolder text-dark-75">
+                      {{ 'FTP:' | translate }}
+                    </span>
+                    bprow@bnc.cc
+                  </span>
                 </td>
                 <td class="text-right">
                   <span
@@ -511,43 +502,44 @@
                   >
                     $4,600,000
                   </span>
-                  <span class="text-muted font-weight-bold"> Paid </span>
-                </td>
-                <td class="text-right">
                   <span class="text-muted font-weight-bold">
-                    Python, MySQL
+                    {{ 'Paid' | translate }}
                   </span>
                 </td>
                 <td class="text-right">
-                  <span class="label label-lg label-light-warning label-inline"
-                    >In Progress</span
-                  >
+                  <span class="text-muted font-weight-bold">
+                    {{ 'Python, MySQL' | translate }}
+                  </span>
+                </td>
+                <td class="text-right">
+                  <span class="label label-lg label-light-warning label-inline">
+                    {{ 'in progress' | translate }}
+                  </span>
                 </td>
                 <td class="pr-0 text-right">
                   <a
-                    class="
-                      btn btn-icon btn-light btn-hover-primary btn-sm
-                      cursor-pointer
-                    "
+                    class="btn btn-icon btn-light btn-hover-primary btn-sm cursor-pointer"
                   >
-                    <app-keenicon name="switch" class="fs-md text-primary"></app-keenicon>
+                    <app-keenicon
+                      name="switch"
+                      class="fs-md text-primary"
+                    ></app-keenicon>
                   </a>
                   <a
-                    class="
-                      btn btn-icon btn-light btn-hover-primary btn-sm
-                      mx-3
-                      cursor-pointer
-                    "
+                    class="btn btn-icon btn-light btn-hover-primary btn-sm mx-3 cursor-pointer"
                   >
-                    <app-keenicon name="pencil" class="fs-md text-primary"></app-keenicon>
+                    <app-keenicon
+                      name="pencil"
+                      class="fs-md text-primary"
+                    ></app-keenicon>
                   </a>
                   <a
-                    class="
-                      btn btn-icon btn-light btn-hover-primary btn-sm
-                      cursor-pointer
-                    "
+                    class="btn btn-icon btn-light btn-hover-primary btn-sm cursor-pointer"
                   >
-                    <app-keenicon name="trash" class=" svg-icon-md text-primary"></app-keenicon>
+                    <app-keenicon
+                      name="trash"
+                      class="svg-icon-md text-primary"
+                    ></app-keenicon>
                   </a>
                 </td>
               </tr>
@@ -565,19 +557,16 @@
                 <td class="pl-0">
                   <a
                     href="#"
-                    class="
-                      text-dark-75
-                      font-weight-bolder
-                      text-hover-primary
-                      mb-1
-                      font-size-lg
-                    "
-                    >Cisco Management</a
+                    class="text-dark-75 font-weight-bolder text-hover-primary mb-1 font-size-lg"
                   >
-                  <span class="text-muted font-weight-bold d-block"
-                    ><span class="font-weight-bolder text-dark-75">FTP:</span>
-                    bprow@bnc.cc</span
-                  >
+                    {{ 'cisco management' | translate }}
+                  </a>
+                  <span class="text-muted font-weight-bold d-block">
+                    <span class="font-weight-bolder text-dark-75">
+                      {{ 'FTP:' | translate }}
+                    </span>
+                    bprow@bnc.cc
+                  </span>
                 </td>
                 <td class="text-right">
                   <span
@@ -585,7 +574,9 @@
                   >
                     $560,000
                   </span>
-                  <span class="text-muted font-weight-bold"> Paid </span>
+                  <span class="text-muted font-weight-bold">
+                    {{ 'Paid' | translate }}
+                  </span>
                 </td>
                 <td class="text-right">
                   <span class="text-muted font-weight-bold">
@@ -593,35 +584,34 @@
                   </span>
                 </td>
                 <td class="text-right">
-                  <span class="label label-lg label-light-success label-inline"
-                    >Success</span
-                  >
+                  <span class="label label-lg label-light-success label-inline">
+                    {{ 'success' | translate }}
+                  </span>
                 </td>
                 <td class="pr-0 text-right">
                   <a
-                    class="
-                      btn btn-icon btn-light btn-hover-primary btn-sm
-                      cursor-pointer
-                    "
+                    class="btn btn-icon btn-light btn-hover-primary btn-sm cursor-pointer"
                   >
-                    <app-keenicon name="switch" class="fs-md text-primary"></app-keenicon>
+                    <app-keenicon
+                      name="switch"
+                      class="fs-md text-primary"
+                    ></app-keenicon>
                   </a>
                   <a
-                    class="
-                      btn btn-icon btn-light btn-hover-primary btn-sm
-                      mx-3
-                      cursor-pointer
-                    "
+                    class="btn btn-icon btn-light btn-hover-primary btn-sm mx-3 cursor-pointer"
                   >
-                    <app-keenicon name="pencil" class="fs-md text-primary"></app-keenicon>
+                    <app-keenicon
+                      name="pencil"
+                      class="fs-md text-primary"
+                    ></app-keenicon>
                   </a>
                   <a
-                    class="
-                      btn btn-icon btn-light btn-hover-primary btn-sm
-                      cursor-pointer
-                    "
+                    class="btn btn-icon btn-light btn-hover-primary btn-sm cursor-pointer"
                   >
-                    <app-keenicon name="trash" class=" svg-icon-md text-primary"></app-keenicon>
+                    <app-keenicon
+                      name="trash"
+                      class="svg-icon-md text-primary"
+                    ></app-keenicon>
                   </a>
                 </td>
               </tr>
@@ -639,18 +629,13 @@
                 <td class="pl-0">
                   <a
                     href="#"
-                    class="
-                      text-dark
-                      font-weight-bolder
-                      text-hover-primary
-                      mb-1
-                      font-size-lg
-                    "
-                    >Beats Studio</a
+                    class="text-dark font-weight-bolder text-hover-primary mb-1 font-size-lg"
                   >
-                  <span class="text-muted font-weight-bold d-block"
-                    >FTP: bprow@bnc.cc</span
-                  >
+                    {{ 'beats studio' | translate }}
+                  </a>
+                  <span class="text-muted font-weight-bold d-block">
+                    {{ 'FTP: bprow@bnc.cc' | translate }}
+                  </span>
                 </td>
                 <td class="text-right pr-0">
                   <span
@@ -658,43 +643,44 @@
                   >
                     $57,000
                   </span>
-                  <span class="text-muted font-weight-bold"> Paid </span>
-                </td>
-                <td class="text-right">
                   <span class="text-muted font-weight-bold">
-                    AngularJS, C#
+                    {{ 'Paid' | translate }}
                   </span>
                 </td>
                 <td class="text-right">
-                  <span class="label label-lg label-light-danger label-inline"
-                    >Rejected</span
-                  >
+                  <span class="text-muted font-weight-bold">
+                    {{ 'AngularJS, C#' | translate }}
+                  </span>
+                </td>
+                <td class="text-right">
+                  <span class="label label-lg label-light-danger label-inline">
+                    {{ 'rejected' | translate }}
+                  </span>
                 </td>
                 <td class="pr-0 text-right">
                   <a
-                    class="
-                      btn btn-icon btn-light btn-hover-primary btn-sm
-                      cursor-pointer
-                    "
+                    class="btn btn-icon btn-light btn-hover-primary btn-sm cursor-pointer"
                   >
-                    <app-keenicon name="switch" class="fs-md text-primary"></app-keenicon>
+                    <app-keenicon
+                      name="switch"
+                      class="fs-md text-primary"
+                    ></app-keenicon>
                   </a>
                   <a
-                    class="
-                      btn btn-icon btn-light btn-hover-primary btn-sm
-                      mx-3
-                      cursor-pointer
-                    "
+                    class="btn btn-icon btn-light btn-hover-primary btn-sm mx-3 cursor-pointer"
                   >
-                    <app-keenicon name="pencil" class="fs-md text-primary"></app-keenicon>
+                    <app-keenicon
+                      name="pencil"
+                      class="fs-md text-primary"
+                    ></app-keenicon>
                   </a>
                   <a
-                    class="
-                      btn btn-icon btn-light btn-hover-primary btn-sm
-                      cursor-pointer
-                    "
+                    class="btn btn-icon btn-light btn-hover-primary btn-sm cursor-pointer"
                   >
-                    <app-keenicon name="trash" class=" svg-icon-md text-primary"></app-keenicon>
+                    <app-keenicon
+                      name="trash"
+                      class="svg-icon-md text-primary"
+                    ></app-keenicon>
                   </a>
                 </td>
               </tr>
@@ -712,22 +698,18 @@
                 <td class="pl-0">
                   <a
                     href="#"
-                    class="
-                      text-dark-75
-                      font-weight-bolder
-                      text-hover-primary
-                      mb-1
-                      font-size-lg
-                    "
-                    >Sant Outstanding</a
+                    class="text-dark-75 font-weight-bolder text-hover-primary mb-1 font-size-lg"
                   >
+                    {{ 'sant outstanding' | translate }}
+                  </a>
                   <div>
                     <span class="font-weight-bolder">Email:</span>
                     <a
                       class="text-muted font-weight-bold text-hover-primary"
                       href="#"
-                      >bprow@bnc.cc</a
                     >
+                      {{ 'bprow@bnc.cc' | translate }}
+                    </a>
                   </div>
                 </td>
                 <td class="text-right">
@@ -736,43 +718,44 @@
                   >
                     $2,000,000
                   </span>
-                  <span class="text-muted font-weight-bold"> Paid </span>
-                </td>
-                <td class="text-right">
                   <span class="text-muted font-weight-bold">
-                    ReactJs, HTML
+                    {{ 'Paid' | translate }}
                   </span>
                 </td>
                 <td class="text-right">
-                  <span class="label label-lg label-light-primary label-inline"
-                    >Approved</span
-                  >
+                  <span class="text-muted font-weight-bold">
+                    {{ 'ReactJs, HTML' | translate }}
+                  </span>
+                </td>
+                <td class="text-right">
+                  <span class="label label-lg label-light-primary label-inline">
+                    {{ 'approved' | translate }}
+                  </span>
                 </td>
                 <td class="pr-0 text-right">
                   <a
-                    class="
-                      btn btn-icon btn-light btn-hover-primary btn-sm
-                      cursor-pointer
-                    "
+                    class="btn btn-icon btn-light btn-hover-primary btn-sm cursor-pointer"
                   >
-                    <app-keenicon name="switch" class="fs-md text-primary"></app-keenicon>
+                    <app-keenicon
+                      name="switch"
+                      class="fs-md text-primary"
+                    ></app-keenicon>
                   </a>
                   <a
-                    class="
-                      btn btn-icon btn-light btn-hover-primary btn-sm
-                      mx-3
-                      cursor-pointer
-                    "
+                    class="btn btn-icon btn-light btn-hover-primary btn-sm mx-3 cursor-pointer"
                   >
-                    <app-keenicon name="pencil" class="fs-md text-primary"></app-keenicon>
+                    <app-keenicon
+                      name="pencil"
+                      class="fs-md text-primary"
+                    ></app-keenicon>
                   </a>
                   <a
-                    class="
-                      btn btn-icon btn-light btn-hover-primary btn-sm
-                      cursor-pointer
-                    "
+                    class="btn btn-icon btn-light btn-hover-primary btn-sm cursor-pointer"
                   >
-                    <app-keenicon name="trash" class=" svg-icon-md text-primary"></app-keenicon>
+                    <app-keenicon
+                      name="trash"
+                      class="svg-icon-md text-primary"
+                    ></app-keenicon>
                   </a>
                 </td>
               </tr>
@@ -792,19 +775,16 @@
                 <td class="pl-0">
                   <a
                     href="#"
-                    class="
-                      text-dark-75
-                      font-weight-bolder
-                      text-hover-primary
-                      mb-1
-                      font-size-lg
-                    "
-                    >KTR Application</a
+                    class="text-dark-75 font-weight-bolder text-hover-primary mb-1 font-size-lg"
                   >
-                  <span class="text-muted font-weight-bold d-block"
-                    ><span class="font-weight-bolder text-dark-75">FTP:</span>
-                    bprow@bnc.cc</span
-                  >
+                    {{ 'ktr application' | translate }}
+                  </a>
+                  <span class="text-muted font-weight-bold d-block">
+                    <span class="font-weight-bolder text-dark-75">
+                      {{ 'FTP:' | translate }}
+                    </span>
+                    bprow@bnc.cc
+                  </span>
                 </td>
                 <td class="text-right">
                   <span
@@ -812,43 +792,44 @@
                   >
                     $45,200,000
                   </span>
-                  <span class="text-muted font-weight-bold"> Paid </span>
-                </td>
-                <td class="text-right">
                   <span class="text-muted font-weight-bold">
-                    ReactJS, Ruby
+                    {{ 'Paid' | translate }}
                   </span>
                 </td>
                 <td class="text-right">
-                  <span class="label label-lg label-light-warning label-inline"
-                    >In Progress</span
-                  >
+                  <span class="text-muted font-weight-bold">
+                    {{ 'ReactJS, Ruby' | translate }}
+                  </span>
+                </td>
+                <td class="text-right">
+                  <span class="label label-lg label-light-warning label-inline">
+                    {{ 'in progress' | translate }}
+                  </span>
                 </td>
                 <td class="pr-0 text-right">
                   <a
-                    class="
-                      btn btn-icon btn-light btn-hover-primary btn-sm
-                      cursor-pointer
-                    "
+                    class="btn btn-icon btn-light btn-hover-primary btn-sm cursor-pointer"
                   >
-                    <app-keenicon name="switch" class="fs-md text-primary"></app-keenicon>
+                    <app-keenicon
+                      name="switch"
+                      class="fs-md text-primary"
+                    ></app-keenicon>
                   </a>
                   <a
-                    class="
-                      btn btn-icon btn-light btn-hover-primary btn-sm
-                      mx-3
-                      cursor-pointer
-                    "
+                    class="btn btn-icon btn-light btn-hover-primary btn-sm mx-3 cursor-pointer"
                   >
-                    <app-keenicon name="pencil" class="fs-md text-primary"></app-keenicon>
+                    <app-keenicon
+                      name="pencil"
+                      class="fs-md text-primary"
+                    ></app-keenicon>
                   </a>
                   <a
-                    class="
-                      btn btn-icon btn-light btn-hover-primary btn-sm
-                      cursor-pointer
-                    "
+                    class="btn btn-icon btn-light btn-hover-primary btn-sm cursor-pointer"
                   >
-                    <app-keenicon name="trash" class=" svg-icon-md text-primary"></app-keenicon>
+                    <app-keenicon
+                      name="trash"
+                      class="svg-icon-md text-primary"
+                    ></app-keenicon>
                   </a>
                 </td>
               </tr>
@@ -893,22 +874,18 @@
                 <td class="pl-0">
                   <a
                     href="#"
-                    class="
-                      text-dark-75
-                      font-weight-bolder
-                      text-hover-primary
-                      mb-1
-                      font-size-lg
-                    "
-                    >Sant Outstanding</a
+                    class="text-dark-75 font-weight-bolder text-hover-primary mb-1 font-size-lg"
                   >
+                    {{ 'sant outstanding' | translate }}
+                  </a>
                   <div>
                     <span class="font-weight-bolder">Email:</span>
                     <a
                       class="text-muted font-weight-bold text-hover-primary"
                       href="#"
-                      >bprow@bnc.cc</a
                     >
+                      {{ 'bprow@bnc.cc' | translate }}
+                    </a>
                   </div>
                 </td>
                 <td class="text-right">
@@ -917,43 +894,44 @@
                   >
                     $2,000,000
                   </span>
-                  <span class="text-muted font-weight-bold"> Paid </span>
-                </td>
-                <td class="text-right">
                   <span class="text-muted font-weight-bold">
-                    ReactJs, HTML
+                    {{ 'Paid' | translate }}
                   </span>
                 </td>
                 <td class="text-right">
-                  <span class="label label-lg label-light-primary label-inline"
-                    >Approved</span
-                  >
+                  <span class="text-muted font-weight-bold">
+                    {{ 'ReactJs, HTML' | translate }}
+                  </span>
+                </td>
+                <td class="text-right">
+                  <span class="label label-lg label-light-primary label-inline">
+                    {{ 'approved' | translate }}
+                  </span>
                 </td>
                 <td class="pr-0 text-right">
                   <a
-                    class="
-                      btn btn-icon btn-light btn-hover-primary btn-sm
-                      cursor-pointer
-                    "
+                    class="btn btn-icon btn-light btn-hover-primary btn-sm cursor-pointer"
                   >
-                    <app-keenicon name="switch" class="fs-md text-primary"></app-keenicon>
+                    <app-keenicon
+                      name="switch"
+                      class="fs-md text-primary"
+                    ></app-keenicon>
                   </a>
                   <a
-                    class="
-                      btn btn-icon btn-light btn-hover-primary btn-sm
-                      mx-3
-                      cursor-pointer
-                    "
+                    class="btn btn-icon btn-light btn-hover-primary btn-sm mx-3 cursor-pointer"
                   >
-                    <app-keenicon name="pencil" class="fs-md text-primary"></app-keenicon>
+                    <app-keenicon
+                      name="pencil"
+                      class="fs-md text-primary"
+                    ></app-keenicon>
                   </a>
                   <a
-                    class="
-                      btn btn-icon btn-light btn-hover-primary btn-sm
-                      cursor-pointer
-                    "
+                    class="btn btn-icon btn-light btn-hover-primary btn-sm cursor-pointer"
                   >
-                    <app-keenicon name="trash" class=" svg-icon-md text-primary"></app-keenicon>
+                    <app-keenicon
+                      name="trash"
+                      class="svg-icon-md text-primary"
+                    ></app-keenicon>
                   </a>
                 </td>
               </tr>
@@ -962,7 +940,9 @@
                   <div class="symbol symbol-50 symbol-light mr-5">
                     <span class="symbol-label">
                       <span
-                        [inlineSVG]="'./assets/media/svg/brand-logos/telegram.svg'"
+                        [inlineSVG]="
+                          './assets/media/svg/brand-logos/telegram.svg'
+                        "
                         class="svg-icon h-50 align-self-center"
                       ></span>
                     </span>
@@ -971,19 +951,16 @@
                 <td class="pl-0">
                   <a
                     href="#"
-                    class="
-                      text-dark-75
-                      font-weight-bolder
-                      text-hover-primary
-                      mb-1
-                      font-size-lg
-                    "
-                    >Telegram Mobile</a
+                    class="text-dark-75 font-weight-bolder text-hover-primary mb-1 font-size-lg"
                   >
-                  <span class="text-muted font-weight-bold d-block"
-                    ><span class="font-weight-bolder text-dark-75">FTP:</span>
-                    bprow@bnc.cc</span
-                  >
+                    {{ 'telegram mobile' | translate }}
+                  </a>
+                  <span class="text-muted font-weight-bold d-block">
+                    <span class="font-weight-bolder text-dark-75">
+                      {{ 'FTP:' | translate }}
+                    </span>
+                    bprow@bnc.cc
+                  </span>
                 </td>
                 <td class="text-right">
                   <span
@@ -991,43 +968,44 @@
                   >
                     $4,600,000
                   </span>
-                  <span class="text-muted font-weight-bold"> Paid </span>
-                </td>
-                <td class="text-right">
                   <span class="text-muted font-weight-bold">
-                    Python, MySQL
+                    {{ 'Paid' | translate }}
                   </span>
                 </td>
                 <td class="text-right">
-                  <span class="label label-lg label-light-warning label-inline"
-                    >In Progress</span
-                  >
+                  <span class="text-muted font-weight-bold">
+                    {{ 'Python, MySQL' | translate }}
+                  </span>
+                </td>
+                <td class="text-right">
+                  <span class="label label-lg label-light-warning label-inline">
+                    {{ 'in progress' | translate }}
+                  </span>
                 </td>
                 <td class="pr-0 text-right">
                   <a
-                    class="
-                      btn btn-icon btn-light btn-hover-primary btn-sm
-                      cursor-pointer
-                    "
+                    class="btn btn-icon btn-light btn-hover-primary btn-sm cursor-pointer"
                   >
-                    <app-keenicon name="switch" class="fs-md text-primary"></app-keenicon>
+                    <app-keenicon
+                      name="switch"
+                      class="fs-md text-primary"
+                    ></app-keenicon>
                   </a>
                   <a
-                    class="
-                      btn btn-icon btn-light btn-hover-primary btn-sm
-                      mx-3
-                      cursor-pointer
-                    "
+                    class="btn btn-icon btn-light btn-hover-primary btn-sm mx-3 cursor-pointer"
                   >
-                    <app-keenicon name="pencil" class="fs-md text-primary"></app-keenicon>
+                    <app-keenicon
+                      name="pencil"
+                      class="fs-md text-primary"
+                    ></app-keenicon>
                   </a>
                   <a
-                    class="
-                      btn btn-icon btn-light btn-hover-primary btn-sm
-                      cursor-pointer
-                    "
+                    class="btn btn-icon btn-light btn-hover-primary btn-sm cursor-pointer"
                   >
-                    <app-keenicon name="trash" class=" svg-icon-md text-primary"></app-keenicon>
+                    <app-keenicon
+                      name="trash"
+                      class="svg-icon-md text-primary"
+                    ></app-keenicon>
                   </a>
                 </td>
               </tr>
@@ -1045,19 +1023,16 @@
                 <td class="pl-0">
                   <a
                     href="#"
-                    class="
-                      text-dark-75
-                      font-weight-bolder
-                      text-hover-primary
-                      mb-1
-                      font-size-lg
-                    "
-                    >Cisco Management</a
+                    class="text-dark-75 font-weight-bolder text-hover-primary mb-1 font-size-lg"
                   >
-                  <span class="text-muted font-weight-bold d-block"
-                    ><span class="font-weight-bolder text-dark-75">FTP:</span>
-                    bprow@bnc.cc</span
-                  >
+                    {{ 'cisco management' | translate }}
+                  </a>
+                  <span class="text-muted font-weight-bold d-block">
+                    <span class="font-weight-bolder text-dark-75">
+                      {{ 'FTP:' | translate }}
+                    </span>
+                    bprow@bnc.cc
+                  </span>
                 </td>
                 <td class="text-right">
                   <span
@@ -1065,7 +1040,9 @@
                   >
                     $560,000
                   </span>
-                  <span class="text-muted font-weight-bold"> Paid </span>
+                  <span class="text-muted font-weight-bold">
+                    {{ 'Paid' | translate }}
+                  </span>
                 </td>
                 <td class="text-right">
                   <span class="text-muted font-weight-bold">
@@ -1073,35 +1050,34 @@
                   </span>
                 </td>
                 <td class="text-right">
-                  <span class="label label-lg label-light-success label-inline"
-                    >Success</span
-                  >
+                  <span class="label label-lg label-light-success label-inline">
+                    {{ 'success' | translate }}
+                  </span>
                 </td>
                 <td class="pr-0 text-right">
                   <a
-                    class="
-                      btn btn-icon btn-light btn-hover-primary btn-sm
-                      cursor-pointer
-                    "
+                    class="btn btn-icon btn-light btn-hover-primary btn-sm cursor-pointer"
                   >
-                    <app-keenicon name="switch" class="fs-md text-primary"></app-keenicon>
+                    <app-keenicon
+                      name="switch"
+                      class="fs-md text-primary"
+                    ></app-keenicon>
                   </a>
                   <a
-                    class="
-                      btn btn-icon btn-light btn-hover-primary btn-sm
-                      mx-3
-                      cursor-pointer
-                    "
+                    class="btn btn-icon btn-light btn-hover-primary btn-sm mx-3 cursor-pointer"
                   >
-                    <app-keenicon name="pencil" class="fs-md text-primary"></app-keenicon>
+                    <app-keenicon
+                      name="pencil"
+                      class="fs-md text-primary"
+                    ></app-keenicon>
                   </a>
                   <a
-                    class="
-                      btn btn-icon btn-light btn-hover-primary btn-sm
-                      cursor-pointer
-                    "
+                    class="btn btn-icon btn-light btn-hover-primary btn-sm cursor-pointer"
                   >
-                    <app-keenicon name="trash" class=" svg-icon-md text-primary"></app-keenicon>
+                    <app-keenicon
+                      name="trash"
+                      class="svg-icon-md text-primary"
+                    ></app-keenicon>
                   </a>
                 </td>
               </tr>
@@ -1119,18 +1095,13 @@
                 <td class="pl-0">
                   <a
                     href="#"
-                    class="
-                      text-dark
-                      font-weight-bolder
-                      text-hover-primary
-                      mb-1
-                      font-size-lg
-                    "
-                    >Beats Studio</a
+                    class="text-dark font-weight-bolder text-hover-primary mb-1 font-size-lg"
                   >
-                  <span class="text-muted font-weight-bold d-block"
-                    >FTP: bprow@bnc.cc</span
-                  >
+                    {{ 'beats studio' | translate }}
+                  </a>
+                  <span class="text-muted font-weight-bold d-block">
+                    {{ 'FTP: bprow@bnc.cc' | translate }}
+                  </span>
                 </td>
                 <td class="text-right pr-0">
                   <span
@@ -1138,43 +1109,44 @@
                   >
                     $57,000
                   </span>
-                  <span class="text-muted font-weight-bold"> Paid </span>
-                </td>
-                <td class="text-right">
                   <span class="text-muted font-weight-bold">
-                    AngularJS, C#
+                    {{ 'Paid' | translate }}
                   </span>
                 </td>
                 <td class="text-right">
-                  <span class="label label-lg label-light-danger label-inline"
-                    >Rejected</span
-                  >
+                  <span class="text-muted font-weight-bold">
+                    {{ 'AngularJS, C#' | translate }}
+                  </span>
+                </td>
+                <td class="text-right">
+                  <span class="label label-lg label-light-danger label-inline">
+                    {{ 'rejected' | translate }}
+                  </span>
                 </td>
                 <td class="pr-0 text-right">
                   <a
-                    class="
-                      btn btn-icon btn-light btn-hover-primary btn-sm
-                      cursor-pointer
-                    "
+                    class="btn btn-icon btn-light btn-hover-primary btn-sm cursor-pointer"
                   >
-                    <app-keenicon name="switch" class="fs-md text-primary"></app-keenicon>
+                    <app-keenicon
+                      name="switch"
+                      class="fs-md text-primary"
+                    ></app-keenicon>
                   </a>
                   <a
-                    class="
-                      btn btn-icon btn-light btn-hover-primary btn-sm
-                      mx-3
-                      cursor-pointer
-                    "
+                    class="btn btn-icon btn-light btn-hover-primary btn-sm mx-3 cursor-pointer"
                   >
-                    <app-keenicon name="pencil" class="fs-md text-primary"></app-keenicon>
+                    <app-keenicon
+                      name="pencil"
+                      class="fs-md text-primary"
+                    ></app-keenicon>
                   </a>
                   <a
-                    class="
-                      btn btn-icon btn-light btn-hover-primary btn-sm
-                      cursor-pointer
-                    "
+                    class="btn btn-icon btn-light btn-hover-primary btn-sm cursor-pointer"
                   >
-                    <app-keenicon name="trash" class=" svg-icon-md text-primary"></app-keenicon>
+                    <app-keenicon
+                      name="trash"
+                      class="svg-icon-md text-primary"
+                    ></app-keenicon>
                   </a>
                 </td>
               </tr>
@@ -1194,19 +1166,16 @@
                 <td class="pl-0">
                   <a
                     href="#"
-                    class="
-                      text-dark-75
-                      font-weight-bolder
-                      text-hover-primary
-                      mb-1
-                      font-size-lg
-                    "
-                    >KTR Application</a
+                    class="text-dark-75 font-weight-bolder text-hover-primary mb-1 font-size-lg"
                   >
-                  <span class="text-muted font-weight-bold d-block"
-                    ><span class="font-weight-bolder text-dark-75">FTP:</span>
-                    bprow@bnc.cc</span
-                  >
+                    {{ 'ktr application' | translate }}
+                  </a>
+                  <span class="text-muted font-weight-bold d-block">
+                    <span class="font-weight-bolder text-dark-75">
+                      {{ 'FTP:' | translate }}
+                    </span>
+                    bprow@bnc.cc
+                  </span>
                 </td>
                 <td class="text-right">
                   <span
@@ -1214,43 +1183,44 @@
                   >
                     $45,200,000
                   </span>
-                  <span class="text-muted font-weight-bold"> Paid </span>
-                </td>
-                <td class="text-right">
                   <span class="text-muted font-weight-bold">
-                    ReactJS, Ruby
+                    {{ 'Paid' | translate }}
                   </span>
                 </td>
                 <td class="text-right">
-                  <span class="label label-lg label-light-warning label-inline"
-                    >In Progress</span
-                  >
+                  <span class="text-muted font-weight-bold">
+                    {{ 'ReactJS, Ruby' | translate }}
+                  </span>
+                </td>
+                <td class="text-right">
+                  <span class="label label-lg label-light-warning label-inline">
+                    {{ 'in progress' | translate }}
+                  </span>
                 </td>
                 <td class="pr-0 text-right">
                   <a
-                    class="
-                      btn btn-icon btn-light btn-hover-primary btn-sm
-                      cursor-pointer
-                    "
+                    class="btn btn-icon btn-light btn-hover-primary btn-sm cursor-pointer"
                   >
-                    <app-keenicon name="switch" class="fs-md text-primary"></app-keenicon>
+                    <app-keenicon
+                      name="switch"
+                      class="fs-md text-primary"
+                    ></app-keenicon>
                   </a>
                   <a
-                    class="
-                      btn btn-icon btn-light btn-hover-primary btn-sm
-                      mx-3
-                      cursor-pointer
-                    "
+                    class="btn btn-icon btn-light btn-hover-primary btn-sm mx-3 cursor-pointer"
                   >
-                    <app-keenicon name="pencil" class="fs-md text-primary"></app-keenicon>
+                    <app-keenicon
+                      name="pencil"
+                      class="fs-md text-primary"
+                    ></app-keenicon>
                   </a>
                   <a
-                    class="
-                      btn btn-icon btn-light btn-hover-primary btn-sm
-                      cursor-pointer
-                    "
+                    class="btn btn-icon btn-light btn-hover-primary btn-sm cursor-pointer"
                   >
-                    <app-keenicon name="trash" class=" svg-icon-md text-primary"></app-keenicon>
+                    <app-keenicon
+                      name="trash"
+                      class="svg-icon-md text-primary"
+                    ></app-keenicon>
                   </a>
                 </td>
               </tr>

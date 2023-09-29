@@ -15,7 +15,9 @@
         <a href="#" class="text-gray-800 text-hover-primary fs-6 fw-bolder">
           Carles Nilson
         </a>
-        <span class="text-gray-400 fw-bold">Yestarday at 5:06 PM</span>
+        <span class="text-gray-400 fw-bold">
+          {{ 'Yestarday at 5:06 PM' | translate }}
+        </span>
       </div>
       <!-- end::Info -->
     </div>
@@ -52,12 +54,7 @@
     <div class="d-flex align-items-center mb-5">
       <a
         href="#"
-        class="
-          btn btn-sm btn-light btn-color-muted btn-active-light-success
-          px-4
-          py-2
-          me-4
-        "
+        class="btn btn-sm btn-light btn-color-muted btn-active-light-success px-4 py-2 me-4"
       >
         <app-keenicon name="element-plus" class="fs-2"></app-keenicon>
         12
@@ -65,11 +62,7 @@
 
       <a
         href="#"
-        class="
-          btn btn-sm btn-light btn-color-muted btn-active-light-danger
-          px-4
-          py-2
-        "
+        class="btn btn-sm btn-light btn-color-muted btn-active-light-danger px-4 py-2"
       >
         <app-keenicon name="heart" class="fs-2"></app-keenicon>
         150
@@ -97,13 +90,15 @@
             Alice Danchik
           </a>
 
-          <span class="text-gray-400 fw-bold fs-7">1 day</span>
+          <span class="text-gray-400 fw-bold fs-7">
+            {{ '1 day' | translate }}
+          </span>
 
           <a
             href="#"
             class="ms-auto text-gray-400 text-hover-primary fw-bold fs-7"
           >
-            Reply
+            {{'Reply'|translate}}
           </a>
         </div>
         <!-- end::Info -->
@@ -135,13 +130,15 @@
             Harris Bold
           </a>
 
-          <span class="text-gray-400 fw-bold fs-7">2 days</span>
+          <span class="text-gray-400 fw-bold fs-7">
+            {{ '2 days' | translate }}
+          </span>
 
           <a
             href="#"
             class="ms-auto text-gray-400 text-hover-primary fw-bold fs-7"
           >
-            Reply
+            {{'Reply'|translate}}
           </a>
         </div>
         <!-- end::Info -->
@@ -168,7 +165,7 @@
       class="form-control border-0 p-0 pe-10 resize-none min-h-25px"
       data-kt-autosize="true"
       rows="1"
-      placeholder="Reply.."
+      [placeholder]="'Reply..' | translate"
     ></textarea>
 
     <div class="position-absolute top-0 end-0 me-n5">

@@ -1,8 +1,12 @@
 <!-- begin::Header -->
 <div class="card-header border-0 pt-5">
   <h3 class="card-title align-items-start flex-column">
-    <span class="card-label fw-bolder fs-3 mb-1">Recent Orders</span>
-    <span class="text-muted mt-1 fw-bold fs-7">Over 500 orders</span>
+    <span class="card-label fw-bolder fs-3 mb-1">
+      {{ 'recent orders' | translate }}
+    </span>
+    <span class="text-muted mt-1 fw-bold fs-7">
+      {{ 'over 500 orders' | translate }}
+    </span>
   </h3>
   <div class="card-toolbar">
     <!-- begin::Menu -->
@@ -35,9 +39,7 @@
         <tr class="fw-bolder text-muted">
           <th class="w-25px">
             <div
-              class="
-                form-check form-check-sm form-check-custom form-check-solid
-              "
+              class="form-check form-check-sm form-check-custom form-check-solid"
             >
               <input
                 class="form-check-input"
@@ -48,13 +50,13 @@
               />
             </div>
           </th>
-          <th class="min-w-150px">Order Id</th>
-          <th class="min-w-140px">Country</th>
-          <th class="min-w-120px">Date</th>
-          <th class="min-w-120px">Company</th>
-          <th class="min-w-120px">Total</th>
-          <th class="min-w-120px">Status</th>
-          <th class="min-w-100px text-end">Actions</th>
+          <th class="min-w-150px">{{ 'order id' | translate }}</th>
+          <th class="min-w-140px">{{ 'country' | translate }}</th>
+          <th class="min-w-120px">{{ 'date' | translate }}</th>
+          <th class="min-w-120px">{{ 'company' | translate }}</th>
+          <th class="min-w-120px">{{ 'total' | translate }}</th>
+          <th class="min-w-120px">{{ 'status' | translate }}</th>
+          <th class="min-w-100px text-end">{{ 'actions' | translate }}</th>
         </tr>
       </thead>
       <!-- end::Table head -->
@@ -63,9 +65,7 @@
         <tr>
           <td>
             <div
-              class="
-                form-check form-check-sm form-check-custom form-check-solid
-              "
+              class="form-check form-check-sm form-check-custom form-check-solid"
             >
               <input
                 class="form-check-input widget-13-check"
@@ -86,9 +86,9 @@
             >
               Brasil
             </a>
-            <span class="text-muted fw-bold text-muted d-block fs-7"
-              >Code: PH</span
-            >
+            <span class="text-muted fw-bold text-muted d-block fs-7">
+              {{ 'Code: PH' | translate }}
+            </span>
           </td>
           <td>
             <a
@@ -97,9 +97,9 @@
             >
               05/28/2020
             </a>
-            <span class="text-muted fw-bold text-muted d-block fs-7"
-              >Code: Paid</span
-            >
+            <span class="text-muted fw-bold text-muted d-block fs-7">
+              {{ 'Code: Paid' | translate }}
+            </span>
           </td>
           <td>
             <a
@@ -114,24 +114,20 @@
           </td>
           <td class="text-dark fw-bolder text-hover-primary fs-6">$3560</td>
           <td>
-            <span class="badge badge-light-success">Approved</span>
+            <span class="badge badge-light-success">
+              {{ 'approved' | translate }}
+            </span>
           </td>
           <td class="text-end">
             <a
               href="#"
-              class="
-                btn btn-icon btn-bg-light btn-active-color-primary btn-sm
-                me-1
-              "
+              class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm me-1"
             >
               <app-keenicon name="switch" class="fs-3"></app-keenicon>
             </a>
             <a
               href="#"
-              class="
-                btn btn-icon btn-bg-light btn-active-color-primary btn-sm
-                me-1
-              "
+              class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm me-1"
             >
               <app-keenicon name="pencil" class="fs-3"></app-keenicon>
             </a>
@@ -146,9 +142,7 @@
         <tr>
           <td>
             <div
-              class="
-                form-check form-check-sm form-check-custom form-check-solid
-              "
+              class="form-check form-check-sm form-check-custom form-check-solid"
             >
               <input
                 class="form-check-input widget-13-check"
@@ -169,9 +163,9 @@
             >
               Belarus
             </a>
-            <span class="text-muted fw-bold text-muted d-block fs-7"
-              >Code: BY</span
-            >
+            <span class="text-muted fw-bold text-muted d-block fs-7">
+              {{ 'Code: BY' | translate }}
+            </span>
           </td>
           <td>
             <a
@@ -180,9 +174,9 @@
             >
               04/18/2021
             </a>
-            <span class="text-muted fw-bold text-muted d-block fs-7"
-              >Code: Paid</span
-            >
+            <span class="text-muted fw-bold text-muted d-block fs-7">
+              {{ 'Code: Paid' | translate }}
+            </span>
           </td>
           <td>
             <a
@@ -197,24 +191,20 @@
           </td>
           <td class="text-dark fw-bolder text-hover-primary fs-6">$4850</td>
           <td>
-            <span class="badge badge-light-warning">In Progress</span>
+            <span class="badge badge-light-warning">
+              {{ 'in progress' | translate }}
+            </span>
           </td>
           <td class="text-end">
             <a
               href="#"
-              class="
-                btn btn-icon btn-bg-light btn-active-color-primary btn-sm
-                me-1
-              "
+              class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm me-1"
             >
               <app-keenicon name="switch" class="fs-3"></app-keenicon>
             </a>
             <a
               href="#"
-              class="
-                btn btn-icon btn-bg-light btn-active-color-primary btn-sm
-                me-1
-              "
+              class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm me-1"
             >
               <app-keenicon name="pencil" class="fs-3"></app-keenicon>
             </a>
@@ -229,9 +219,7 @@
         <tr>
           <td>
             <div
-              class="
-                form-check form-check-sm form-check-custom form-check-solid
-              "
+              class="form-check form-check-sm form-check-custom form-check-solid"
             >
               <input
                 class="form-check-input widget-13-check"
@@ -252,9 +240,9 @@
             >
               Phillipines
             </a>
-            <span class="text-muted fw-bold text-muted d-block fs-7"
-              >Code: BH</span
-            >
+            <span class="text-muted fw-bold text-muted d-block fs-7">
+              {{ 'Code: BH' | translate }}
+            </span>
           </td>
           <td>
             <a
@@ -263,9 +251,9 @@
             >
               07/23/2019
             </a>
-            <span class="text-muted fw-bold text-muted d-block fs-7"
-              >Code: Paid</span
-            >
+            <span class="text-muted fw-bold text-muted d-block fs-7">
+              {{ 'Code: Paid' | translate }}
+            </span>
           </td>
           <td>
             <a
@@ -274,30 +262,26 @@
             >
               RoadGee
             </a>
-            <span class="text-muted fw-bold text-muted d-block fs-7"
-              >Transportation</span
-            >
+            <span class="text-muted fw-bold text-muted d-block fs-7">
+              {{ 'transportation' | translate }}
+            </span>
           </td>
           <td class="text-dark fw-bolder text-hover-primary fs-6">$8376</td>
           <td>
-            <span class="badge badge-light-danger">Success</span>
+            <span class="badge badge-light-danger">
+              {{ 'success' | translate }}
+            </span>
           </td>
           <td class="text-end">
             <a
               href="#"
-              class="
-                btn btn-icon btn-bg-light btn-active-color-primary btn-sm
-                me-1
-              "
+              class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm me-1"
             >
               <app-keenicon name="switch" class="fs-3"></app-keenicon>
             </a>
             <a
               href="#"
-              class="
-                btn btn-icon btn-bg-light btn-active-color-primary btn-sm
-                me-1
-              "
+              class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm me-1"
             >
               <app-keenicon name="pencil" class="fs-3"></app-keenicon>
             </a>
@@ -312,9 +296,7 @@
         <tr>
           <td>
             <div
-              class="
-                form-check form-check-sm form-check-custom form-check-solid
-              "
+              class="form-check form-check-sm form-check-custom form-check-solid"
             >
               <input
                 class="form-check-input widget-13-check"
@@ -335,9 +317,9 @@
             >
               Argentina
             </a>
-            <span class="text-muted fw-bold text-muted d-block fs-7"
-              >Code: BR</span
-            >
+            <span class="text-muted fw-bold text-muted d-block fs-7">
+              {{ 'Code: BR' | translate }}
+            </span>
           </td>
           <td>
             <a
@@ -346,9 +328,9 @@
             >
               12/21/2021
             </a>
-            <span class="text-muted fw-bold text-muted d-block fs-7"
-              >Code: Paid</span
-            >
+            <span class="text-muted fw-bold text-muted d-block fs-7">
+              {{ 'Code: Paid' | translate }}
+            </span>
           </td>
           <td>
             <a
@@ -357,30 +339,26 @@
             >
               The Hill
             </a>
-            <span class="text-muted fw-bold text-muted d-block fs-7"
-              >Insurance</span
-            >
+            <span class="text-muted fw-bold text-muted d-block fs-7">
+              {{ 'insurance' | translate }}
+            </span>
           </td>
           <td class="text-dark fw-bolder text-hover-primary fs-6">$9486</td>
           <td>
-            <span class="badge badge-light-info">Rejected</span>
+            <span class="badge badge-light-info">
+              {{ 'rejected' | translate }}
+            </span>
           </td>
           <td class="text-end">
             <a
               href="#"
-              class="
-                btn btn-icon btn-bg-light btn-active-color-primary btn-sm
-                me-1
-              "
+              class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm me-1"
             >
               <app-keenicon name="switch" class="fs-3"></app-keenicon>
             </a>
             <a
               href="#"
-              class="
-                btn btn-icon btn-bg-light btn-active-color-primary btn-sm
-                me-1
-              "
+              class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm me-1"
             >
               <app-keenicon name="pencil" class="fs-3"></app-keenicon>
             </a>
@@ -395,9 +373,7 @@
         <tr>
           <td>
             <div
-              class="
-                form-check form-check-sm form-check-custom form-check-solid
-              "
+              class="form-check form-check-sm form-check-custom form-check-solid"
             >
               <input
                 class="form-check-input widget-13-check"
@@ -418,9 +394,9 @@
             >
               Agoda
             </a>
-            <span class="text-muted fw-bold text-muted d-block fs-7"
-              >Code: BT</span
-            >
+            <span class="text-muted fw-bold text-muted d-block fs-7">
+              {{ 'Code: BT' | translate }}
+            </span>
           </td>
           <td>
             <a
@@ -429,9 +405,9 @@
             >
               05/28/2020
             </a>
-            <span class="text-muted fw-bold text-muted d-block fs-7"
-              >Code: Paid</span
-            >
+            <span class="text-muted fw-bold text-muted d-block fs-7">
+              {{ 'Code: Paid' | translate }}
+            </span>
           </td>
           <td>
             <a
@@ -440,30 +416,26 @@
             >
               Phillipines
             </a>
-            <span class="text-muted fw-bold text-muted d-block fs-7"
-              >Transportation</span
-            >
+            <span class="text-muted fw-bold text-muted d-block fs-7">
+              {{ 'transportation' | translate }}
+            </span>
           </td>
           <td class="text-dark fw-bolder text-hover-primary fs-6">$8476</td>
           <td>
-            <span class="badge badge-light-primary">Approved</span>
+            <span class="badge badge-light-primary">
+              {{ 'approved' | translate }}
+            </span>
           </td>
           <td class="text-end">
             <a
               href="#"
-              class="
-                btn btn-icon btn-bg-light btn-active-color-primary btn-sm
-                me-1
-              "
+              class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm me-1"
             >
               <app-keenicon name="switch" class="fs-3"></app-keenicon>
             </a>
             <a
               href="#"
-              class="
-                btn btn-icon btn-bg-light btn-active-color-primary btn-sm
-                me-1
-              "
+              class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm me-1"
             >
               <app-keenicon name="pencil" class="fs-3"></app-keenicon>
             </a>

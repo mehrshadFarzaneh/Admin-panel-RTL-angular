@@ -12,7 +12,9 @@
 >
   <div class="card shadow-none rounded-0">
     <div class="card-header" id="kt_activities_header">
-      <h3 class="card-title fw-bolder text-dark">Activity Logs</h3>
+      <h3 class="card-title fw-bolder text-dark">
+        {{ 'PREFIX.ACTIVITY_LOGS' | translate: { PREFIX: 'Activity Logs' } }}
+      </h3>
 
       <div class="card-toolbar">
         <button
@@ -41,25 +43,36 @@
 
             <div class="timeline-icon symbol symbol-circle symbol-40px me-4">
               <div class="symbol-label bg-light">
-                <app-keenicon name="message-text-2" class="fs-2 text-gray500"></app-keenicon>
+                <app-keenicon
+                  name="message-text-2"
+                  class="fs-2 text-gray500"
+                ></app-keenicon>
               </div>
             </div>
 
             <div class="timeline-content mb-10 mt-n1">
               <div class="pe-3 mb-5">
                 <div class="fs-5 fw-bold mb-2">
-                  There are 2 new tasks for you in “AirPlus Mobile APp” project:
+                  {{
+                    'PREFIX.NEW_TASKS'
+                      | translate
+                  }}
                 </div>
 
                 <div class="d-flex align-items-center mt-1 fs-6">
-                  <div class="text-muted me-2 fs-7">Added at 4:23 PM by</div>
+                  <div class="text-muted me-2 fs-7">
+                    {{ 'PREFIX.ADDED_AT' | translate }}
+                  </div>
 
                   <div
                     class="symbol symbol-circle symbol-25px"
                     data-bs-toggle="tooltip"
                     data-bs-boundary="window"
                     data-bs-placement="top"
-                    title="Nina Nilson"
+                    title="{{
+                      'PREFIX.NINA_NILSON'
+                        | translate: { PREFIX: 'Nina Nilson' }
+                    }}"
                   >
                     <img src="./assets/media/avatars/300-14.jpg" alt="img" />
                   </div>
@@ -68,43 +81,25 @@
 
               <div class="overflow-auto pb-5">
                 <div
-                  class="
-                    d-flex
-                    align-items-center
-                    border border-dashed border-gray-300
-                    rounded
-                    min-w-750px
-                    px-7
-                    py-3
-                    mb-5
-                  "
+                  class="d-flex align-items-center border border-dashed border-gray-300 rounded min-w-750px px-7 py-3 mb-5"
                 >
                   <a
-                    class="
-                      fs-5
-                      text-dark text-hover-primary
-                      fw-bold
-                      w-375px
-                      min-w-200px
-                      cursor-pointer
-                    "
+                    class="fs-5 text-dark text-hover-primary fw-bold w-375px min-w-200px cursor-pointer"
                   >
-                    Meeting with customer
+                    {{
+                      'PREFIX.MEETING_WITH_CUSTOMER'
+                        | translate: { PREFIX: 'Meeting with customer' }
+                    }}
                   </a>
 
                   <div class="min-w-175px pe-2">
-                    <span class="badge badge-light text-muted"
-                      >Application Design</span
-                    >
+                    <span class="badge badge-light text-muted">
+                      {{ 'PREFIX.APPLICATION_DESIGN' | translate }}
+                    </span>
                   </div>
 
                   <div
-                    class="
-                      symbol-group symbol-hover
-                      flex-nowrap flex-grow-1
-                      min-w-100px
-                      pe-2
-                    "
+                    class="symbol-group symbol-hover flex-nowrap flex-grow-1 min-w-100px pe-2"
                   >
                     <div class="symbol symbol-circle symbol-25px">
                       <img src="./assets/media/avatars/300-2.jpg" alt="img" />
@@ -116,13 +111,7 @@
 
                     <div class="symbol symbol-circle symbol-25px">
                       <div
-                        class="
-                          symbol-label
-                          fs-8
-                          fw-bold
-                          bg-primary
-                          text-inverse-primary
-                        "
+                        class="symbol-label fs-8 fw-bold bg-primary text-inverse-primary"
                       >
                         A
                       </div>
@@ -130,56 +119,39 @@
                   </div>
 
                   <div class="min-w-125px pe-2">
-                    <span class="badge badge-light-primary">In Progress</span>
+                    <span class="badge badge-light-primary">
+                      {{ 'PREFIX.IN_PROGRESS' | translate }}
+
+                    </span>
                   </div>
 
                   <a
-                    class="
-                      btn btn-sm btn-light btn-active-light-primary
-                      cursor-pointer
-                    "
+                    class="btn btn-sm btn-light btn-active-light-primary cursor-pointer"
                   >
-                    View
+                    {{ 'PREFIX.VIEW' | translate: { PREFIX: 'View' } }}
                   </a>
                 </div>
 
                 <div
-                  class="
-                    d-flex
-                    align-items-center
-                    border border-dashed border-gray-300
-                    rounded
-                    min-w-750px
-                    px-7
-                    py-3
-                    mb-0
-                  "
+                  class="d-flex align-items-center border border-dashed border-gray-300 rounded min-w-750px px-7 py-3 mb-0"
                 >
                   <a
-                    class="
-                      fs-5
-                      text-dark text-hover-primary
-                      fw-bold
-                      w-375px
-                      min-w-200px
-                      cursor-pointer
-                    "
+                    class="fs-5 text-dark text-hover-primary fw-bold w-375px min-w-200px cursor-pointer"
                   >
-                    Project Delivery Preparation
+                    {{
+                      'PREFIX.PROJECT_DELIVERY_PREPARATION'
+                        | translate: { PREFIX: 'Project Delivery Preparation' }
+                    }}
                   </a>
 
                   <div class="min-w-175px">
-                    <span class="badge badge-light text-muted"
-                      >CRM System Development</span
-                    >
+                    <span class="badge badge-light text-muted">
+                      {{ 'PREFIX.CRM_SYSTEM_DEVELOPMENT' | translate }}
+                    </span>
                   </div>
 
                   <div
-                    class="
-                      symbol-group symbol-hover
-                      flex-nowrap flex-grow-1
-                      min-w-100px
-                    "
+                    class="symbol-group symbol-hover flex-nowrap flex-grow-1 min-w-100px"
                   >
                     <div class="symbol symbol-circle symbol-25px">
                       <img src="./assets/media/avatars/300-20.jpg" alt="img" />
@@ -187,13 +159,7 @@
 
                     <div class="symbol symbol-circle symbol-25px">
                       <div
-                        class="
-                          symbol-label
-                          fs-8
-                          fw-bold
-                          bg-success
-                          text-inverse-primary
-                        "
+                        class="symbol-label fs-8 fw-bold bg-success text-inverse-primary"
                       >
                         B
                       </div>
@@ -201,16 +167,15 @@
                   </div>
 
                   <div class="min-w-125px">
-                    <span class="badge badge-light-success">Completed</span>
+                    <span class="badge badge-light-success">
+                      '{{ 'PREFIX.COMPLETED' | translate }}
+                    </span>
                   </div>
 
                   <a
-                    class="
-                      btn btn-sm btn-light btn-active-light-primary
-                      cursor-pointer
-                    "
+                    class="btn btn-sm btn-light btn-active-light-primary cursor-pointer"
                   >
-                    View
+                    {{ 'PREFIX.VIEW' | translate: { PREFIX: 'View' } }}
                   </a>
                 </div>
               </div>
@@ -222,19 +187,23 @@
 
             <div class="timeline-icon symbol symbol-circle symbol-40px">
               <div class="symbol-label bg-light">
-                <app-keenicon name="pointers" class="fs-2 text-gray500"></app-keenicon>
+                <app-keenicon
+                  name="pointers"
+                  class="fs-2 text-gray500"
+                ></app-keenicon>
               </div>
             </div>
 
             <div class="timeline-content mb-10 mt-n2">
               <div class="overflow-auto pe-3">
                 <div class="fs-5 fw-bold mb-2">
-                  Invitation for crafting engaging designs that speak human
-                  workshop
+                  {{"Invitation for crafting engaging designs that speak human workshop" | translate}}
                 </div>
 
                 <div class="d-flex align-items-center mt-1 fs-6">
-                  <div class="text-muted me-2 fs-7">Sent at 4:23 PM by</div>
+                  <div class="text-muted me-2 fs-7">
+                    {{ 'sent at 4:23 pm by' | translate }}
+                  </div>
 
                   <div
                     class="symbol symbol-circle symbol-25px"
@@ -262,19 +231,15 @@
             <div class="timeline-content mb-10 mt-n1">
               <div class="mb-5 pe-3">
                 <a
-                  class="
-                    fs-5
-                    fw-bold
-                    text-gray-800 text-hover-primary
-                    mb-2
-                    cursor-pointer
-                  "
+                  class="fs-5 fw-bold text-gray-800 text-hover-primary mb-2 cursor-pointer"
                 >
                   3 New Incoming Project Files:
                 </a>
 
                 <div class="d-flex align-items-center mt-1 fs-6">
-                  <div class="text-muted me-2 fs-7">Sent at 10:30 PM by</div>
+                  <div class="text-muted me-2 fs-7">
+                    {{ 'sent at 10:30 pm by' | translate }}
+                  </div>
 
                   <div
                     class="symbol symbol-circle symbol-25px"
@@ -290,14 +255,7 @@
 
               <div class="overflow-auto pb-5">
                 <div
-                  class="
-                    d-flex
-                    align-items-center
-                    border border-dashed border-gray-300
-                    rounded
-                    min-w-700px
-                    p-5
-                  "
+                  class="d-flex align-items-center border border-dashed border-gray-300 rounded min-w-700px p-5"
                 >
                   <div class="d-flex flex-aligns-center pe-10 pe-lg-20">
                     <img
@@ -313,7 +271,7 @@
                         Finance KPI App Guidelines
                       </a>
 
-                      <div class="text-gray-400">1.9mb</div>
+                      <div class="text-gray-400">{{ '1.9mb' | translate }}</div>
                     </div>
                   </div>
 
@@ -331,7 +289,7 @@
                         Client UAT Testing Results
                       </a>
 
-                      <div class="text-gray-400">18kb</div>
+                      <div class="text-gray-400">{{ '18kb' | translate }}</div>
                     </div>
                   </div>
 
@@ -349,7 +307,7 @@
                         Finance Reports
                       </a>
 
-                      <div class="text-gray-400">20mb</div>
+                      <div class="text-gray-400">{{ '20mb' | translate }}</div>
                     </div>
                   </div>
                 </div>
@@ -369,20 +327,20 @@
             <div class="timeline-content mb-10 mt-n1">
               <div class="pe-3 mb-5">
                 <div class="fs-5 fw-bold mb-2">
-                  Task
+                  {{'Task'|translate}}
                   <a class="text-primary fw-bolder me-1 cursor-pointer">
                     #45890
                   </a>
-                  merged with
+                  {{'merged with'|translate}}
                   <a class="text-primary fw-bolder me-1 cursor-pointer">
                     #45890
                   </a>
-                  in “Ads Pro Admin Dashboard project:
+                  {{'in “Ads Pro Admin Dashboard project:'| translate}}
                 </div>
 
                 <div class="d-flex align-items-center mt-1 fs-6">
                   <div class="text-muted me-2 fs-7">
-                    Initiated at 4:23 PM by
+                    {{'Initiated at 4:23 PM by' | translate}}
                   </div>
 
                   <div
@@ -411,11 +369,13 @@
             <div class="timeline-content mb-10 mt-n1">
               <div class="pe-3 mb-5">
                 <div class="fs-5 fw-bold mb-2">
-                  3 new application design concepts added:
+                  {{'3 new application design concepts added:' | translate}}
                 </div>
 
                 <div class="d-flex align-items-center mt-1 fs-6">
-                  <div class="text-muted me-2 fs-7">Created at 4:23 PM by</div>
+                  <div class="text-muted me-2 fs-7">
+                    {{ 'created at 4:23 pm by' | translate }}
+                  </div>
 
                   <div
                     class="symbol symbol-circle symbol-25px"
@@ -431,14 +391,7 @@
 
               <div class="overflow-auto pb-5">
                 <div
-                  class="
-                    d-flex
-                    align-items-center
-                    border border-dashed border-gray-300
-                    rounded
-                    min-w-700px
-                    p-7
-                  "
+                  class="d-flex align-items-center border border-dashed border-gray-300 rounded min-w-700px p-7"
                 >
                   <div class="overlay me-10">
                     <div class="overlay-wrapper">
@@ -453,7 +406,7 @@
                       <a
                         class="btn btn-sm btn-primary btn-shadow cursor-pointer"
                       >
-                        Explore
+                        {{'Explore'|translate}}
                       </a>
                     </div>
                   </div>
@@ -471,7 +424,7 @@
                       <a
                         class="btn btn-sm btn-primary btn-shadow cursor-pointer"
                       >
-                        Explore
+                      {{'Explore'|translate}}
                       </a>
                     </div>
                   </div>
@@ -489,7 +442,7 @@
                       <a
                         class="btn btn-sm btn-primary btn-shadow cursor-pointer"
                       >
-                        Explore
+                      {{'Explore'|translate}}
                       </a>
                     </div>
                   </div>
@@ -510,16 +463,18 @@
             <div class="timeline-content mb-10 mt-n1">
               <div class="pe-3 mb-5">
                 <div class="fs-5 fw-bold mb-2">
-                  New case
+                  {{'New case' | translate}}
                   <a class="text-primary fw-bolder me-1 cursor-pointer">
                     #67890
                   </a>
-                  is assigned to you in Multi-platform Database Design project
+                  {{'is assigned to you in Multi-platform Database Design project' | translate}}
                 </div>
 
                 <div class="overflow-auto pb-5">
                   <div class="d-flex align-items-center mt-1 fs-6">
-                    <div class="text-muted me-2 fs-7">Added at 4:23 PM by</div>
+                    <div class="text-muted me-2 fs-7">
+                      {{ 'added at 4:23 pm by' | translate }}
+                    </div>
 
                     <a class="text-primary fw-bolder me-1 cursor-pointer">
                       Alice Tan
@@ -542,11 +497,13 @@
             <div class="timeline-content mb-10 mt-n1">
               <div class="pe-3 mb-5">
                 <div class="fs-5 fw-bold mb-2">
-                  You have received a new order:
+                  {{'You have received a new order:' | translate}}
                 </div>
 
                 <div class="d-flex align-items-center mt-1 fs-6">
-                  <div class="text-muted me-2 fs-7">Placed at 5:05 AM by</div>
+                  <div class="text-muted me-2 fs-7">
+                    {{ 'placed at 5:05 am by' | translate }}
+                  </div>
 
                   <div
                     class="symbol symbol-circle symbol-25px"
@@ -562,44 +519,25 @@
 
               <div class="overflow-auto pb-5">
                 <div
-                  class="
-                    notice
-                    d-flex
-                    bg-light-primary
-                    rounded
-                    border-primary border border-dashed
-                    min-w-lg-600px
-                    flex-shrink-0
-                    p-6
-                  "
+                  class="notice d-flex bg-light-primary rounded border-primary border border-dashed min-w-lg-600px flex-shrink-0 p-6"
                 >
                   <app-keenicon name="cod004.svg" class="fs-1"></app-keenicon>
 
                   <div
-                    class="
-                      d-flex
-                      flex-stack flex-grow-1 flex-wrap flex-md-nowrap
-                    "
+                    class="d-flex flex-stack flex-grow-1 flex-wrap flex-md-nowrap"
                   >
                     <div class="mb-3 mb-md-0 fw-bold">
                       <h4 class="text-gray-800 fw-bolder">
-                        Database Backup Process Completed!
+                        {{ 'Database Backup Process Completed!' | translate }}
                       </h4>
                       <div class="fs-6 text-gray-600 pe-7">
-                        Login into Metronic Admin Dashboard to make sure the
-                        data integrity is OK
+                        {{'Login into Metronic Admin Dashboard to make sure the data integrity is OK' | translate}}
                       </div>
                     </div>
                     <a
-                      class="
-                        btn btn-primary
-                        px-6
-                        align-self-center
-                        text-nowrap
-                        cursor-pointer
-                      "
+                      class="btn btn-primary px-6 align-self-center text-nowrap cursor-pointer"
                     >
-                      Proceed
+                      {{'Proceed'|translate}}
                     </a>
                   </div>
                 </div>
@@ -612,22 +550,27 @@
 
             <div class="timeline-icon symbol symbol-circle symbol-40px">
               <div class="symbol-label bg-light">
-                <app-keenicon name="basket" class="fs-3 text-primary"></app-keenicon>
+                <app-keenicon
+                  name="basket"
+                  class="fs-3 text-primary"
+                ></app-keenicon>
               </div>
             </div>
 
             <div class="timeline-content mt-n1">
               <div class="pe-3 mb-5">
                 <div class="fs-5 fw-bold mb-2">
-                  New order
+                  {{'New order' | translate}}
                   <a class="text-primary fw-bolder me-1 cursor-pointer">
                     #67890
                   </a>
-                  is placed for Workshow Planning & Budget Estimation
+                  {{'is placed for Workshow Planning & Budget Estimation' | translate}}
                 </div>
 
                 <div class="d-flex align-items-center mt-1 fs-6">
-                  <div class="text-muted me-2 fs-7">Placed at 4:23 PM by</div>
+                  <div class="text-muted me-2 fs-7">
+                    {{ 'placed at 4:23 pm by' | translate }}
+                  </div>
 
                   <a class="text-primary fw-bolder me-1 cursor-pointer">
                     Jimmy Bold
@@ -641,8 +584,11 @@
     </div>
     <div class="card-footer py-5 text-center" id="kt_activities_footer">
       <a to="/crafted/pages/profile" class="btn btn-bg-body text-primary">
-        View All Activities
-        <app-keenicon name="arrow-right" class="fs-3 text-primary"></app-keenicon>
+        {{ 'PREFIX.VIEW_ALL_ACTIVITIES' | translate }}
+        <app-keenicon
+          name="arrow-right"
+          class="fs-3 text-primary"
+        ></app-keenicon>
       </a>
     </div>
   </div>

@@ -1,7 +1,9 @@
 <div class="d-flex flex-wrap flex-stack mb-6">
   <h3 class="fw-bolder my-2">
-    My Campaigns
-    <span class="fs-6 text-gray-400 fw-bold ms-1">30 Days</span>
+    {{ 'My Campaigns' | translate }}
+    <span class="fs-6 text-gray-400 fw-bold ms-1">
+      {{ '30 days' | translate }}
+    </span>
   </h3>
 
   <div class="d-flex align-items-center my-2">
@@ -12,18 +14,18 @@
         data-hide-search="true"
         class="form-select form-select-white form-select-sm"
       >
-        <option value="1" selected>30 Days</option>
-        <option value="2">90 Days</option>
-        <option value="3">6 Months</option>
-        <option value="4">1 Year</option>
+        <option value="1" selected>{{ '30 days' | translate }}</option>
+        <option value="2">{{ '90 days' | translate }}</option>
+        <option value="3">{{ '6 months' | translate }}</option>
+        <option value="4">{{ '1 year' | translate }}</option>
       </select>
     </div>
     <button
       class="btn btn-primary btn-sm"
       data-bs-toggle="tooltip"
-      title="Coming soon"
+      [title]="'Coming soon' | translate"
     >
-      Add Campaign
+      {{ 'Add Campaign' | translate }}
     </button>
   </div>
 </div>
@@ -32,11 +34,11 @@
   <div class="col-sm-6 col-xl-4">
     <app-card5
       image="./assets/media/svg/brand-logos/twitch.svg"
-      title="Twitch Posts"
+      title="{{ 'Twitch Posts' | translate }}"
       description="$500.00"
       status="down"
       [statusValue]="40.5"
-      statusDesc="more impressions"
+      statusDesc="{{ 'more impressions' | translate }}"
       [progress]="0.5"
       progressType="MRR"
     ></app-card5>
@@ -44,11 +46,11 @@
   <div class="col-sm-6 col-xl-4">
     <app-card5
       image="./assets/media/svg/brand-logos/twitter.svg"
-      title="Twitter Followers"
+      title="{{ 'Twitter Followers' | translate }}"
       description="807k"
       status="up"
       [statusValue]="17.62"
-      statusDesc="Followers growth"
+      [statusDesc]="'Followers growth' | translate"
       [progress]="5"
       progressType="New trials"
     ></app-card5>
@@ -56,79 +58,86 @@
   <div class="col-sm-6 col-xl-4">
     <app-card5
       image="./assets/media/svg/brand-logos/spotify.svg"
-      title="Spotify Listeners"
+      title="{{ 'Spotify Listeners' | translate }}"
       description="1,073"
       status="down"
       [statusValue]="10.45"
-      statusDesc="Less comments than usual"
+      statusDesc="{{ 'Less comments than usual' | translate }}"
       [progress]="40"
-      progressType="Impressions"
+      progressType="{{ 'Impressions' | translate }}"
     ></app-card5>
   </div>
+
   <div class="col-sm-6 col-xl-4">
     <app-card5
       image="./assets/media/svg/brand-logos/pinterest-p.svg"
-      title="Pinterest Posts"
+      title="{{ 'Pinterest Posts' | translate }}"
       description="97"
       status="up"
       [statusValue]="26.1"
-      statusDesc="More posts"
+      statusDesc="{{ 'More posts' | translate }}"
       [progress]="10"
-      progressType="Spend"
+      progressType="{{ 'Spend' | translate }}"
     ></app-card5>
   </div>
+
   <div class="col-sm-6 col-xl-4">
     <app-card5
       image="./assets/media/svg/brand-logos/github.svg"
-      title="Github Contributes"
+      title="{{ 'Github Contributes' | translate }}"
       description="4,109"
       status="down"
       [statusValue]="32.8"
-      statusDesc="Less contributions"
+      statusDesc="{{ 'Less contributions' | translate }}"
       [progress]="40"
-      progressType="Dispute"
+      progressType="{{ 'Dispute' | translate }}"
     ></app-card5>
   </div>
+
   <div class="col-sm-6 col-xl-4">
     <app-card5
       image="./assets/media/svg/brand-logos/youtube-play.svg"
-      title="Youtube Subscribers"
+      title="{{ 'Youtube Subscribers' | translate }}"
       description="354"
       status="up"
       [statusValue]="29.45"
-      statusDesc="Subscribers growth"
+      statusDesc="{{ 'Subscribers growth' | translate }}"
       [progress]="40"
-      progressType="Subscribers"
+      progressType="{{ 'Subscribers' | translate }}"
     ></app-card5>
   </div>
+
   <div class="col-sm-6 col-xl-4">
     <app-card5
       image="./assets/media/svg/brand-logos/telegram.svg"
-      title="Telegram Posts"
+      title="{{ 'Telegram Posts' | translate }}"
       description="566"
       status="up"
       [statusValue]="11.4"
-      statusDesc="more clicks"
+      statusDesc="{{ 'more clicks' | translate }}"
       [progress]="40"
-      progressType="Profit"
+      progressType="{{ 'Profit' | translate }}"
     ></app-card5>
   </div>
+
   <div class="col-sm-6 col-xl-4">
     <app-card5
       image="./assets/media/svg/brand-logos/reddit.svg"
-      title="Reddit Awards"
+      title="{{ 'Reddit Awards' | translate }}"
       description="2.1M"
       status="up"
       [statusValue]="46.7"
-      statusDesc="more adds"
+      statusDesc="{{ 'more adds' | translate }}"
       [progress]="0.0"
-      progressType="Retention"
+      progressType="{{ 'Retention' | translate }}"
     ></app-card5>
   </div>
 </div>
 
 <div class="d-flex flex-stack flex-wrap pt-10">
-  <div class="fs-6 fw-bold text-gray-700">Showing 1 to 10 of 50 entries</div>
+  <div class="fs-6 fw-bold text-gray-700">
+    {{ 'showing 1 to 10 of 50 entries' | translate }}
+  </div>
 
   <ul class="pagination">
     <li class="page-item previous">
@@ -138,27 +147,27 @@
     </li>
 
     <li class="page-item active">
-      <a class="page-link cursor-pointer"> 1 </a>
+      <a class="page-link cursor-pointer">1</a>
     </li>
 
     <li class="page-item">
-      <a class="page-link cursor-pointer"> 2 </a>
+      <a class="page-link cursor-pointer">2</a>
     </li>
 
     <li class="page-item">
-      <a class="page-link cursor-pointer"> 3 </a>
+      <a class="page-link cursor-pointer">3</a>
     </li>
 
     <li class="page-item">
-      <a class="page-link cursor-pointer"> 4 </a>
+      <a class="page-link cursor-pointer">4</a>
     </li>
 
     <li class="page-item">
-      <a class="page-link cursor-pointer"> 5 </a>
+      <a class="page-link cursor-pointer">5</a>
     </li>
 
     <li class="page-item">
-      <a class="page-link cursor-pointer"> 6 </a>
+      <a class="page-link cursor-pointer">6</a>
     </li>
 
     <li class="page-item next">

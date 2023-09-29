@@ -3,13 +3,15 @@ import { AppFacade } from './../../core/store/app.facade';
 import { Directive, ElementRef, Renderer2, OnInit, AfterViewInit, Inject } from '@angular/core';
 import { LangUtil } from 'src/app/core/utils/lang.util';
 import { DOCUMENT } from '@angular/common';
+import { NavigationEnd, Router } from '@angular/router';
 
 @Directive({
   selector: '[appMenuPlacement]'
 })
 export class MenuPlacementDirective implements AfterViewInit {
+  private itsRtl = false;
   constructor(private el: ElementRef, private renderer: Renderer2, private appFacade: AppFacade,
-    private translateService: TranslationService, @Inject(DOCUMENT) private document: Document) { }
+  private translateService: TranslationService, @Inject(DOCUMENT) private document: Document,private router: Router) { }
 
   ngOnInit(): void {
     //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
@@ -20,17 +22,24 @@ export class MenuPlacementDirective implements AfterViewInit {
   ngAfterViewInit() {
 
     this.appFacade.isLayoutDirectionRtl$.subscribe((rtl: boolean) => {
-      debugger;
+
       // this.initialPlacementAttributeByLocalStorage(rtl);
       // setTimeout(() => {
       // Call the function to fetch and update elements
       // this.updateElementsWithPlacement(rtl);
+      this.itsRtl = rtl;
       this.updateMenuPlacementBasedOnRTL(rtl);
       this.replaceBodyAttributeFor(rtl);
       this.replaceMainStyleFileFor(rtl);
       // }, 3000);
 
     })
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        // Your code to execute on every route change
+        this.placementElementMustChange(this.itsRtl);
+      }
+    });
   }
 
   private initialPlacementAttributeByLocalStorage(rtl: boolean): void {
@@ -79,7 +88,7 @@ export class MenuPlacementDirective implements AfterViewInit {
       });
     }
     // setTimeout(() => {
-    //   debugger;
+    //
     //   const isRtl = LangUtil.isRtlLang(this.translateService.getSelectedLanguage());
     //   const elementsWithPlacement = this.document.querySelectorAll('[data-kt-menu-placement]');
 
@@ -174,7 +183,7 @@ export class MenuPlacementDirective implements AfterViewInit {
 
   // Function to fetch and update the elements
   updateElementsWithPlacement(rtl: boolean) {
-    debugger;
+
     if (this.elementsWithPlacement.length === 0) {
       this.elementsWithPlacement = document.querySelectorAll('[data-kt-menu-placement]');
     }
@@ -201,7 +210,7 @@ export class MenuPlacementDirective implements AfterViewInit {
 
 
   // updateMenuPlacementBasedOnRTL(isRtl: boolean) {
-  //   debugger;
+  //
   //   // Find and modify the placement attributes
   //   const elementsToModify = document.querySelectorAll('[data-kt-menu-placement]');
 
@@ -232,13 +241,13 @@ export class MenuPlacementDirective implements AfterViewInit {
 
   rtlInitialized = false;
   updateMenuPlacementBasedOnRTL(isRtl: boolean) {
-    debugger;
+
 
     if (isRtl && !this.rtlInitialized) {
       setTimeout(() => {
         this.rtlInitialized = true;
         this.updateMenuPlacementBasedOnRTL(true);
-      }, 2000);
+      }, 4000);
       return;
     }
 
@@ -277,6 +286,39 @@ export class MenuPlacementDirective implements AfterViewInit {
         element.setAttribute('data-kt-menu-placement', newPlacement);
       }
     });
+
+    this.placementElementMustChange(isRtl);
+  }
+  placementElementMustChange(isRtl:boolean){
+    const button = document.getElementById("more-menu__btn");
+    const headerSearchInput = document.getElementById("kt_header_search");
+    const notificationsInput = document.getElementById("notifications-btn__navbar");
+    const quickLinkInput = document.getElementById("quick-link");
+    const changeThemInput = document.querySelector('app-theme-mode-switcher > div');
+    const userMenuInput = document.getElementById('user-menu__input');
+    // Check if the button element exists
+    try{
+      if (isRtl) {
+        // Update the data-kt-menu-placement attribute
+        button?.setAttribute("data-kt-menu-placement", "bottom-start");
+        headerSearchInput?.setAttribute("data-kt-menu-placement", "bottom-start")
+        notificationsInput?.setAttribute("data-kt-menu-placement", "bottom-start")
+        quickLinkInput?.setAttribute("data-kt-menu-placement", "bottom-start")
+        changeThemInput?.setAttribute("data-kt-menu-placement", "bottom-start")
+        userMenuInput?.setAttribute("data-kt-menu-placement", "bottom-start")
+      }else {
+        button?.setAttribute("data-kt-menu-placement", "bottom-end");
+        headerSearchInput?.setAttribute("data-kt-menu-placement", "bottom-end")
+        notificationsInput?.setAttribute("data-kt-menu-placement", "bottom-end")
+        quickLinkInput?.setAttribute("data-kt-menu-placement", "bottom-start")
+        changeThemInput?.setAttribute("data-kt-menu-placement", "bottom-start")
+        userMenuInput?.setAttribute("data-kt-menu-placement", "bottom-start")
+      }
+    }catch{
+      // some element not found because we get them AOT :)
+    }
+
   }
 
+  // document.select
 }

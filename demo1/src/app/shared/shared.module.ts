@@ -1,18 +1,21 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MenuPlacementDirective } from './directives/menu-placement.directive';
+import { AutoTranslateDirective } from './directives/direct-translation.directive';
 
 
 
 @NgModule({
   declarations: [
-    MenuPlacementDirective
+    MenuPlacementDirective,
+    AutoTranslateDirective
   ],
   imports: [
     CommonModule
   ],
   exports: [
-    MenuPlacementDirective
+    MenuPlacementDirective,
+    AutoTranslateDirective
   ]
 })
 export class SharedModule { }

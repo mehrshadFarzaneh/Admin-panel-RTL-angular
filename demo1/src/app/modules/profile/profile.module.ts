@@ -14,6 +14,7 @@ import {
   WidgetsModule,
 } from '../../_metronic/partials';
 import { SharedModule } from "../../_metronic/shared/shared.module";
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [

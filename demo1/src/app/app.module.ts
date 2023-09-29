@@ -18,6 +18,7 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { CoreModule } from './core/core.module';
 import { MenuPlacementDirective } from './shared/directives/menu-placement.directive';
 import { SharedModule } from './shared/shared.module';
+import { EffectsModule } from '@ngrx/effects';
 // #fake-end#
 
 function appInitializer(authService: AuthService) {
@@ -51,7 +52,8 @@ function appInitializer(authService: AuthService) {
     StoreModule.forRoot({}, {}),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() }),
     CoreModule,
-    SharedModule
+    SharedModule,
+    EffectsModule.forRoot([])
   ],
   providers: [
     {

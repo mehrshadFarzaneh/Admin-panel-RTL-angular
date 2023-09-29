@@ -6,16 +6,17 @@ import { ActivityDrawerComponent } from './activity-drawer/activity-drawer.compo
 import { MessengerDrawerComponent } from './messenger-drawer/messenger-drawer.component';
 import { ChatInnerModule } from '../../content/chat-inner/chat-inner.module';
 import { SharedModule } from "../../../shared/shared.module";
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
   declarations: [
     ActivityDrawerComponent,
     MessengerDrawerComponent,
   ],
-  imports: [CommonModule, InlineSVGModule, RouterModule, ChatInnerModule, SharedModule],
+  imports: [CommonModule, InlineSVGModule, RouterModule, ChatInnerModule, SharedModule, TranslateModule],
   exports: [
     ActivityDrawerComponent,
     MessengerDrawerComponent,
   ],
 })
-export class DrawersModule {}
+export class DrawersModule { }

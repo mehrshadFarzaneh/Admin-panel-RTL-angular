@@ -57,15 +57,7 @@
     <div
       id="#kt_aside_menu"
       data-kt-menu="true"
-      class="
-        menu
-        menu-column
-        menu-title-gray-800
-        menu-state-title-primary
-        menu-state-icon-primary
-        menu-state-bullet-primary
-        menu-arrow-gray-500
-      "
+      class="menu menu-column menu-title-gray-800 menu-state-title-primary menu-state-icon-primary menu-state-bullet-primary menu-arrow-gray-500"
     >
       <app-aside-menu id="asideMenu"></app-aside-menu>
     </div>
@@ -84,7 +76,7 @@
     data-bs-dismiss-="click"
     ngbDropdown="Check out the complete documentation with over 100 components"
   >
-    <span class="btn-label">Docs & Components</span>
+    <span class="btn-label">{{ 'Docs & Components' | translate }}</span>
     <app-keenicon name="document" class="fs-2"></app-keenicon>
   </a>
 </div>

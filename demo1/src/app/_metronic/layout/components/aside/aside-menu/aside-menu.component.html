@@ -1,16 +1,3 @@
-<!-- Dashboard -->
-<div class="menu-item">
-  <a
-    class="menu-link without-sub"
-    routerLink="/dashboard"
-    routerLinkActive="active">
-    <span class="menu-icon">
-      <app-keenicon name="color-swatch" class="fs-2"></app-keenicon>
-    </span>
-    <span class="menu-title" translate="MENU.DASHBOARD"></span>
-  </a>
-</div>
-
 <!-- Layout builder -->
 <div class="menu-item">
   <a
@@ -21,13 +8,20 @@
     <span class="menu-icon">
       <app-keenicon name="switch" class="fs-2"></app-keenicon>
     </span>
-    <span class="menu-title">Layout Builder</span>
+    <span class="menu-title" translate="MENU.LAYOUT_BUILDER">
+      {{ 'layout builder' | translate }}
+    </span>
   </a>
 </div>
 <!-- Separator -->
 <div class="menu-item">
   <div class="menu-content pt-8 pb-2">
-    <span class="menu-section text-muted text-uppercase fs-8 ls-1">Crafted</span>
+    <span
+      class="menu-section text-muted text-uppercase fs-8 ls-1"
+      translate="MENU.CRAFTED"
+    >
+      {{ 'crafted' | translate }}
+    </span>
   </div>
 </div>
 
@@ -41,10 +35,13 @@
     <span class="menu-icon">
       <app-keenicon name="element-plus" class="fs-2"></app-keenicon>
     </span>
-    <span class="menu-title">Pages</span>
+    <span class="menu-title" translate="MENU.PAGES">
+      {{ 'pages' | translate }}
+    </span>
     <span class="menu-arrow"></span>
   </span>
   <div class="menu-sub menu-sub-accordion" routerLinkActive="menu-active-bg">
+    <!-- Profile -->
     <div
       class="menu-item menu-accordion"
       routerLinkActive="here show"
@@ -54,67 +51,97 @@
         <span class="menu-bullet">
           <span class="bullet bullet-dot"></span>
         </span>
-        <span class="menu-title" data-link="/crafted/pages/profile">Profile</span>
+        <span
+          class="menu-title"
+          translate="MENU.PROFILE"
+          data-link="/crafted/pages/profile"
+        >
+          {{ 'profile' | translate }}
+        </span>
         <span class="menu-arrow"></span>
       </span>
-      <div class="menu-sub menu-sub-accordion" routerLinkActive="menu-active-bg">
+      <div
+        class="menu-sub menu-sub-accordion"
+        routerLinkActive="menu-active-bg"
+      >
+        <!-- Overview -->
         <div class="menu-item">
           <a
             class="menu-link without-sub"
             routerLinkActive="active"
-            routerLink="/crafted/pages/profile/overview">
+            routerLink="/crafted/pages/profile/overview"
+          >
             <span class="menu-bullet">
               <span class="bullet bullet-dot"></span>
             </span>
-            <span class="menu-title">Overview</span>
+            <span class="menu-title" translate="MENU.OVERVIEW">
+              {{ 'Overview' | translate }}
+            </span>
           </a>
         </div>
+        <!-- Projects -->
         <div class="menu-item">
           <a
             class="menu-link without-sub"
             routerLinkActive="active"
-            routerLink="/crafted/pages/profile/projects">
+            routerLink="/crafted/pages/profile/projects"
+          >
             <span class="menu-bullet">
               <span class="bullet bullet-dot"></span>
             </span>
-            <span class="menu-title">Projects</span>
+            <span class="menu-title" translate="MENU.PROJECTS">
+              {{ 'projects' | translate }}
+            </span>
           </a>
         </div>
+        <!-- Campaigns -->
         <div class="menu-item">
           <a
             class="menu-link without-sub"
             routerLinkActive="active"
-            routerLink="/crafted/pages/profile/campaigns">
+            routerLink="/crafted/pages/profile/campaigns"
+          >
             <span class="menu-bullet">
               <span class="bullet bullet-dot"></span>
             </span>
-            <span class="menu-title">Campaigns</span>
+            <span class="menu-title" translate="MENU.CAMPAIGNS">
+              {{ 'Campaigns' | translate }}
+            </span>
           </a>
         </div>
+        <!-- Documents -->
         <div class="menu-item">
           <a
             class="menu-link without-sub"
             routerLinkActive="active"
-            routerLink="/crafted/pages/profile/documents">
+            routerLink="/crafted/pages/profile/documents"
+          >
             <span class="menu-bullet">
               <span class="bullet bullet-dot"></span>
             </span>
-            <span class="menu-title">Documents</span>
+            <span class="menu-title" translate="MENU.DOCUMENTS">
+              {{ 'documents' | translate }}
+            </span>
           </a>
         </div>
+        <!-- Connections -->
         <div class="menu-item">
           <a
             class="menu-link without-sub"
             routerLinkActive="active"
-            routerLink="/crafted/pages/profile/connections">
+            routerLink="/crafted/pages/profile/connections"
+          >
             <span class="menu-bullet">
               <span class="bullet bullet-dot"></span>
             </span>
-            <span class="menu-title">Connections</span>
+            <span class="menu-title" translate="MENU.CONNECTIONS">
+              {{ 'connections' | translate }}
+            </span>
           </a>
         </div>
       </div>
     </div>
+    <!-- Wizards -->
     <div
       class="menu-item menu-accordion"
       routerLinkActive="here show"
@@ -124,30 +151,47 @@
         <span class="menu-bullet">
           <span class="bullet bullet-dot"></span>
         </span>
-        <span class="menu-title" data-link="/crafted/pages/wizards">Wizards</span>
+        <span
+          class="menu-title"
+          translate="MENU.WIZARDS"
+          data-link="/crafted/pages/wizards"
+        >
+          {{ 'wizards' | translate }}
+        </span>
         <span class="menu-arrow"></span>
       </span>
-      <div class="menu-sub menu-sub-accordion" routerLinkActive="menu-active-bg">
+      <div
+        class="menu-sub menu-sub-accordion"
+        routerLinkActive="menu-active-bg"
+      >
+        <!-- Horizontal -->
         <div class="menu-item">
           <a
             class="menu-link without-sub"
             routerLinkActive="active"
-            routerLink="/crafted/pages/wizards/horizontal">
+            routerLink="/crafted/pages/wizards/horizontal"
+          >
             <span class="menu-bullet">
               <span class="bullet bullet-dot"></span>
             </span>
-            <span class="menu-title">Horizontal</span>
+            <span class="menu-title" translate="MENU.HORIZONTAL">
+              {{ 'horizontal' | translate }}
+            </span>
           </a>
         </div>
+        <!-- Vertical -->
         <div class="menu-item">
           <a
             class="menu-link without-sub"
             routerLinkActive="active"
-            routerLink="/crafted/pages/wizards/vertical">
+            routerLink="/crafted/pages/wizards/vertical"
+          >
             <span class="menu-bullet">
               <span class="bullet bullet-dot"></span>
             </span>
-            <span class="menu-title">Vertical</span>
+            <span class="menu-title" translate="MENU.VERTICAL">
+              {{ 'vertical' | translate }}
+            </span>
           </a>
         </div>
       </div>
@@ -165,30 +209,44 @@
     <span class="menu-icon">
       <app-keenicon name="profile-circle" class="fs-2"></app-keenicon>
     </span>
-    <span class="menu-title" data-link="/crafted/account">Accounts</span>
+    <span
+      class="menu-title"
+      translate="MENU.ACCOUNTS"
+      data-link="/crafted/account"
+    >
+      {{ 'accounts' | translate }}
+    </span>
     <span class="menu-arrow"></span>
   </span>
   <div class="menu-sub menu-sub-accordion" routerLinkActive="menu-active-bg">
+    <!-- Overview -->
     <div class="menu-item">
       <a
         class="menu-link without-sub"
         routerLinkActive="active"
-        routerLink="/crafted/account/overview">
+        routerLink="/crafted/account/overview"
+      >
         <span class="menu-bullet">
           <span class="bullet bullet-dot"></span>
         </span>
-        <span class="menu-title">Overview</span>
+        <span class="menu-title" translate="MENU.OVERVIEW">
+          {{ 'Overview' | translate }}
+        </span>
       </a>
     </div>
+    <!-- Settings -->
     <div class="menu-item">
       <a
         class="menu-link without-sub"
         routerLinkActive="active"
-        routerLink="/crafted/account/settings">
+        routerLink="/crafted/account/settings"
+      >
         <span class="menu-bullet">
           <span class="bullet bullet-dot"></span>
         </span>
-        <span class="menu-title">Settings</span>
+        <span class="menu-title" translate="MENU.SETTINGS">
+          {{ 'settings' | translate }}
+        </span>
       </a>
     </div>
   </div>
@@ -204,30 +262,40 @@
     <span class="menu-icon">
       <app-keenicon name="cross-circle" class="fs-2"></app-keenicon>
     </span>
-    <span class="menu-title" data-link="/error">Errors</span>
+    <span class="menu-title" translate="MENU.ERRORS" data-link="/error">
+      {{ 'errors' | translate }}
+    </span>
     <span class="menu-arrow"></span>
   </span>
   <div class="menu-sub menu-sub-accordion" routerLinkActive="menu-active-bg">
+    <!-- Error 404 -->
     <div class="menu-item">
       <a
         class="menu-link without-sub"
         routerLink="/error/404"
-        routerLinkActive="active">
+        routerLinkActive="active"
+      >
         <span class="menu-bullet">
           <span class="bullet bullet-dot"></span>
         </span>
-        <span class="menu-title">Error 404</span>
+        <span class="menu-title" translate="MENU.ERROR_404">
+          {{ 'Error 404' | translate }}
+        </span>
       </a>
     </div>
+    <!-- Error 500 -->
     <div class="menu-item">
       <a
         class="menu-link without-sub"
         routerLink="/error/500"
-        routerLinkActive="active">
+        routerLinkActive="active"
+      >
         <span class="menu-bullet">
           <span class="bullet bullet-dot"></span>
         </span>
-        <span class="menu-title">Error 500</span>
+        <span class="menu-title" translate="MENU.ERROR_500">
+          {{ 'Error 500' | translate }}
+        </span>
       </a>
     </div>
   </div>
@@ -243,74 +311,104 @@
     <span class="menu-icon">
       <app-keenicon name="phone" class="fs-2"></app-keenicon>
     </span>
-    <span class="menu-title" data-link="/crafted/widgets">Widgets</span>
+    <span
+      class="menu-title"
+      translate="MENU.WIDGETS"
+      data-link="/crafted/widgets"
+    >
+      {{ 'widgets' | translate }}
+    </span>
     <span class="menu-arrow"></span>
   </span>
   <div class="menu-sub menu-sub-accordion" routerLinkActive="menu-active-bg">
+    <!-- Lists -->
     <div class="menu-item">
       <a
         class="menu-link without-sub"
         routerLinkActive="active"
-        routerLink="/crafted/widgets/lists">
+        routerLink="/crafted/widgets/lists"
+      >
         <span class="menu-bullet">
           <span class="bullet bullet-dot"></span>
         </span>
-        <span class="menu-title">Lists</span>
+        <span class="menu-title" translate="MENU.LISTS">
+          {{ 'lists' | translate }}
+        </span>
       </a>
     </div>
+    <!-- Statistics -->
     <div class="menu-item">
       <a
         class="menu-link without-sub"
         routerLinkActive="active"
-        routerLink="/crafted/widgets/statistics">
+        routerLink="/crafted/widgets/statistics"
+      >
         <span class="menu-bullet">
           <span class="bullet bullet-dot"></span>
         </span>
-        <span class="menu-title">Statistics</span>
+        <span class="menu-title" translate="MENU.STATISTICS">
+          {{ 'statistics' | translate }}
+        </span>
       </a>
     </div>
+    <!-- Charts -->
     <div class="menu-item">
       <a
         class="menu-link without-sub"
         routerLinkActive="active"
-        routerLink="/crafted/widgets/charts">
+        routerLink="/crafted/widgets/charts"
+      >
         <span class="menu-bullet">
           <span class="bullet bullet-dot"></span>
         </span>
-        <span class="menu-title">Charts</span>
+        <span class="menu-title" translate="MENU.CHARTS">
+          {{ 'charts' | translate }}
+        </span>
       </a>
     </div>
+    <!-- Mixed -->
     <div class="menu-item">
       <a
         class="menu-link without-sub"
         routerLinkActive="active"
-        routerLink="/crafted/widgets/mixed">
+        routerLink="/crafted/widgets/mixed"
+      >
         <span class="menu-bullet">
           <span class="bullet bullet-dot"></span>
         </span>
-        <span class="menu-title">Mixed</span>
+        <span class="menu-title" translate="MENU.MIXED">
+          {{ 'mixed' | translate }}
+        </span>
       </a>
     </div>
+    <!-- Tables -->
     <div class="menu-item">
       <a
         class="menu-link without-sub"
         routerLinkActive="active"
-        routerLink="/crafted/widgets/tables">
+        routerLink="/crafted/widgets/tables"
+      >
         <span class="menu-bullet">
           <span class="bullet bullet-dot"></span>
         </span>
-        <span class="menu-title">Tables</span>
+        <span class="menu-title" translate="MENU.TABLES">
+          {{ 'tables' | translate }}
+        </span>
       </a>
     </div>
+    <!-- Feeds -->
     <div class="menu-item">
       <a
         class="menu-link without-sub"
         routerLinkActive="active"
-        routerLink="/crafted/widgets/feeds">
+        routerLink="/crafted/widgets/feeds"
+      >
         <span class="menu-bullet">
           <span class="bullet bullet-dot"></span>
         </span>
-        <span class="menu-title">Feeds</span>
+        <span class="menu-title" translate="MENU.FEEDS">
+          {{ 'feeds' | translate }}
+        </span>
       </a>
     </div>
   </div>
@@ -319,7 +417,12 @@
 <!-- Separator -->
 <div class="menu-item">
   <div class="menu-content pt-8 pb-2">
-    <span class="menu-section text-muted text-uppercase fs-8 ls-1">Apps</span>
+    <span
+      class="menu-section text-muted text-uppercase fs-8 ls-1"
+      translate="MENU.APPS"
+    >
+      {{ 'apps' | translate }}
+    </span>
   </div>
 </div>
 
@@ -333,41 +436,55 @@
     <span class="menu-icon">
       <app-keenicon name="message-text-2" class="fs-2"></app-keenicon>
     </span>
-    <span class="menu-title" data-link="/apps/chat">Chat</span>
+    <span class="menu-title" translate="MENU.CHAT" data-link="/apps/chat">
+      {{ 'chat' | translate }}
+    </span>
     <span class="menu-arrow"></span>
   </span>
   <div class="menu-sub menu-sub-accordion" routerLinkActive="menu-active-bg">
+    <!-- Private Chat -->
     <div class="menu-item">
       <a
         class="menu-link without-sub"
         routerLinkActive="active"
-        routerLink="/apps/chat/private-chat">
+        routerLink="/apps/chat/private-chat"
+      >
         <span class="menu-bullet">
           <span class="bullet bullet-dot"></span>
         </span>
-        <span class="menu-title">Private Chat</span>
+        <span class="menu-title" translate="MENU.PRIVATE_CHAT">
+          {{ 'private chat' | translate }}
+        </span>
       </a>
     </div>
+    <!-- Group Chat -->
     <div class="menu-item">
       <a
         class="menu-link without-sub"
         routerLinkActive="active"
-        routerLink="/apps/chat/group-chat">
+        routerLink="/apps/chat/group-chat"
+      >
         <span class="menu-bullet">
           <span class="bullet bullet-dot"></span>
         </span>
-        <span class="menu-title">Group Chart</span>
+        <span class="menu-title" translate="MENU.GROUP_CHAT">
+          {{ 'group chat' | translate }}
+        </span>
       </a>
     </div>
+    <!-- Drawer Chat -->
     <div class="menu-item">
       <a
         class="menu-link without-sub"
         routerLinkActive="active"
-        routerLink="/apps/chat/drawer-chat">
+        routerLink="/apps/chat/drawer-chat"
+      >
         <span class="menu-bullet">
           <span class="bullet bullet-dot"></span>
         </span>
-        <span class="menu-title">Drawer Chart</span>
+        <span class="menu-title" translate="MENU.DRAWER_CHAT">
+          {{ 'DRAWER_CHAT' | translate }}
+        </span>
       </a>
     </div>
   </div>
@@ -386,6 +503,8 @@
     <span class="menu-icon">
       <app-keenicon name="document" class="fs-2"></app-keenicon>
     </span>
-    <span class="menu-title">Changelog {{ appAngularVersion }}</span>
+    <span class="menu-title" translate="MENU.CHANGELOG">
+      Changelog {{ appAngularVersion }}
+    </span>
   </a>
 </div>
