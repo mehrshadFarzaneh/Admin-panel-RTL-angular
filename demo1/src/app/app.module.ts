@@ -19,6 +19,7 @@ import { CoreModule } from './core/core.module';
 import { MenuPlacementDirective } from './shared/directives/menu-placement.directive';
 import { SharedModule } from './shared/shared.module';
 import { EffectsModule } from '@ngrx/effects';
+import { ServiceWorkerModule } from '@angular/service-worker';
 // #fake-end#
 
 function appInitializer(authService: AuthService) {
@@ -53,7 +54,13 @@ function appInitializer(authService: AuthService) {
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() }),
     CoreModule,
     SharedModule,
-    EffectsModule.forRoot([])
+    EffectsModule.forRoot([]),
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: !isDevMode(),
+      // Register the ServiceWorker as soon as the application is stable
+      // or after 30 seconds (whichever comes first).
+      registrationStrategy: 'registerWhenStable:30000'
+    })
   ],
   providers: [
     {
