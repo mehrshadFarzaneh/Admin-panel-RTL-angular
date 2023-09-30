@@ -131,7 +131,7 @@ export class MenuPlacementDirective implements AfterViewInit {
     const changeThemInput = document.querySelector('app-theme-mode-switcher > div');
     const userMenuInput = document.getElementById('user-menu__input');
     // Check if the button element exists
-    try{
+    // try{
       if (isRtl) {
         // Update the data-kt-menu-placement attribute
         button?.setAttribute("data-kt-menu-placement", "bottom-start");
@@ -144,13 +144,13 @@ export class MenuPlacementDirective implements AfterViewInit {
         button?.setAttribute("data-kt-menu-placement", "bottom-end");
         headerSearchInput?.setAttribute("data-kt-menu-placement", "bottom-end")
         notificationsInput?.setAttribute("data-kt-menu-placement", "bottom-end")
-        quickLinkInput?.setAttribute("data-kt-menu-placement", "bottom-start")
-        changeThemInput?.setAttribute("data-kt-menu-placement", "bottom-start")
-        userMenuInput?.setAttribute("data-kt-menu-placement", "bottom-start")
+        quickLinkInput?.setAttribute("data-kt-menu-placement", "bottom-end")
+        changeThemInput?.setAttribute("data-kt-menu-placement", "bottom-end")
+        userMenuInput?.setAttribute("data-kt-menu-placement", "bottom-end")
       }
-    }catch{
-      // some element not found because we get them AOT :)
-    }
+    // }catch{
+    //   // some element not found because we get them AOT :)
+    // }
 
   }
   //#endymion
