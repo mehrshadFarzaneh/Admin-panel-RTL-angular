@@ -50,5 +50,5 @@ testem.log
 Thumbs.db
 
 
-/src/shared
-/src/core
+#/src/shared
+#/src/core
